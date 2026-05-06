@@ -1,0 +1,96 @@
+import { Topic } from '@/content/types';
+
+export const topic: Topic = {
+  id: 'hull-deck-dimensions',
+  title: 'Las partes del casco, la cubierta y las dimensiones',
+  readingTime: 16,
+  audioTime: '15:04',
+
+  content: [
+    { type: 'title', text: 'Las partes del casco, la cubierta y las dimensiones' },
+    { type: 'paragraph', text: 'Nomenclatura' },
+    { type: 'paragraph', text: 'La náutica se caracteriza, entre otras cosas, por tener un lenguaje propio —el argot náutico— muy amplio y de larga historia que es necesario conocer para poder comunicarse correctamente tanto en el entorno de una tripulación como en el contexto de la actividad.' },
+    { type: 'paragraph', text: 'Este argot náutico no es caprichoso. Su desarrollo ha tenido como propósito lograr que cada palabra del lenguaje náutico tenga un significado único e invariable, de tal forma que al decirla no haya posibilidad de que sea interpretada erróneamente.' },
+    { type: 'paragraph', text: 'Por ejemplo, si alguien a bordo de un barco le dice "mirá eso, a la derecha…" podría interpretarse como la derecha del que habla o la suya o la derecha del barco.' },
+    { type: 'paragraph', text: 'Si en cambio le dice "mirá eso, a estribor…" estará claro que señala a la derecha del barco, pues "estribor" es justamente eso, la derecha de la embarcación.' },
+    { type: 'paragraph', text: 'El Casco, la Cubierta y las Dimensiones' },
+    { type: 'paragraph', text: 'El casco de una embarcación es la estructura que la define como tal, es la cobertura exterior que mantiene impermeable y aísla a todo lo contenido dentro de este, cerrándose en la parte superior con la cubierta.' },
+    { type: 'paragraph', text: 'El conjunto de casco y cubierta es el que le da entonces su forma tradicional al barco, y pueden ser construidos en base a diferentes materiales.' },
+    { type: 'paragraph', text: 'Los cascos y cubiertas de los veleros modernos son en su gran mayoría de fibra de vidrio o de plástico, de madera laminada con resinas poliuretánicas y en algunos casos de aluminio o acero; y antiguamente eran hechos de madera con procesos artesanales. En la construcción de los veleros de competición se utilizan otros compuestos tales como la fibra de carbono o el kevlar, combinados con otros materiales.' },
+    { type: 'paragraph', text: 'Existen embarcaciones de un casco, como los típicos veleros, lanchas y cruceros que uno tiene idealizados, a los que se los denomina monocascos, y existen otras embarcaciones de cascos múltiples como los catamaranes o trimaranes que tienen dos y tres cascos en cada caso.' },
+    { type: 'paragraph', text: 'A su vez, los cascos pueden tener formas distintas según sea el destino del barco. Las lanchas y veleros de competición tienen generalmente cascos de planeo, cuyo fondo tiende a ser plano para minimizar el contacto con la superficie del agua, permitiéndoles así reducir su resistencia y navegar a mayores velocidades. Los buques mercantes y los veleros barcos de crucero, en cambio, tienen cascos más voluminosos destinados a aprovechar el espacio interior —sea para bodegas de carga o espacio habitable— y que al aumentar el volumen sumergido deben moverse desplazando el agua que tienen alrededor, por lo que se los llama cascos de desplazamiento.' },
+    { type: 'paragraph', text: 'La proa es la parte delantera del casco, y por extensión, del barco. Generalmente tienen forma ahusada o de cuña pues es la parte de la nave que debe cortar las aguas cuando ésta se encuentra en movimiento.' },
+    { type: 'paragraph', text: 'La popa es la parte contraria a la proa, es decir la sección trasera y final de la embarcación. Las popas tienen diferentes formas: anchas o angostas, abiertas o cerradas, dependiendo del diseño del barco. La placa que cierra la popa del casco se llama espejo.' },
+    { type: 'paragraph', text: 'Los términos estribor y babor definen los lados derecho e izquierdo de la embarcación, mirando hacia la proa.' },
+    { type: 'paragraph', text: 'Las bandas son los lados del buque, por lo que habrá una banda de estribor —la de la derecha— y una banda de babor —la de la izquierda—.' },
+    { type: 'paragraph', text: 'Veamos de donde surgen las palabras "estribor" y "babor".' },
+    { type: 'paragraph', text: 'En la navegación medieval, antes de generalizarse el timón centrado en el eje longitudinal del barco, las embarcaciones se gobernaban mediante un remo terminado en una pala ancha, sujeto a su costado derecho. Se lo colocaba de ese lado, probablemente porque la mayoría de los timoneles eran diestros.' },
+    { type: 'paragraph', text: 'Así, entre los navegantes de lenguas germánicas, ese lado del barco pasó a denominarse "steurobord", por la conjunción de las palabras "steuro" que significa "timón" o "elemento de gobierno" y "bord" que refiere al tablado del borde del barco. El significado literal era, por tanto, "el costado por donde se gobierna".' },
+    { type: 'paragraph', text: 'El término "steurobord" fue adaptado en el francés a "estribord" y en el inglés a "starboard". En el español, quizás por vecindad con los francoparlantes, se lo convirtió a "estribor".' },
+    { type: 'paragraph', text: 'Luego, dado que el remo de gobierno se situaba en el costado derecho, se prefería atracar el barco apoyando su lado izquierdo contra el muelle, para no dañar ese timón lateral.' },
+    { type: 'paragraph', text: 'A ese costado izquierdo se lo llamaba "bæcbord", término compuesto por las palabras "bæc" que significa "espalda" o "parte posterior", y la ya conocida "bord", y cuyo significado literal era "el costado de la espalda", es decir, el lado que quedaba a la espalda del timonel cuando éste gobernaba sosteniendo el timón, mirando hacia estribor.' },
+    { type: 'paragraph', text: 'El término evolucionó en el francés antiguo como "babord", y desde allí pasó al español como "babor"; en el inglés, más pragmático, a ese lado se lo llama "port", que claramente indica que ese es el lado del barco que va contra el puerto.' },
+    { type: 'paragraph', text: 'A su vez, las bandas están divididas virtualmente en tres sectores. El través, que define la parte media de la banda, en la mitad de la eslora —medida del largo del barco—; la amura, que es la sección delantera de la banda del barco donde ésta comienza a angostarse hacia la proa; y la aleta, que marca la sección trasera, donde el casco comienza a cerrarse hacia la popa.' },
+    { type: 'paragraph', text: 'El conjunto de casco y cubierta de los barcos están permanentemente sujetos a fuerzas de presión y tensión. Por ejemplo, el agua en la que flota una embarcación ejerce una fuerza de presión sobre el casco —de hecho, esa presión es la que lo hace flotar— y si éste no fuera lo suficientemente robusto, colapsaría inmediatamente; a su vez, los elementos que sujetan el mástil y las velas de un velero a la cubierta traccionan fuertemente de ella cuando el barco se escora —cuando se inclina— producto de la fuerza del viento, si la cubierta no fuese lo suficientemente resistente se desgarraría en pedazos. Es por eso que el conjunto de casco y cubierta debe necesariamente contar con una estructura que aporte la resistencia requerida para soportar estas fuerzas.' },
+    { type: 'title', text: 'Partes Estructurales de un Barco' },
+    { type: 'paragraph', text: 'La quilla es el componente fundamental de esa estructura pues constituye, dicho a modo de ejemplo, la columna vertebral del buque, sobre la que se apoyan las demás partes de su esqueleto. Es una pieza monolítica que recorre longitudinalmente la base del buque, desde la proa hasta la popa de la embarcación.' },
+    { type: 'paragraph', text: 'En la proa, la quilla se une con la roda y en la popa con el codaste.' },
+    { type: 'paragraph', text: 'El conjunto de quilla, roda y codaste forman una unidad sólida y robusta cuya misión es darle rigidez y resistencia al buque.' },
+    { type: 'paragraph', text: 'Las cuadernas, por su parte, son las piezas curvas que se montan transversalmente sobre la quilla y que forman las costillas del esqueleto del barco, sobre las que se afirma el forro que forma el casco. La cuaderna maestra es la que se ubica en la parte más ancha del barco.' },
+    { type: 'paragraph', text: 'Los baos son las vigas superiores que se apoyan sobre cada cuaderna, dándoles a éstas la resistencia estructural a las fuerzas de presión laterales. La cubierta del barco se apoya sobre los baos.' },
+    { type: 'paragraph', text: 'En los veleros, la quilla tiene además la finalidad de sostener el lastre —es decir, el peso agregado— usado para compensar la presión del viento sobre el velamen. El quillote es una prolongación de la quilla cuyo objeto es llevar aún más abajo el peso del lastre, para optimizar el trabajo de compensación de cargas y estabilidad del barco —par adrizante—.' },
+    { type: 'paragraph', text: 'Los viejos veleros se caracterizaban por tener quillas corridas que se prolongaban de proa a popa. Estos barcos eran muy estables en la navegación, pero lentos al tener que cambiar de rumbos debido, entre otras cosas, a la resistencia que esas largas quillas oponían al agua.' },
+    { type: 'paragraph', text: 'La solución a esto fueron los quillotes de aleta, que al ser más cortos reducían la resistencia estructural al agua mejorando la maniobrabilidad, y permitiendo al mismo tiempo colocar mástiles más altos al llevar el contrapeso del lastre a mayor profundidad relativa.' },
+    { type: 'paragraph', text: 'Los veleros de competición utilizan quillotes con bulbo que al ser extremadamente angostos y largos aprovechan al máximo las ventajas de los quillotes de aleta.' },
+    { type: 'paragraph', text: 'Las orzas son un tipo de quillote que puede ser rebatido.' },
+    { type: 'title', text: 'El Timón' },
+    { type: 'paragraph', text: 'El timón es, por definición, el conjunto de partes que permite maniobrar y darle al buque la dirección en la que debe navegar. La pala del timón es una pieza plana y larga de forma hidrodinámica que está en contacto con el agua, y que pivotea sobre un eje llamado mecha que traslada los movimientos que el Timonel aplica torciendo la caña hacia estribor o babor.' },
+    { type: 'paragraph', text: 'En barcos de mayor porte, en los que la fuerza del Timonel no es suficiente para lograr mover la caña del timón, se la reemplaza por un sistema formado por una rueda —similar a un volante— y un conjunto de engranajes reductores y poleas que facilitan el control y traslado de fuerzas a la pala del timón.' },
+    { type: 'paragraph', text: 'La pala del timón puede ubicarse debajo del casco, en cuyo caso la mecha pasará a través de un tubo llamado limera, o bien ser fijados con herrajes al espejo de popa.' },
+    { type: 'paragraph', text: 'La función del timón —y en particular la de la pala— es encaminar el flujo de agua que corre debajo del barco en el sentido más conveniente, sea para mantener la dirección del barco o para torcer su rumbo a un lado u otro. En algunos barcos se ayuda a encaminar el flujo de agua que sale de la línea del quillote extendiendo su forma con un skeg hasta la posición del timón.' },
+    { type: 'paragraph', text: 'Los autores dicen que el timón va ubicado en el centro del barco, lo cual es cierto… sin embargo, en diseños más modernos con esloras importantes y en los veleros de competición, suelen estar equipados con dos timones —con sus ruedas y palas— desplazados cada uno de ellos hacia las bandas.' },
+    { type: 'paragraph', text: 'Dado que esos veleros suelen navegar con ángulos de escora importantes, un timón ubicado en el centro perdería eficiencia al no estar totalmente sumergido en el agua mientras el barco se encuentra inclinado.' },
+    { type: 'paragraph', text: 'Tiene sentido entonces ubicar los planos de dirección hacia las bandas —hacia las aletas— para operar luego con el timón de la banda que se encuentra sumergida en cada caso.' },
+    { type: 'title', text: 'El Cockpit y el Interior del Barco' },
+    { type: 'paragraph', text: 'En la cubierta de los veleros, detrás del mástil y hacia la popa, se encuentra el cockpit —también llamado bañera— que es el espacio donde se ubica el Timonel y la tripulación, y a donde llegan, en general, todos los elementos de control y comando de la embarcación.' },
+    { type: 'paragraph', text: 'El cockpit de los veleros de crucero está rodeado por una baranda de protección, para evitar caídas al agua, llamada balcón de popa, y en proa se encuentra otra baranda similar, denominada púlpito. Sobre las bandas, entre el púlpito y el balcón de popa, se extienden los guardamancebos que son cables metálicos o barandas rígidas de protección, que se sostienen mediante una serie de soportes verticales llamados candeleros.' },
+    { type: 'paragraph', text: 'Los cockpits que dan a popas abiertas, como el de la imagen arriba de este párrafo, están diseñados para descargar rápidamente el agua de las olas o de lluvia. Los que tienen popa cerrada lo hacen a través unos orificios practicados en el casco llamados imbornales.' },
+    { type: 'paragraph', text: 'Dentro del casco se encuentra la cabina que, dependiendo del tamaño del barco, puede estar dividida en camarotes, salas, pañoles y bodegas, dependiendo del tamaño del barco. Las paredes de estos recintos toman el nombre de mamparos. La puerta de acceso a la cabina y las que llevan a cada recinto se las denomina escotillas y las aperturas ubicadas sobre la cubierta, de forma horizontal, toman el nombre de tambuchos.' },
+    { type: 'paragraph', text: 'Finalmente, la sentina es el fondo del casco, donde resumen todos los líquidos que pudiesen entrar en el barco o derramarse dentro de él.' },
+    { type: 'title', text: 'Referencias de las Medidas de una Embarcación' },
+    { type: 'paragraph', text: 'Las dimensiones del barco están dadas por la eslora, que es la medida de su longitud tomada entre el punto más adelantado de la proa y el punto más retrasado de la popa.' },
+    { type: 'paragraph', text: 'De hecho, esa medida define a la eslora máxima, mientras que la eslora en flotación es la longitud entre los puntos donde la proa y la popa entran en contacto con el agua. La manga es la medida del ancho de la embarcación tomada en su parte más ancha, es decir a la altura de la cuaderna maestra. Y el puntal es la altura vertical del barco desde la parte superior de la quilla hasta la parte inferior de la cubierta.' },
+    { type: 'paragraph', text: 'La crujía es una línea imaginaria que une el extremo de la proa con la popa. Y por extensión, el plano de crujía es un plano vertical que pasa por la línea de crujía cortando virtualmente el barco en dos mitades longitudinales simétricas.' },
+    { type: 'paragraph', text: 'A su vez, la línea de flotación rodea al barco a nivel del plano de la superficie del agua. La parte del casco que queda debajo de ella —sumergida en el agua— se la denomina obra viva o carena del barco, mientras que la parte que emerge por sobre la línea de flotación se la llama obra muerta. Y la distancia entre la línea de flotación y el borde inferior del quillote define el calado del barco.' },
+    { type: 'paragraph', text: 'Tenga en cuenta que la posición de la línea de flotación respecto del casco es relativa, pues variará en función de la escora —inclinación del barco— y del peso de las cargas a bordo del barco, haciendo que esté más o menos sumergido en el agua.' },
+    { type: 'paragraph', text: 'Y, a su vez, con el cambio de altura de la línea de flotación variará también la altura de la obra viva y de la obra muerta, y la del francobordo.' },
+    { type: 'paragraph', text: 'La altura de la obra muerta en la sección media del barco, es decir la que existe entre el plano del agua y el borde superior de la banda, se la denomina francobordo.' }
+  ],
+
+  quiz: [
+    {
+      question: '¿Qué es la eslora?',
+      options: ['La anchura del barco', 'La longitud máxima del barco', 'La altura del barco', 'El calado del barco'],
+      correctAnswer: 1,
+      explanation: 'La eslora es la longitud máxima del barco, medida desde el extremo de proa hasta el extremo de popa.'
+    },
+    {
+      question: '¿Qué es la manga?',
+      options: ['La longitud del barco', 'La altura del barco', 'La anchura máxima del barco', 'El peso del barco'],
+      correctAnswer: 2,
+      explanation: 'La manga es la distancia transversal máxima del barco, es decir, su anchura máxima.'
+    },
+    {
+      question: '¿Qué es el estribor?',
+      options: ['El lado izquierdo del barco', 'La proa del barco', 'El lado derecho del barco', 'La popa del barco'],
+      correctAnswer: 2,
+      explanation: 'Estribor es el lado derecho del barco, mirando hacia la proa.'
+    },
+    {
+      question: '¿Qué es la quilla?',
+      options: ['La cubierta del barco', 'La columna vertebral del barco', 'El mástil', 'El timón'],
+      correctAnswer: 1,
+      explanation: 'La quilla es el componente fundamental que recorre longitudinalmente la base del buque, desde la proa hasta la popa.'
+    }
+  ]
+};

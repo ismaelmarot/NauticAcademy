@@ -1,0 +1,98 @@
+import { Topic } from '@/content/types';
+
+export const topic: Topic = {
+  id: 'buoyancy-stability',
+  title: 'Flotabilidad y estabilidad',
+  readingTime: 17,
+
+  content: [
+    { type: 'title', text: 'Flotabilidad' },
+    { type: 'paragraph', text: 'El diseño de cada buque varía según la función que vaya a desempeñar. Un velero de regata no es igual a un crucero de motor, y ninguno de ellos se parece a un buque portacontenedores; sin embargo, hay algo en lo que todos coinciden: todos ellos flotan. Y esto es porque en su diseño se ha buscado lograr que el peso específico de la embarcación —con toda su carga— sea menor que el peso de la masa de fluido que desplaza al sumergir su obra viva en el agua.' },
+    { type: 'paragraph', text: 'Esto define, en principio, el concepto de desplazamiento:' },
+    { type: 'paragraph', text: 'Desplazamiento: Es el peso del volumen de la masa de agua desalojada por el peso del buque, incluyendo toda su carga, al sumergir su obra viva en el fluido.' },
+    { type: 'paragraph', text: 'Luego, mientras el peso total de la embarcación sea menor al peso del volumen de agua desplazada, el barco tendrá flotabilidad positiva.' },
+    { type: 'paragraph', text: 'Y por lo tanto esa flotabilidad es la propiedad que hace flotar a los barcos, y está descripta en el Principio de Arquímedes, que dice que:' },
+    { type: 'paragraph', text: 'Un cuerpo total o parcialmente sumergido en un fluido en reposo es empujado de abajo hacia arriba con una fuerza igual al peso del volumen del fluido que el cuerpo ha desplazado.' },
+    { type: 'paragraph', text: 'A esa fuerza a la que se refiere Arquímedes, se la conoce con el nombre de empuje hidrostático, y depende de la densidad y del volumen de fluido desplazado. Cuando la fuerza del empuje hidrostático sea igual al peso del objeto, este dejará de sumergirse, comenzando a mantenerse a flote.' },
+    { type: 'paragraph', text: 'Vale hacer notar que materiales distintos, con diferentes densidades, pero igual volumen, tendrán una flotabilidad diferente.' },
+    { type: 'paragraph', text: 'Arquímedes fue uno de los más importantes científicos de la antigüedad.' },
+    { type: 'paragraph', text: 'Vivió en Siracusa, Sicilia —que en esa época era griega— durante el siglo III a.c., y se dedicó a casi todas las ramas de la ciencia explicando, entre otras cosas, la física del brazo de palanca y los fundamentos de la hidrostática, dentro de los que se encuentra lo que hoy conocemos como el Principio de Arquímedes, del que estamos hablando, y al que se cree llegó casi por casualidad.' },
+    { type: 'paragraph', text: 'La anécdota no comprobada dice que el Rey Hierón II, que gobernaba Siracusa, sospechaba que el orfebre al cual le había encargado que crease una corona de oro, había rebajado el metal agregándole plata, y le encarga entonces a Arquímedes que averigüe si esto había sido así.' },
+    { type: 'paragraph', text: 'Obviamente, Arquímedes no podía fundir la corona para calcular la masa y volumen de sus metales, y a partir de ellos su densidad… por lo que se fue a su casa bastante preocupado, pues no imaginaba cómo resolver el problema.' },
+    { type: 'paragraph', text: '¿Y vio que a uno se le ocurren grandes ideas en la ducha? Bueno… Arquímedes encontró la solución en la bañera, porque en esa época aún no se habían inventado las duchas.' },
+    { type: 'paragraph', text: 'Mientras se metía en la bañera, Arquímedes se dio cuenta que el nivel del agua subía a medida que se sumergía, e inmediatamente intuyó que ese efecto podría ser usado para determinar el volumen de la corona. Debido a que el agua no se puede comprimir, la corona, al ser sumergida, desplazaría una cantidad de agua igual a su propio volumen. Y luego, al dividir el peso de la corona por el volumen de agua desplazada se podría obtener su densidad... la de la corona.' },
+    { type: 'paragraph', text: 'La densidad de la corona sería menor que la densidad del oro si otros metales menos densos le hubieran sido añadidos.' },
+    { type: 'paragraph', text: 'Cuando Arquímedes se dio cuenta del descubrimiento, se dice que salió corriendo desnudo por las calles gritando ¡eureka! que en griego significa "lo encontré".' },
+    { type: 'paragraph', text: 'Si, por ejemplo, tomásemos una pelota llena de aire y otra de arena de el mismo tamaño, veríamos que ambas ocupan el mismo volumen en el espacio pero que, al ponerlas sobre el agua, la llena de aire flotaría mientras que la de arena se hundiría debido a su mayor densidad.' },
+    { type: 'paragraph', text: 'Al tener más densidad, el peso de la pelota de arena es mayor que el peso del agua que desplaza al sumergirse y por lo tanto la fuerza del empuje hidrostático no llega a igualar el peso de la pelota que, por lo tanto, se hundirá hasta tocar fondo. Se dice entonces que la pelota de arena tiene una relación volumen-peso baja, esto es poco volumen y alto peso.' },
+    { type: 'paragraph', text: 'Un barco es esencialmente una carcasa llena de aire con una relación volumen-peso alta —es decir, gran volumen y poco peso— por lo que su obra viva desplazará un volumen de agua cuyo peso será equivalente al peso del barco, y por esta razón el barco flotará.' },
+    { type: 'paragraph', text: 'Lógicamente, a medida que el barco comience a aumentar su carga, irá disminuyendo su relación volumen-peso —mantiene el volumen, pero aumenta el peso— haciendo que se sumerja más; a medida que el barco continúe aumentando su carga irá descendiendo su índice de flotabilidad hasta llegar al punto donde la relación volumen-peso se invertirá —resultando en poco volumen para tanto peso— y haciendo que el barco deje de flotar, hundiéndose en el agua.' },
+    { type: 'paragraph', text: 'Habiendo explicado esto, conviene ahora introducir el término francobordo, que define la altura de la obra muerta, es decir la distancia que existe desde el plano del nivel del agua hasta el borde superior de la cubierta en la sección media del barco. A medida que el barco se sumerge producto de la carga agregada, disminuye también el francobordo, y aumenta el calado, que es la altura de la obra viva —la parte sumergida del barco—.' },
+    { type: 'paragraph', text: 'El francobordo está ligado a la seguridad del barco, pues constituye una reserva de flotabilidad.' },
+    { type: 'paragraph', text: 'En los buques mercantes, la normativa vigente determina un francobordo mínimo obligatorio, para evitar que los armadores embarquen cargas más allá de lo razonable. Por esa razón, todos los buques llevan grabado en forma inalterable, a ambas bandas, la marca de francobordo o marca de Plimsoll —que fue el parlamentario inglés que la propuso en 1887— que especifica los niveles máximos de carga, según la época del año y el tipo de agua.' },
+    { type: 'paragraph', text: 'Esa marca está formada por una línea vertical con marcas horizontales que salen hacia la derecha y la izquierda, y que indican la altura del francobordo mínimo que el buque debe mantener cuando navega en las condiciones que indica cada sigla, como sigue:' },
+    { type: 'paragraph', text: 'TF: Refiere a "Tropical Fresh", es decir agua dulce en zona tropical.' },
+    { type: 'paragraph', text: 'F: "Fresh", agua dulce de otras zonas, excepto las tropicales.' },
+    { type: 'paragraph', text: 'T: "Tropical", agua salada de mares tropicales.' },
+    { type: 'paragraph', text: 'S: "Summer", agua salada en verano.' },
+    { type: 'paragraph', text: 'W: "Winter", agua salada en invierno.' },
+    { type: 'paragraph', text: 'WNA: "Winter North Atlantic", agua salada en invierno, en el Atlántico Norte.' },
+    { type: 'paragraph', text: 'El agua dulce es menos densa que el agua salada, y a su vez el agua fría del invierno es más densa que el agua cálida del verano, por lo que entonces un cuerpo flotará más en agua salada que en agua dulce, y más en agua cálida que en agua fría. Es por esa razón la marca de francobordo tiene distintos rangos, según el tipo de agua y la temporada de navegación.' },
+    { type: 'paragraph', text: 'La marca de francobordo lleva además un círculo cruzado en su centro por una línea horizontal, que debe ir en el centro del barco —en la banda— con la franja horizontal ubicada a la altura de la marca "S", es decir la que indica el nivel de francobordo mínimo para el verano —summer— en agua salada.' },
+    { type: 'title', text: 'Estabilidad de los Barcos' },
+    { type: 'paragraph', text: 'La estabilidad, o más precisamente la estabilidad transversal, es la característica física que hace que un buque se mantenga adrizado tendiendo a corregir dinámicamente los desvíos de esa posición producidos por la fuerza del agua o del viento.' },
+    { type: 'paragraph', text: 'Se dice que el barco está adrizado cuando está en posición vertical, con el mástil exactamente perpendicular respecto al plano del agua.' },
+    { type: 'paragraph', text: 'La historia cuenta que para medir si un barco estaba perfectamente adrizado, se dejaba colgar libremente una driza —cabo utilizado para izar una vela, que cuelga del tope del mástil— y si ésta se mantenía paralela al mástil, sin desviarse hacia los lados o la proa o la popa, quería decir que el barco estaba "adrizado".' },
+    { type: 'paragraph', text: 'La estabilidad se logra por el equilibrio dinámico que ocurre entre las fuerzas de gravedad e hidrostática y que se analizan a partir de cuatro centros clave del buque que detallaremos a continuación.' },
+    { type: 'paragraph', text: 'Centro de Quilla: El centro de quilla es el origen a partir del cual se miden los otros tres puntos que hacen a la estabilidad del barco. Este centro se ubica en la intersección del plano de crujía y el plano base del buque, sobre la quilla.' },
+    { type: 'paragraph', text: 'Centro de Carena: El centro de carena o baricentro es el punto de la embarcación donde actúa el empuje hidrostático, es decir el empuje del agua, de abajo hacia arriba. La ordenada de medición de fuerzas del centro de carena es la distancia entre este punto y el centro de quilla. En condiciones de perfecta estabilidad, el centro de carena estaría ubicado en algún punto del plano de crujía —sobre la vertical de la quilla— sin embargo, puesto que el barco sufre permanentes rolidos y cabeceos mientras navega, el centro de carena cambia dinámicamente de posición siguiendo estos movimientos, y lo mismo pasa cuando varía la superficie de la obra viva producto del cambio de peso, al aumentar o disminuir su carga.' },
+    { type: 'paragraph', text: 'Centro de Gravedad: El centro de gravedad es el punto del buque sobre el que converge la acción de la fuerza de gravedad, y la ordenada que mide esa fuerza también se ubica sobre la quilla.' },
+    { type: 'paragraph', text: 'Metacentro: El metacentro es el punto en el que se cruzan el plano de crujía y la vertical del centro de carena cuando este se mueve producto de la escora del barco, o de otros movimientos como los rolidos y cabeceos.' },
+    { type: 'paragraph', text: 'Antes de continuar estudiando cómo las fuerzas hidrostáticas y de gravedad afectan a la estabilidad de una embarcación, es necesario definir el concepto de momento, que es el resultado de aplicar una fuerza a una distancia dada respecto de un punto —de los centros de gravedad y de carena en nuestro caso—.' },
+    { type: 'paragraph', text: 'Para ejemplificar esto recurriremos al conocido juego del sube y baja que se puede encontrar en las plazas y parques, y que consiste en un listón —su peso y medidas no son importantes— que se halla en equilibrio sobre un punto de apoyo. Si sobre uno de los extremos sentamos a un niño de, digamos, un peso de 30 kilos sucederá que el sube y baja se desequilibrará, inclinándose hacia ese lado. Desde el punto de vista de la física —y evitando ingresar en el cálculo matemático— el peso de ese niño está ejerciendo un momento de fuerza sobre el centro de equilibrio del listón que forma el sube y baja. Para regresar a la situación de equilibrio deberíamos sentar a otro niño de exactamente el mismo peso sobre el extremo opuesto, ubicándolo a igual distancia del centro que el del otro lado; o bien sentar a un niño de mayor peso a una distancia menor del centro.' },
+    { type: 'paragraph', text: 'Así entonces se obtendría un momento de fuerza —es decir, fuerza aplicada— en un lado del sube y baja que compensará el momento de fuerza —la fuerza aplicada— en el brazo contrario del sube y baja.' },
+    { type: 'paragraph', text: 'Acercándonos a lo que dice la física, podemos concluir que el equilibrio ocurre cuando la suma de los momentos de fuerza aplicados en un sentido iguala a la suma de los momentos de fuerza aplicados en el sentido contrario.' },
+    { type: 'title', text: 'Par Adrizante' },
+    { type: 'paragraph', text: 'Ahora bien, si trasladamos el ejemplo del sube y baja a un barco, reemplazando el listón del juego por el mástil del barco y su velamen, es más simple comprender el momento producido por la fuerza del viento que al empujar sobre las velas saca al velero de su adrizamiento —es decir, de su equilibrio vertical— y que se compensa con el momento aplicado por el lastre del quillote. A esa compensación de momentos se la denomina par adrizante.' },
+    { type: 'paragraph', text: 'De acuerdo con lo que hemos explicado, si un velero está adrizado, el centro de gravedad y el centro de carena coincidirán con el plano de crujía, es decir que ambos centros estarán ubicados sobre el mismo plano vertical, pero no necesariamente en el mismo punto de ese plano.' },
+    { type: 'paragraph', text: 'Ahora bien, en el instante en el que el velero salga de su adrizamiento a causa, por ejemplo, del viento actuando sobre el velamen, ocurrirá que el centro de gravedad se mantendrá fijo —siempre que las cargas dentro del barco no se desplacen— mientras que el centro de carena se desplazará en el mismo sentido que la escora de la embarcación.' },
+    { type: 'paragraph', text: 'En el mismo momento en el que se inicie este cambio, comenzará a trabajar el par de fuerzas adrizantes. La fuerza de gravedad lo hará desde el centro de gravedad —empujando hacia abajo— y la fuerza hidrostática, por su lado, actuará sobre el centro de carena —empujando hacia arriba—.' },
+    { type: 'paragraph', text: 'El momento aportado por estas dos fuerzas, es decir por el par adrizante, compensará el momento de valor contrario que produjo la escora, haciendo que el velero intente regresar a su posición vertical.' },
+    { type: 'paragraph', text: 'En los veleros, la eficiencia del par adrizante depende en términos generales de dos características.' },
+    { type: 'paragraph', text: '1. Cuanto peso tiene el lastre del quillote y cuan alejado del centro de gravedad se encuentre ese peso.' },
+    { type: 'paragraph', text: '2. La manga de la embarcación, pues cuanto más ancha sea más resistencia a la escora producirá el centro de carena.' },
+    { type: 'paragraph', text: 'Habiendo explicado esto, vale comentar ahora que la estabilidad de un barco estará asegurada mientras que la altura metacéntrica sea positiva, es decir mientras que el metacentro se encuentre por encima del plano del centro de gravedad. En el momento en el que el metacentro quede debajo del plano del centro de gravedad, es decir con altura metacéntrica negativa, se habrá perdido la estabilidad aumentando la posibilidad del que el barco sufra una vuelta de campana. Los veleros se diseñan para que el lastre del quillote compense cualquier escora, haciendo que el metacentro quede siempre por sobre el plano del centro de gravedad.' },
+    { type: 'title', text: 'Factores que Afectan la Estabilidad' },
+    { type: 'paragraph', text: 'Existen condiciones que afectan el grado de estabilidad de un buque y la eficiencia del par de fuerzas adrizantes.' },
+    { type: 'paragraph', text: 'El manejo y estiba de las cargas a bordo es una de las condiciones más importantes, que afecta tanto a un bote como a un buque mercante. Al sobrecargar una embarcación se reduce su francobordo aumentando el riesgo de que embarque agua; y si la carga fuese estibada sobre cubierta, se elevaría además el centro de gravedad desequilibrando la embarcación. Para asegurar el equilibrio es importante distribuir equitativamente el peso de las cargas en la embarcación y mantenerlas afirmadas para evitar su desplazamiento durante eventuales escoras.' },
+    { type: 'paragraph', text: 'Hemos visto que los veleros son una clase de barco excepcional, pues se los diseña con una gran capacidad de escora y un importante par adrizante. Aun así, el manejo de las cargas es un tema para tener en cuenta particularmente en los veleros de competición, donde su mejor o peor estiba incide en el adrizamiento del barco, y por lo tanto en su performance.' },
+    { type: 'paragraph', text: 'Los veleros de crucero de cascos múltiples, tales como los catamaranes y los trimaranes, tienen gran estabilidad debido a que la separación de sus cascos proporciona resistencia adicional a la escora, pero puesto que no cuentan con quillotes con lastres importantes, carecen de capacidad de recuperación ante escoras mayores, por lo que el riesgo de vuelcos se incrementa cuando se extreman las condiciones de navegación.' }
+  ],
+
+  quiz: [
+    {
+      question: '¿Qué dice el Principio de Arquímedes?',
+      options: ['Un cuerpo se hunde siempre', 'Un cuerpo es empujado hacia arriba con fuerza igual al peso del fluido desplazado', 'El viento empuja el barco', 'La madera siempre flota'],
+      correctAnswer: 1,
+      explanation: 'El Principio de Arquímedes dice que un cuerpo sumergido recibe un empuje hacia arriba igual al peso del volumen de fluido que desplazó.'
+    },
+    {
+      question: '¿Qué es el francobordo?',
+      options: ['La parte sumergida', 'La distancia desde el agua hasta el borde superior de la cubierta', 'El peso del barco', 'El mástil'],
+      correctAnswer: 1,
+      explanation: 'El francobordo es la altura de la obra muerta, la distancia entre el nivel del agua y el borde superior de la cubierta.'
+    },
+    {
+      question: '¿Qué es el metacentro?',
+      options: ['El peso del barco', 'El punto donde se cruzan el plano de crujía y la vertical del centro de carena', 'El timón', 'La quilla'],
+      correctAnswer: 1,
+      explanation: 'El metacentro es el punto donde se cruzan el plano de crujía y la vertical del centro de carena cuando el barco se escora.'
+    },
+    {
+      question: '¿Cuándo se pierde la estabilidad?',
+      options: ['Cuando el metacentro está arriba del centro de gravedad', 'Cuando el metacentro está debajo del centro de gravedad', 'Cuando hay mucho viento', 'Cuando el barco es grande'],
+      correctAnswer: 1,
+      explanation: 'La estabilidad se pierde cuando la altura metacéntrica es negativa, es decir cuando el metacentro queda debajo del centro de gravedad.'
+    }
+  ]
+};
