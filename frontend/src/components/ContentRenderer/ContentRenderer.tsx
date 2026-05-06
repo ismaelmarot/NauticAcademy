@@ -31,10 +31,32 @@ const ListItem = styled.li<{ $theme: any }>`
   margin-bottom: 6px;
 `;
 
+const ImageContainer = styled.figure<{ $theme: any }>`
+  margin: 16px 0;
+  text-align: center;
+`;
+
+const StyledImage = styled.img`
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+`;
+
+const Caption = styled.figcaption<{ $theme: any }>`
+  margin-top: 8px;
+  font-size: 14px;
+  color: ${({ $theme }) => $theme.colors.textSecondary};
+  font-style: italic;
+`;
+
 interface ContentBlock {
-  type: 'title' | 'paragraph' | 'list';
+  type: 'title' | 'paragraph' | 'list' | 'image';
   text?: string;
   items?: string[];
+  src?: string;
+  alt?: string;
+  caption?: string;
 }
 
 interface ContentRendererProps {
@@ -57,6 +79,16 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
                 <ListItem key={i} $theme={theme}>{item}</ListItem>
               ))}
             </List>
+          );
+        }
+        if (block.type === 'image' && block.src) {
+          return (
+            <ImageContainer key={index} $theme={theme}>
+              <StyledImage src={block.src} alt={block.alt || ''} />
+              {block.caption && (
+                <Caption $theme={theme}>{block.caption}</Caption>
+              )}
+            </ImageContainer>
           );
         }
         return <Paragraph key={index} $theme={theme}>{block.text}</Paragraph>;
