@@ -20,9 +20,21 @@ const Paragraph = styled.p<{ $theme: any }>`
   font-size: 16px;
 `;
 
+const List = styled.ul<{ $theme: any }>`
+  margin-bottom: 12px;
+  padding-left: 20px;
+  color: ${({ $theme }) => $theme.colors.text};
+  font-size: 16px;
+`;
+
+const ListItem = styled.li<{ $theme: any }>`
+  margin-bottom: 6px;
+`;
+
 interface ContentBlock {
-  type: 'title' | 'paragraph';
-  text: string;
+  type: 'title' | 'paragraph' | 'list';
+  text?: string;
+  items?: string[];
 }
 
 interface ContentRendererProps {
@@ -37,6 +49,15 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
       {content.map((block, index) => {
         if (block.type === 'title') {
           return <Title key={index} $theme={theme}>{block.text}</Title>;
+        }
+        if (block.type === 'list' && block.items) {
+          return (
+            <List key={index} $theme={theme}>
+              {block.items.map((item, i) => (
+                <ListItem key={i} $theme={theme}>{item}</ListItem>
+              ))}
+            </List>
+          );
         }
         return <Paragraph key={index} $theme={theme}>{block.text}</Paragraph>;
       })}

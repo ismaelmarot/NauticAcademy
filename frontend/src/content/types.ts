@@ -1,6 +1,7 @@
 export interface ContentBlock {
-  type: 'title' | 'paragraph';
-  text: string;
+  type: 'title' | 'paragraph' | 'list';
+  text?: string;
+  items?: string[];
 }
 
 export interface Topic {

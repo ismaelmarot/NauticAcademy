@@ -149,23 +149,7 @@ const Home: React.FC = () => {
   };
 
   const getVisibleChapters = () => {
-    const visibleChapters: any[] = [];
-    let foundIncomplete = false;
-
-    for (const chapter of chapters) {
-      const progress = getChapterProgress(chapter);
-      const isCompleted = progress.completed === progress.totalTopics && progress.totalTopics > 0;
-
-      if (!foundIncomplete || isCompleted) {
-        visibleChapters.push(chapter);
-      }
-
-      if (!isCompleted && !foundIncomplete) {
-        foundIncomplete = true;
-      }
-    }
-
-    return visibleChapters;
+    return chapters;
   };
 
   if (loading) {
@@ -202,9 +186,7 @@ const Home: React.FC = () => {
             return sectionTopics === sec.topics.length && sec.topics.length > 0;
           }).length;
 
-          const isLocked = chapters.indexOf(chapter) > 0 && 
-            getChapterProgress(chapters[chapters.indexOf(chapter) - 1]).completed < 
-            getChapterProgress(chapters[chapters.indexOf(chapter) - 1]).totalTopics;
+          const isLocked = false;
 
           return (
             <ChapterCard
