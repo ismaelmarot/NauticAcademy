@@ -11,7 +11,7 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Las cartas náuticas son representaciones planas y detalladas de la superficie terrestre y marina, cuidadosamente elaboradas para ofrecer al navegante información confiable sobre profundidades, costas, peligros y ayudas a la navegación, así como referencias de orientación mediante meridianos, paralelos y rosas de los vientos.' },
     { type: 'paragraph', text: 'Su correcta interpretación depende del conocimiento de sus elementos y proyecciones, ya que de ello depende la precisión en la navegación y el trazado de rumbos.' },
     { type: 'paragraph', text: 'Las cartas náuticas son la herramienta fundamental del navegante para planificar y ejecutar la navegación. Sobre ellas se trazan los rumbos, se miden las distancias, se marcan las posiciones y se registran todos los datos relevantes para la seguridad de la travesía.' },
-    { type: 'title', text: 'Información que Proporcionan las Cartas Náuticas' },
+    { type: 'subtitle', text: 'Información que Proporcionan las Cartas Náuticas' },
     { type: 'paragraph', text: 'Una carta náutica contiene una gran cantidad de información esencial para la navegación segura:' },
     { type: 'list', items: [
       'Costas y líneas de costa con sus detalles topográficos',
@@ -25,10 +25,10 @@ export const topic: Topic = {
       'Limitaciones y zonas restringidas',
       'Datos sobre la declinación magnética'
     ]},
-    { type: 'title', text: 'Proyección de Mercator' },
+    { type: 'subtitle', text: 'Proyección de Mercator' },
     { type: 'paragraph', text: 'La proyección más utilizada en cartografía náutica es la proyección de Mercator. Esta proyección cilíndrica tiene la propiedad fundamental de conservar los ángulos, lo que significa que los rumbos se representan como líneas rectas sobre la carta.' },
     { type: 'paragraph', text: 'En la proyección de Mercator, las deformaciones se incrementan progresivamente hacia los polos, de modo que tanto las latitudes como las longitudes se representan con escalas cada vez mayores. Esta característica, aunque distorsiona las áreas, permite conservar los ángulos y los rumbos, lo que hace de la proyección de Mercator la más útil para la navegación.' },
-    { type: 'title', text: 'Elementos de una Carta Náutica' },
+    { type: 'subtitle', text: 'Elementos de una Carta Náutica' },
     { type: 'paragraph', text: 'Para poder interpretar correctamente una carta náutica, es necesario conocer sus elementos principales:' },
     { type: 'list', items: [
       'Título: indica la zona geográfica representada',
@@ -40,10 +40,10 @@ export const topic: Topic = {
       'Compás de demoras: rosa graduada en grados para medición de rumbos'
     ]},
     { type: 'paragraph', text: 'En las cartas basadas en la proyección de Mercator, la escala de latitudes se representa sobre los márgenes laterales —derecho e izquierdo— de la carta, mientras que la escala de longitudes se ubica en los márgenes superior e inferior.' },
-    { type: 'title', text: 'Escala de la Carta' },
+    { type: 'subtitle', text: 'Escala de la Carta' },
     { type: 'paragraph', text: 'La escala de una carta náutica indica la relación entre las distancias medidas sobre la carta y las distancias reales en la superficie terrestre. Se expresa como una fracción, por ejemplo 1:50.000, lo que significa que una unidad de medida en la carta equivale a 50.000 unidades en la realidad.' },
     { type: 'paragraph', text: 'Las cartas de mayor escala (denominador más pequeño) muestran mayor detalle pero cubren una zona más reducida, mientras que las de menor escala cubren zonas más extensas con menos detalle.' },
-    { type: 'title', text: 'Clasificación de las Cartas Náuticas' },
+    { type: 'subtitle', text: 'Clasificación de las Cartas Náuticas' },
     { type: 'paragraph', text: 'Las cartas náuticas se clasifican según su escala y el propósito para el que fueron diseñadas:' },
     { type: 'list', items: [
       'Cartas generales: cubren grandes extensiones, utilizadas para navegación oceánica',

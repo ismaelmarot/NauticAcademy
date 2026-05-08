@@ -1,5 +1,5 @@
 export interface ContentBlock {
-  type: 'title' | 'paragraph' | 'list' | 'image';
+  type: 'title' | 'subtitle' | 'paragraph' | 'list' | 'image';
   text?: string;
   items?: string[];
   src?: string;

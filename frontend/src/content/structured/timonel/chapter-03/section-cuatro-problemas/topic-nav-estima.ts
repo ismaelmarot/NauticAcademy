@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Métodos de Posicionamiento en Navegación por Estima' },
     { type: 'paragraph', text: 'La navegación por estima (dead reckoning) es el método de posicionamiento que consiste en calcular la posición del buque a partir de una posición conocida, aplicando el rumbo, la velocidad y el tiempo transcurrido. Es el método de navegación más antiguo y sigue siendo fundamental como respaldo cuando no hay referencias externas disponibles.' },
-    { type: 'title', text: 'Proyección de la posición futura' },
+    { type: 'subtitle', text: 'Proyección de la posición futura' },
     { type: 'paragraph', text: 'La navegación por estima permite predecir dónde estará el buque en un momento futuro. Esto es esencial para la planificación de la navegación y para anticipar peligros:' },
     { type: 'list', items: [
       'Se parte de una posición conocida (fix o posición inicial)',
@@ -20,7 +20,7 @@ export const topic: Topic = {
       'El punto final es la posición estimada (EP) en el momento futuro',
       'Se marcan los puntos intermedios cada hora o cada cambio de rumbo'
     ]},
-    { type: 'title', text: 'Cálculo de la posición actual por estima' },
+    { type: 'subtitle', text: 'Cálculo de la posición actual por estima' },
     { type: 'paragraph', text: 'Cuando no se puede fijar la posición por observación, la estima permite saber dónde se encuentra el buque aproximadamente:' },
     { type: 'list', items: [
       'Se registra cada cambio de rumbo y velocidad en la bitácora',
@@ -30,7 +30,7 @@ export const topic: Topic = {
       'La posición actual es el último punto de la serie de estimas',
       'Es importante registrar también los efectos conocidos de corriente y viento'
     ]},
-    { type: 'title', text: 'Estimación gráfica desde un punto conocido' },
+    { type: 'subtitle', text: 'Estimación gráfica desde un punto conocido' },
     { type: 'paragraph', text: 'El procedimiento gráfico para estimar la posición desde un punto conocido es el siguiente:' },
     { type: 'list', items: [
       'Partir de la última posición fija conocida (marcada con un círculo)',
@@ -41,7 +41,7 @@ export const topic: Topic = {
       'Repetir para cada tramo de navegación',
       'Si se conoce la corriente, se traza el vector de corriente desde el punto de estima para obtener la posición estimada corregida (EP)'
     ]},
-    { type: 'title', text: 'Factores que afectan la precisión de la estima' },
+    { type: 'subtitle', text: 'Factores que afectan la precisión de la estima' },
     { type: 'paragraph', text: 'La navegación por estima acumula errores con el tiempo. Los principales factores que afectan su precisión son:' },
     { type: 'list', items: [
       'Corrientes marinas no consideradas',
@@ -51,7 +51,7 @@ export const topic: Topic = {
       'Tiempo transcurrido sin fijación de posición',
       'Por esto, es esencial fijar la posición por observación periódicamente'
     ]},
-    { type: 'title', text: 'Abreviaturas de posición' },
+    { type: 'subtitle', text: 'Abreviaturas de posición' },
     { type: 'list', items: [
       'Fix: posición fija por observación (círculo ●)',
       'DR: dead reckoning — posición por estima pura (triángulo △)',

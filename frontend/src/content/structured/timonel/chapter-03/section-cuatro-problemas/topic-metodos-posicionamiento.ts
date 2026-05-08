@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Métodos de Posicionamiento Asociados al Tipo de Navegación' },
     { type: 'paragraph', text: 'A lo largo de la historia de la navegación, se han desarrollado diferentes métodos para determinar la posición del buque en el mar. Cada método está asociado a un tipo de navegación, y el navegante moderno debe conocerlos todos para poder elegir el más adecuado según las circunstancias.' },
-    { type: 'title', text: 'Navegación Costera' },
+    { type: 'subtitle', text: 'Navegación Costera' },
     { type: 'list', items: [
       'Se realiza a la vista de la costa o con referencias costeras',
       'Posicionamiento por demoras, marcaciones, enfilaciones y sondajes',
@@ -17,7 +17,7 @@ export const topic: Topic = {
       'Precisión alta cuando hay referencias visibles',
       'Limitada a zonas cercanas a la costa'
     ]},
-    { type: 'title', text: 'Navegación por Estima' },
+    { type: 'subtitle', text: 'Navegación por Estima' },
     { type: 'list', items: [
       'Se basa en proyectar la posición futura a partir de una posición conocida',
       'Utiliza rumbo, velocidad y tiempo transcurrido',
@@ -25,7 +25,7 @@ export const topic: Topic = {
       'El error se acumula con el tiempo; requiere fijación periódica',
       'Es fundamental como método de respaldo y en travesías oceánicas'
     ]},
-    { type: 'title', text: 'Navegación Radioeléctrica' },
+    { type: 'subtitle', text: 'Navegación Radioeléctrica' },
     { type: 'list', items: [
       'Utiliza señales de radio de estaciones terrestres',
       'Sistemas históricos: LORAN, Decca, Omega (mayormente obsoletos)',
@@ -33,7 +33,7 @@ export const topic: Topic = {
       'Fue fundamental antes de la era del GPS',
       'Algunos sistemas aún operan como respaldo'
     ]},
-    { type: 'title', text: 'Navegación Astronómica' },
+    { type: 'subtitle', text: 'Navegación Astronómica' },
     { type: 'list', items: [
       'Determina la posición mediante la observación de astros (Sol, Luna, planetas, estrellas)',
       'Utiliza el sextante para medir alturas y un cronómetro para la hora',
@@ -41,7 +41,7 @@ export const topic: Topic = {
       'Es el método de posicionamiento más antiguo y el último recurso',
       'Todo navegante debería mantener competencias básicas en navegación astronómica'
     ]},
-    { type: 'title', text: 'Navegación Satelital (GPS)' },
+    { type: 'subtitle', text: 'Navegación Satelital (GPS)' },
     { type: 'list', items: [
       'Utiliza señales de satélites para determinar la posición con gran precisión',
       'Sistemas: GPS (EE.UU.), GLONASS (Rusia), Galileo (UE), BeiDou (China)',

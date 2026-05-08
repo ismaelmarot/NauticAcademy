@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Cálculo y Estima de Altura y Momento de la Marea' },
     { type: 'paragraph', text: 'Las mareas son uno de los fenómenos más importantes para la navegación, ya que determinan la profundidad real del agua en cualquier momento y lugar. Conocer cómo calcular la altura de la marea y el momento en que se produce es esencial para la seguridad de la navegación, especialmente en puertos, canales y zonas de bajo fondo.' },
-    { type: 'title', text: '¿Qué son las mareas?' },
+    { type: 'subtitle', text: '¿Qué son las mareas?' },
     { type: 'paragraph', text: 'Las mareas son movimientos periódicos de ascenso y descenso del nivel del mar, provocados principalmente por las fuerzas gravitacionales que ejercen la Luna y el Sol sobre la Tierra. Este movimiento se produce generalmente dos veces al día (mareas semidiurnas) en la mayoría de las costas.' },
     { type: 'list', items: [
       'Causa principal: atracción gravitacional de la Luna (aproximadamente 2/3 del efecto)',
@@ -17,7 +17,7 @@ export const topic: Topic = {
       'La fuerza centrífuga del sistema Tierra-Luna también contribuye',
       'Las mareas se manifiestan como oscilaciones del nivel del mar con períodos de aproximadamente 12 h 25 min (media luna)'
     ]},
-    { type: 'title', text: 'Mareas de Sicigia y de Cuadratura' },
+    { type: 'subtitle', text: 'Mareas de Sicigia y de Cuadratura' },
     { type: 'paragraph', text: 'Según la posición relativa del Sol, la Luna y la Tierra, las mareas tienen diferente amplitud:' },
     { type: 'list', items: [
       'Mareas de sicigia (vivas o de aguas vivas): ocurren en luna nueva y luna llena, cuando el Sol, la Luna y la Tierra están alineados. Las fuerzas se suman y la amplitud de la marea es máxima.',
@@ -25,7 +25,7 @@ export const topic: Topic = {
       'La amplitud es la diferencia de altura entre la pleamar y la bajamar',
       'El coeficiente de marea indica la fuerza de la marea: alto en sicigia, bajo en cuadratura'
     ]},
-    { type: 'title', text: 'Terminología de las mareas' },
+    { type: 'subtitle', text: 'Terminología de las mareas' },
     { type: 'list', items: [
       'Pleamar (High Water, HW): punto más alto alcanzado por la marea en un ciclo',
       'Bajamar (Low Water, LW): punto más bajo alcanzado por la marea en un ciclo',
@@ -35,7 +35,7 @@ export const topic: Topic = {
       'Amplitud de marea: diferencia de altura entre pleamar y bajamar',
       'Nivel medio del mar: altura promedio del mar en un período largo'
     ]},
-    { type: 'title', text: 'Plano de Reducción de Sondaajes (PRS)' },
+    { type: 'subtitle', text: 'Plano de Reducción de Sondaajes (PRS)' },
     { type: 'paragraph', text: 'Las profundidades indicadas en las cartas náuticas se refieren a un nivel de referencia llamado Plano de Reducción de Sondaajes (PRS), también conocido como datum de sondaajes. Este nivel se fija por debajo del nivel medio del mar, de modo que en la gran mayoría de los casos la profundidad real sea igual o mayor que la indicada en la carta.' },
     { type: 'list', items: [
       'El PRS corresponde aproximadamente a la bajamar más baja que se puede esperar en condiciones meteorológicas normales',
@@ -43,7 +43,7 @@ export const topic: Topic = {
       'La altura de la marea se mide desde el PRS hacia arriba',
       'Profundidad real = Sonda de carta + Altura de marea'
     ]},
-    { type: 'title', text: 'Constantes armónicas' },
+    { type: 'subtitle', text: 'Constantes armónicas' },
     { type: 'paragraph', text: 'Las constantes armónicas son valores numéricos que caracterizan el régimen de mareas de un puerto o lugar determinado. Se obtienen mediante análisis matemático de series de observaciones de mareas y permiten predecir las alturas y horas de pleamares y bajamares.' },
     { type: 'list', items: [
       'Cada puerto tiene sus propias constantes armónicas',
@@ -51,7 +51,7 @@ export const topic: Topic = {
       'Permiten calcular la altura de marea para cualquier fecha y hora',
       'Los puertos principales tienen tablas completas; los puertos secundarios se calculan por diferencias respecto al puerto principal'
     ]},
-    { type: 'title', text: 'Cómo calcular la altura de marea usando las tablas' },
+    { type: 'subtitle', text: 'Cómo calcular la altura de marea usando las tablas' },
     { type: 'paragraph', text: 'El procedimiento general para calcular la altura de marea en un momento dado es el siguiente:' },
     { type: 'list', items: [
       'Consultar la tabla de mareas del puerto para el día deseado',
@@ -61,7 +61,7 @@ export const topic: Topic = {
       'Usar la regla de los doceavos o la tabla de correcciones para interpolar la altura en el momento deseado',
       'La regla de los doceavos: en cada hora del ciclo de 6 horas, la marea sube o baja 1/12, 2/12, 3/12, 3/12, 2/12, 1/12 de la amplitud'
     ]},
-    { type: 'title', text: 'La regla de los doceavos' },
+    { type: 'subtitle', text: 'La regla de los doceavos' },
     { type: 'paragraph', text: 'La regla de los doceavos es un método práctico para estimar la altura de la marea en un momento intermedio entre pleamar y bajamar, asumiendo un ciclo de aproximadamente 6 horas:' },
     { type: 'list', items: [
       'Hora 1: sube/baja 1/12 de la amplitud',

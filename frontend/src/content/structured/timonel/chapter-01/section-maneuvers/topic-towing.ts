@@ -12,17 +12,17 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Situaciones usuales: Ayuda a embarcaciones con averías o sin combustible, remolque de veleros de competición desde sus amarras hasta zona de regata.' },
     { type: 'paragraph', text: 'PRECAUCIÓN: Si le piden remolque, tienen una emergencia. Ayude sin comprometer su propia seguridad y la de su tripulación.' },
 
-    { type: 'title', text: 'Lanzamiento y Recepción del Cabo' },
+    { type: 'subtitle', text: 'Lanzamiento y Recepción del Cabo' },
     { type: 'paragraph', text: 'Cabo de remolque: Poliester retorcido o trenzado, grosor suficiente. Pata de gallo en remolcador (forma de "Y" desde cornamusas de popa hacia un punto central).' },
     { type: 'paragraph', text: 'En remolcado: firme a cornamusas de proa. Puede usar pata de gallo menor para distribuir fuerza.' },
     { type: 'paragraph', text: 'Lanzamiento: Aclarar cabo, adujas amplias, lanzar con movimiento controlado. Longitud mínima: 1 eslora en aguas tranquilas, más en marejada (para que ambos barcos estén sobre el mismo seno de la ola).' },
     { type: 'paragraph', text: 'Cabo guía: Si no pueden acercarse, lanzar cabo fino con objeto pesado o flotante para luego traer el cabo de remolque.' },
 
-    { type: 'title', text: 'Remolque por Arrastre' },
+    { type: 'subtitle', text: 'Remolque por Arrastre' },
     { type: 'paragraph', text: 'Remolcado: Informar cuando está listo. Timón funcional = mantener alineación. Velas bajas, botavara a crujía. Atender comandos del remolcador. NO filar cabo durante navegación.' },
     { type: 'paragraph', text: 'Remolcador: Aproximarse paralelo, velocidad lenta y constante. No aceleraciones violentas ni reducciones repentinas (tirones). Evitar que cabo se hunda y vaya a la hélice. Regular extensión según oleaje (ambos barcos sobre mismo seno de ola).' },
 
-    { type: 'title', text: 'Remolque Abarloado' },
+    { type: 'subtitle', text: 'Remolque Abarloado' },
     { type: 'paragraph', text: 'Barcos al costado, uno al lado del otro. Exclusivo para aguas calmas y protegidas (puertos, marinas). Mínimo 3 cabos: largo de proa, spring de proa (desde remolcador), través de popa (ajustable).' },
     { type: 'paragraph', text: 'Remolcador: Acercarse a la aleta del remolcado. En canales, abarloarse a babor del remolcado para ver mejor tráfico (navegar por estribor). Colocar defensas. Lanzar largo de proa, luego través de popa. Ajustar ángulo: proa remolcado inclinada hacia crujía del remolcador.' },
     { type: 'paragraph', text: 'Remolcado: Defensas colocadas, estático con velas bajas. Seguir instrucciones del remolcador durante toda la navegación.' }

@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Cálculos de Distancia, Tiempo y Velocidad' },
     { type: 'paragraph', text: 'Tres magnitudes fundamentales gobiernan toda la navegación: la distancia recorrida, el tiempo empleado y la velocidad del buque. Estas tres variables están relacionadas por tres ecuaciones simples que todo navegante debe dominar y aplicar con fluidez.' },
-    { type: 'title', text: 'Las tres ecuaciones fundamentales' },
+    { type: 'subtitle', text: 'Las tres ecuaciones fundamentales' },
     { type: 'paragraph', text: 'La relación entre distancia (D), velocidad (V) y tiempo (T) se expresa mediante tres ecuaciones básicas. En navegación, las unidades son: distancia en millas marinas (M), velocidad en nudos (kn) y tiempo en horas (h).' },
     { type: 'list', items: [
       'D = V × T — Distancia = Velocidad × Tiempo',
@@ -18,7 +18,7 @@ export const topic: Topic = {
       'Regla mnemotécnica: el triángulo D-V-T, donde D arriba, V y T abajo',
       'Tapando la incógnita en el triángulo, se obtiene la fórmula correspondiente'
     ]},
-    { type: 'title', text: 'Ejemplo: Cálculo de distancia (D = V × T)' },
+    { type: 'subtitle', text: 'Ejemplo: Cálculo de distancia (D = V × T)' },
     { type: 'paragraph', text: 'Si un buque navega a 12 nudos durante 2,5 horas, ¿qué distancia recorre?' },
     { type: 'list', items: [
       'D = V × T',
@@ -26,7 +26,7 @@ export const topic: Topic = {
       'D = 30 millas marinas',
       'El buque recorre 30 millas en 2 horas y 30 minutos'
     ]},
-    { type: 'title', text: 'Ejemplo: Cálculo de tiempo (T = D / V)' },
+    { type: 'subtitle', text: 'Ejemplo: Cálculo de tiempo (T = D / V)' },
     { type: 'paragraph', text: 'Si un buque debe recorrer 45 millas a una velocidad de 15 nudos, ¿cuánto tiempo tardará?' },
     { type: 'list', items: [
       'T = D / V',
@@ -35,7 +35,7 @@ export const topic: Topic = {
       'Si sale a las 08:00, llegará a las 11:00'
     ]},
     { type: 'paragraph', text: 'Cuando el resultado de tiempo tiene decimales, se convierten a minutos multiplicando la parte decimal por 60. Por ejemplo: 2,75 h = 2 h + (0,75 × 60) = 2 h 45 min.' },
-    { type: 'title', text: 'Ejemplo: Cálculo de velocidad (V = D / T)' },
+    { type: 'subtitle', text: 'Ejemplo: Cálculo de velocidad (V = D / T)' },
     { type: 'paragraph', text: 'Si un buque recorrió 24 millas en 1 hora y 36 minutos, ¿cuál fue su velocidad?' },
     { type: 'list', items: [
       'Primero convertir el tiempo a horas decimales: 1 h 36 min = 1 + (36/60) = 1,6 h',
@@ -43,7 +43,7 @@ export const topic: Topic = {
       'V = 24 M / 1,6 h',
       'V = 15 nudos'
     ]},
-    { type: 'title', text: 'Relación entre millas, nudos y horas' },
+    { type: 'subtitle', text: 'Relación entre millas, nudos y horas' },
     { type: 'paragraph', text: 'Es fundamental recordar que estas tres unidades están íntimamente ligadas:' },
     { type: 'list', items: [
       '1 nudo = 1 milla marina por hora',

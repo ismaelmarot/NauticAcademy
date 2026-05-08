@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Navegación Electrónica: GPS, AIS, Ecosonda y RADAR' },
     { type: 'paragraph', text: 'La navegación moderna se apoya en un conjunto de sistemas electrónicos que proporcionan posicionamiento, información del tráfico, profundidad y detección de obstáculos. Conocer el funcionamiento y las limitaciones de cada uno es esencial para una navegación segura y eficiente.' },
-    { type: 'title', text: 'Sistemas GNSS (Global Navigation Satellite Systems)' },
+    { type: 'subtitle', text: 'Sistemas GNSS (Global Navigation Satellite Systems)' },
     { type: 'paragraph', text: 'Los sistemas GNSS son constelaciones de satélites que permiten determinar la posición en cualquier punto del globo. Existen varios sistemas operativos:' },
     { type: 'list', items: [
       'NAVSTAR GPS (EE.UU.): el más utilizado, con más de 30 satélites operativos',
@@ -19,7 +19,7 @@ export const topic: Topic = {
       'Los receptores modernos suelen ser multiconstelación, usando señales de varios sistemas simultáneamente',
       'Mayor número de satélites visibles = mayor precisión y redundancia'
     ]},
-    { type: 'title', text: 'GPS: Trilateración y funcionamiento' },
+    { type: 'subtitle', text: 'GPS: Trilateración y funcionamiento' },
     { type: 'paragraph', text: 'El GPS determina la posición mediante un proceso llamado trilateración, que consiste en medir la distancia a varios satélites:' },
     { type: 'list', items: [
       'Cada satélite transmite su posición exacta y la hora de transmisión',
@@ -30,7 +30,7 @@ export const topic: Topic = {
       'Con corrección diferencial (DGPS) la precisión puede ser inferior a 1 metro',
       'El GPS también proporciona velocidad (SOG) y rumbo (COG) sobre el fondo'
     ]},
-    { type: 'title', text: 'Waypoints, Rutas y Tracks' },
+    { type: 'subtitle', text: 'Waypoints, Rutas y Tracks' },
     { type: 'paragraph', text: 'El GPS permite planificar y seguir rutas de navegación mediante:' },
     { type: 'list', items: [
       'Waypoints (puntos de ruta): coordenadas almacenadas de puntos de interés',
@@ -41,7 +41,7 @@ export const topic: Topic = {
       'ETA (tiempo estimado de llegada) al siguiente waypoint y destino final',
       'Es esencial verificar que los waypoints introducidos sean correctos antes de navegar'
     ]},
-    { type: 'title', text: 'Cartas electrónicas: Ráster vs Vector' },
+    { type: 'subtitle', text: 'Cartas electrónicas: Ráster vs Vector' },
     { type: 'paragraph', text: 'Las cartas náuticas electrónicas se presentan en dos formatos principales:' },
     { type: 'list', items: [
       'Cartas Ráster (RNC/ARCS): son imágenes digitales de las cartas de papel tradicionales',
@@ -52,7 +52,7 @@ export const topic: Topic = {
       'Desventajas: si falta un dato en la base, no se muestra',
       'ECDIS (Electronic Chart Display and Information System): sistema oficial reconocido por la OMI'
     ]},
-    { type: 'title', text: 'AIS (Automatic Identification System)' },
+    { type: 'subtitle', text: 'AIS (Automatic Identification System)' },
     { type: 'paragraph', text: 'El AIS es un sistema de identificación automática que permite a los buques intercambiar información de navegación entre sí y con estaciones costeras:' },
     { type: 'list', items: [
       'Transmite: MMSI, nombre del buque, posición, rumbo, velocidad, tipo de buque, dimensiones',
@@ -64,7 +64,7 @@ export const topic: Topic = {
       'Alarmas de CPA/TCPA: alertan cuando otro buque pasa dentro de un umbral de seguridad configurado',
       'El AIS complementa pero NO reemplaza al radar ni a la vigilancia visual'
     ]},
-    { type: 'title', text: 'Ecosonda (Echo Sounder)' },
+    { type: 'subtitle', text: 'Ecosonda (Echo Sounder)' },
     { type: 'paragraph', text: 'La ecosonda mide la profundidad del agua bajo la quilla del buque mediante pulsos de sonido:' },
     { type: 'list', items: [
       'Emite un pulso de sonido (ultrasonido) hacia el fondo',
@@ -76,7 +76,7 @@ export const topic: Topic = {
       'Se debe considerar el calado del buque para obtener la profundidad real desde la superficie',
       'Las ecosondas modernas muestran el perfil del fondo (batimetría)'
     ]},
-    { type: 'title', text: 'RADAR (Radio Detection and Ranging)' },
+    { type: 'subtitle', text: 'RADAR (Radio Detection and Ranging)' },
     { type: 'paragraph', text: 'El radar es un sistema de detección por radio que permite visualizar objetos a distancia, incluso en condiciones de poca visibilidad:' },
     { type: 'list', items: [
       'Funciona emitiendo pulsos de radiofrecuencia y recibiendo los ecos reflejados por los objetos',

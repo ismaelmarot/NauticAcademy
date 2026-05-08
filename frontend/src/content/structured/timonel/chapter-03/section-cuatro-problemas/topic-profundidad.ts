@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Profundidad, Calado y Margen de Seguridad' },
     { type: 'paragraph', text: 'Uno de los problemas fundamentales de la navegación es saber si hay suficiente agua debajo de la quilla del buque para pasar con seguridad. Esto requiere comprender la relación entre la profundidad indicada en la carta, la altura de la marea en el momento de la navegación y el calado del buque.' },
-    { type: 'title', text: 'El problema de la profundidad' },
+    { type: 'subtitle', text: 'El problema de la profundidad' },
     { type: 'paragraph', text: 'Las profundidades indicadas en las cartas náuticas no representan la profundidad real del agua en todo momento. Estas sondas están referidas al Plano de Reducción de Sondaajes (PRS), que corresponde a un nivel bajo de referencia. La profundidad real del agua varía con la marea, y el navegante debe calcular si la profundidad disponible es suficiente para el calado de su embarcación.' },
     { type: 'list', items: [
       'La sonda de carta indica la profundidad desde el PRS hasta el fondo',
@@ -17,7 +17,7 @@ export const topic: Topic = {
       'El calado del buque es la distancia vertical desde la línea de flotación hasta el punto más bajo de la quilla',
       'El margen de seguridad (resguardo) es la profundidad adicional que se deja entre la quilla y el fondo'
     ]},
-    { type: 'title', text: 'La fórmula fundamental: P = PRS + Hm' },
+    { type: 'subtitle', text: 'La fórmula fundamental: P = PRS + Hm' },
     { type: 'paragraph', text: 'La profundidad real del agua (P) en un momento dado se calcula sumando la sonda de carta (el valor indicado en la carta, referido al PRS) más la altura de la marea (Hm) en ese momento:' },
     { type: 'list', items: [
       'P = PRS + Hm',
@@ -27,7 +27,7 @@ export const topic: Topic = {
       'Si Hm es positiva (marea alta): la profundidad real es mayor que la de carta',
       'Si Hm es negativa (marea muy baja): la profundidad real puede ser menor que la de carta'
     ]},
-    { type: 'title', text: 'El calado del buque' },
+    { type: 'subtitle', text: 'El calado del buque' },
     { type: 'paragraph', text: 'El calado es la distancia vertical entre la línea de flotación y el punto más sumergido del casco (generalmente la quilla). Es un dato fundamental que todo navegante debe conocer de su embarcación:' },
     { type: 'list', items: [
       'Calado máximo: el mayor calado del buque, generalmente en la popa',
@@ -36,7 +36,7 @@ export const topic: Topic = {
       'Se lee en las marcas de calado (escalas de calado) pintadas en el casco a proa y popa',
       'En las cartas de navegación y documentos del buque figura el calado máximo'
     ]},
-    { type: 'title', text: 'Margen de seguridad (under-keel clearance)' },
+    { type: 'subtitle', text: 'Margen de seguridad (under-keel clearance)' },
     { type: 'paragraph', text: 'El margen de seguridad o resguardo bajo la quilla es la distancia vertical entre el punto más bajo de la quilla y el fondo marino. Es el "colchón" de agua que separa al buque del fondo.' },
     { type: 'list', items: [
       'Margen de seguridad = Profundidad real − Calado del buque',
@@ -46,7 +46,7 @@ export const topic: Topic = {
       'En zonas de oleaje, se debe considerar el hundimiento del buque en el seno de la ola (squat)',
       'El "squat" es el hundimiento adicional del buque por efecto de la velocidad en aguas poco profundas'
     ]},
-    { type: 'title', text: 'Sondajes en la carta náutica' },
+    { type: 'subtitle', text: 'Sondajes en la carta náutica' },
     { type: 'paragraph', text: 'Las cartas náuticas representan las profundidades mediante números (sondas) y curvas isobáticas (isóbatas). Interpretar correctamente esta información es esencial para la navegación segura:' },
     { type: 'list', items: [
       'Los números indican la profundidad en metros (cartas modernas) o en brazas/pies (cartas antiguas)',
@@ -56,7 +56,7 @@ export const topic: Topic = {
       'Las zonas de sonda desconocida o no explorada se indican claramente',
       'Hay que verificar la unidad de las sondas en la leyenda de la carta'
     ]},
-    { type: 'title', text: 'Cómo determinar si hay suficiente agua para pasar' },
+    { type: 'subtitle', text: 'Cómo determinar si hay suficiente agua para pasar' },
     { type: 'paragraph', text: 'El procedimiento para verificar si hay suficiente profundidad para navegar por una zona es el siguiente:' },
     { type: 'list', items: [
       'Paso 1: Identificar la sonda mínima en la ruta prevista (de la carta náutica)',
@@ -68,7 +68,7 @@ export const topic: Topic = {
       'Si el margen es insuficiente, esperar a marea más alta o buscar una ruta alternativa',
       'Considerar también el efecto del oleaje y el squat a velocidad'
     ]},
-    { type: 'title', text: 'Ejemplo práctico' },
+    { type: 'subtitle', text: 'Ejemplo práctico' },
     { type: 'paragraph', text: 'Un buque con calado de 2,5 metros quiere pasar por un canal donde la carta indica una sonda mínima de 1,8 metros. En el momento del paso, la altura de marea es de 2,0 metros.' },
     { type: 'list', items: [
       'Profundidad real: P = 1,8 + 2,0 = 3,8 metros',

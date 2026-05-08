@@ -11,13 +11,13 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Ponerse al pairo es una técnica clásica que consiste en equilibrar velas y timón para que el barco quede prácticamente detenido, con mínima arrancada y adrizado, aunque siga derivando suavemente con la corriente.' },
     { type: 'paragraph', text: 'Los barcos no tienen frenos. En veleros se puede frenar desenando las velas (detienen en algunos metros) o poniéndolos al pairo (detención casi instantánea).' },
 
-    { type: 'title', text: 'Poner al Pairo' },
+    { type: 'subtitle', text: 'Poner al Pairo' },
     { type: 'paragraph', text: 'Se logra dejando derivar el barco hasta que la vela de proa quede acuartelada, orientando luego la vela mayor y el timón para compensar la fuerza derivante, dejando el velero en equilibrio.' },
     { type: 'paragraph', text: 'La vela de proa acuartelada hace que la proa tienda a derivar hacia sotavento, por eso la vela mayor y timón deben compensar esa fuerza manteniendo el barco equilibrado.' },
     { type: 'paragraph', text: 'Para salir del pairo: liberar la vela de proa de su acuartelamiento, dejar caer la proa a sotavento y acompañar con vela mayor y timón.' },
     { type: 'paragraph', text: 'Vela acuartelada: portando, hinchada, pero tomada sobre banda de barlovento sin dejarla pasar a sotavento.' },
 
-    { type: 'title', text: 'Pairo vs Enfachar' },
+    { type: 'subtitle', text: 'Pairo vs Enfachar' },
     { type: 'paragraph', text: 'Pairo: Frena el barco dinámicamente manteniendo control. El timonel puede soltar el timón sin riesgo, el barco permanecerá frenado todo el tiempo necesario.' },
     { type: 'paragraph', text: 'Enfachar: Proa al viento, desventando. Ninguna vela trabaja, el barco se detiene pero requiere que el timonel mantenga la proa opuesta al viento. Se pierde control, el viento hará caer la proa hacia una banda.' },
     { type: 'paragraph', text: 'Útil para: Maniobra de rescate de "hombre al agua" como último paso para detener el barco cerca del náufrago.' }

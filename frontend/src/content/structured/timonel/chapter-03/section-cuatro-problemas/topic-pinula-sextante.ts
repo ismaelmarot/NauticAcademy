@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'La Pínula, el Taxímetro y el Sextante' },
     { type: 'paragraph', text: 'La navegación de precisión requiere instrumentos para tomar demoras, marcaciones y alturas de astros. La pínula (compás de marcaciones), el taxímetro (alidada de demoras) y el sextante son tres instrumentos fundamentales que todo navegante debe conocer y saber utilizar correctamente.' },
-    { type: 'title', text: 'La Pínula (Compás de Marcaciones)' },
+    { type: 'subtitle', text: 'La Pínula (Compás de Marcaciones)' },
     { type: 'paragraph', text: 'La pínula, también conocida como compás de marcaciones o hand bearing compass, es un instrumento portátil utilizado para tomar demoras y marcaciones visuales a objetos costeros, faros, boyas u otros buques.' },
     { type: 'list', items: [
       'Es una brújula portátil con un dispositivo de puntería (visores o prisma)',
@@ -21,7 +21,7 @@ export const topic: Topic = {
       'Se debe tomar al menos tres lecturas y promediar para mayor precisión'
     ]},
     { type: 'paragraph', text: 'La pínula es especialmente útil para obtener líneas de posición por demoras, verificar la posición del buque y tomar marcaciones a otros buques para evaluar riesgo de colisión.' },
-    { type: 'title', text: 'El Taxímetro (Alidada de Demoras)' },
+    { type: 'subtitle', text: 'El Taxímetro (Alidada de Demoras)' },
     { type: 'paragraph', text: 'El taxímetro o alidada de demoras es un dispositivo instalado en la embarcación que permite tomar demoras desde la proa del buque. A diferencia de la pínula, que es portátil, el taxímetro está fijo y se utiliza girando la alidada hacia el objeto observado.' },
     { type: 'list', items: [
       'Consiste en un anillo graduado montado alrededor del compás o sobre un soporte fijo',
@@ -32,7 +32,7 @@ export const topic: Topic = {
       'Demora verdadera = Rumbo del compás + Ángulo de marcación ± Variación Total',
       'Es más estable que la pínula pero menos versátil (solo se usa desde el punto donde está instalado)'
     ]},
-    { type: 'title', text: 'El Sextante' },
+    { type: 'subtitle', text: 'El Sextante' },
     { type: 'paragraph', text: 'El sextante es el instrumento de navegación astronómica por excelencia. Permite medir ángulos verticales y horizontales con gran precisión, y es fundamental para la navegación por estima astronómica, la determinación de la posición por astros y la medición de distancias por altura angular.' },
     { type: 'list', items: [
       'Ocular: por donde el observador mira',
@@ -44,7 +44,7 @@ export const topic: Topic = {
       'Filtros: para observación del sol (de diferentes densidades)',
       'Anteojo: para mayor precisión en la observación de astros'
     ]},
-    { type: 'title', text: 'Error instrumental del sextante' },
+    { type: 'subtitle', text: 'Error instrumental del sextante' },
     { type: 'paragraph', text: 'Todo sextante tiene un pequeño error propio llamado error instrumental (ei), que debe determinarse y corregir en cada observación. El error instrumental se verifica observando el horizonte:' },
     { type: 'list', items: [
       'Se coloca la alidada en 0° y se observa el horizonte a través del sextante',
@@ -55,7 +55,7 @@ export const topic: Topic = {
       'El error instrumental debe verificarse antes de cada uso',
       'Corrección total = Corrección índice + Corrección de altura del observador + Refracción + Semidiámetro (si es sol) + Paralaje (si es luna)'
     ]},
-    { type: 'title', text: 'Cómo tomar la altura del Sol con el sextante' },
+    { type: 'subtitle', text: 'Cómo tomar la altura del Sol con el sextante' },
     { type: 'paragraph', text: 'Para medir la altura del Sol sobre el horizonte (altura meridiana u otra observación):' },
     { type: 'list', items: [
       'Colocar el filtro solar adecuado en el ocular y en el espejo grande',
@@ -66,7 +66,7 @@ export const topic: Topic = {
       'Anotar la hora exacta de la observación (cronómetro)',
       'Aplicar todas las correcciones: error instrumental, depresión del horizonte, refracción, semidiámetro del Sol'
     ]},
-    { type: 'title', text: 'El libro de bitácora' },
+    { type: 'subtitle', text: 'El libro de bitácora' },
     { type: 'paragraph', text: 'El libro de bitácora (logbook) es el registro oficial de la navegación. En él se anotan todos los datos relevantes del viaje:' },
     { type: 'list', items: [
       'Posiciones (hora y coordenadas)',
@@ -78,7 +78,7 @@ export const topic: Topic = {
       'Firmas del oficial de guardia y del capitán',
       'Es un documento legal y debe mantenerse con cuidado y precisión'
     ]},
-    { type: 'title', text: 'Buenas prácticas' },
+    { type: 'subtitle', text: 'Buenas prácticas' },
     { type: 'list', items: [
       'Verificar siempre el error instrumental del sextante antes de usarlo',
       'Tomar múltiples lecturas y promediar para mayor precisión',

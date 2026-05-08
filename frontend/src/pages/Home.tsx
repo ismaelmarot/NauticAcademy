@@ -65,6 +65,30 @@ const StatsRow = styled.div`
   flex-wrap: wrap;
 `;
 
+const QuickActions = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+`;
+
+const ActionButton = styled.button<{ $theme: any }>`
+  flex: 1;
+  padding: 14px 24px;
+  border: 2px solid ${({ $theme }) => $theme.colors.primary};
+  background: transparent;
+  color: ${({ $theme }) => $theme.colors.primary};
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: ${({ $theme }) => $theme.colors.primary};
+    color: white;
+  }
+`;
+
 const ChapterGrid = styled.div`
   display: grid;
   gap: 16px;
@@ -174,6 +198,15 @@ const Home: React.FC = () => {
         {user && <XPBar xp={user.xp || 0} level={user.level || 1} />}
         {user && <StreakBadge streak={user.streak || 0} />}
       </StatsRow>
+
+      <QuickActions>
+        <ActionButton $theme={theme} onClick={() => navigate('/notes')}>
+          Apuntes
+        </ActionButton>
+        <ActionButton $theme={theme} onClick={() => navigate('/knots')}>
+          Nudos
+        </ActionButton>
+      </QuickActions>
 
       <ChapterGrid>
         {getVisibleChapters().map((chapter) => {

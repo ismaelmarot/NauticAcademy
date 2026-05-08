@@ -14,6 +14,14 @@ const Title = styled.h1<{ $theme: any }>`
   font-size: 24px;
 `;
 
+const Subtitle = styled.h2<{ $theme: any }>`
+  color: ${({ $theme }) => $theme.colors.primary};
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+`;
+
 const Paragraph = styled.p<{ $theme: any }>`
   margin-bottom: 12px;
   color: ${({ $theme }) => $theme.colors.text};
@@ -32,26 +40,41 @@ const ListItem = styled.li<{ $theme: any }>`
 `;
 
 const ImageContainer = styled.figure<{ $theme: any }>`
-  margin: 16px 0;
+  margin: 24px 0;
   text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
 `;
 
 const StyledImage = styled.img`
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    border-radius: 8px;
+  }
 `;
 
 const Caption = styled.figcaption<{ $theme: any }>`
-  margin-top: 8px;
+  margin-top: 12px;
   font-size: 14px;
   color: ${({ $theme }) => $theme.colors.textSecondary};
   font-style: italic;
+  line-height: 1.5;
 `;
 
 interface ContentBlock {
-  type: 'title' | 'paragraph' | 'list' | 'image';
+  type: 'title' | 'subtitle' | 'paragraph' | 'list' | 'image';
   text?: string;
   items?: string[];
   src?: string;
@@ -71,6 +94,9 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
       {content.map((block, index) => {
         if (block.type === 'title') {
           return <Title key={index} $theme={theme}>{block.text}</Title>;
+        }
+        if (block.type === 'subtitle') {
+          return <Subtitle key={index} $theme={theme}>{block.text}</Subtitle>;
         }
         if (block.type === 'list' && block.items) {
           return (

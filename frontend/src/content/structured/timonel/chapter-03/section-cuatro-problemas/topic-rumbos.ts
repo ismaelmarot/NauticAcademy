@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'El Rumbo Verdadero, el Magnético y el del Compás' },
     { type: 'paragraph', text: 'El rumbo es el ángulo horizontal que define la dirección hacia la cual se desplaza o apunta la proa de una embarcación. En la navegación práctica, es fundamental distinguir entre tres tipos de rumbo, ya que cada uno se mide respecto de un norte diferente y conocer sus relaciones permite convertir correctamente entre ellos para navegar con seguridad.' },
-    { type: 'title', text: 'Rumbo Verdadero (Rv)' },
+    { type: 'subtitle', text: 'Rumbo Verdadero (Rv)' },
     { type: 'list', items: [
       'Símbolo: Rv',
       'Medido desde: el Norte Verdadero (Nv) —polo norte geográfico—',
@@ -19,7 +19,7 @@ export const topic: Topic = {
       'Es el rumbo que se traza sobre la carta náutica y el que se usa para la planificación de la derrota'
     ]},
     { type: 'paragraph', text: 'El rumbo verdadero es la dirección real respecto del norte geográfico. Es el que se marca sobre la carta náutica al trazar la línea de ruta entre dos puntos, y es el rumbo de referencia para toda la navegación.' },
-    { type: 'title', text: 'Rumbo Magnético (Rm)' },
+    { type: 'subtitle', text: 'Rumbo Magnético (Rm)' },
     { type: 'list', items: [
       'Símbolo: Rm',
       'Medido desde: el Norte Magnético (Nm) —polo norte magnético—',
@@ -29,7 +29,7 @@ export const topic: Topic = {
       'Difiere del rumbo verdadero por la declinación magnética (Dm)'
     ]},
     { type: 'paragraph', text: 'El rumbo magnético se refiere al norte magnético, que no coincide con el norte verdadero. La diferencia angular entre ambos se denomina declinación magnética o variación local, y varía según la posición geográfica y cambia con el tiempo. En las cartas náuticas se indica la declinación del año de edición y su variación anual.' },
-    { type: 'title', text: 'Rumbo Compás (Rc)' },
+    { type: 'subtitle', text: 'Rumbo Compás (Rc)' },
     { type: 'list', items: [
       'Símbolo: Rc',
       'Medido desde: el Norte del Compás (Nc) —norte de aguja—',
@@ -39,7 +39,7 @@ export const topic: Topic = {
       'Es el que se lee directamente en el compás a bordo'
     ]},
     { type: 'paragraph', text: 'El rumbo compás es el que el navegante lee directamente en el compás instalado en la embarcación. Difiere del rumbo magnético por el desvío, un error producido por los campos magnéticos propios del barco (estructuras metálicas, motores, equipos eléctricos).' },
-    { type: 'title', text: 'Relación entre los tres rumbos' },
+    { type: 'subtitle', text: 'Relación entre los tres rumbos' },
     { type: 'paragraph', text: 'La relación fundamental que permite convertir entre los tres rumbos es:' },
     { type: 'list', items: [
       'Rv = Rc + Dm + δ',
@@ -49,7 +49,7 @@ export const topic: Topic = {
       'Por lo tanto: Rv = Rc + Vt, y Rc = Rv − Vt',
       'Regla mnemotécnica: "al verdadero le quito para compás, al compás le sumo para verdadero"'
     ]},
-    { type: 'title', text: 'Variación Total (Vt)' },
+    { type: 'subtitle', text: 'Variación Total (Vt)' },
     { type: 'paragraph', text: 'La Variación Total es la corrección angular que se debe aplicar al rumbo del compás para obtener el rumbo verdadero. Incluye tanto la declinación magnética —propia de la zona geográfica— como el desvío del compás —propio de la embarcación. Se calcula como:' },
     { type: 'list', items: [
       'Vt = Dm + δ',
@@ -57,7 +57,7 @@ export const topic: Topic = {
       'Se anota en la bitácora y debe actualizarse periódicamente',
       'El desvío se determina mediante la tabla de desvíos del compás, elaborada durante la compensación'
     ]},
-    { type: 'title', text: 'Diferencia entre rumbo y derrota' },
+    { type: 'subtitle', text: 'Diferencia entre rumbo y derrota' },
     { type: 'paragraph', text: 'Es importante no confundir el rumbo con la derrota (o rumbo de fondo). El rumbo es la dirección hacia la que apunta la proa del buque, mientras que la derrota es la dirección real del movimiento del buque sobre el fondo, es decir, la trayectoria efectiva resultante de la acción combinada del motor, las corrientes y el viento.' },
     { type: 'list', items: [
       'Rumbo: dirección de la proa (hacia donde apunta el barco)',
@@ -65,7 +65,7 @@ export const topic: Topic = {
       'En aguas sin corriente ni viento: rumbo = derrota',
       'Con corriente o viento: rumbo ≠ derrota; la diferencia se debe a deriva y abatimiento'
     ]},
-    { type: 'title', text: 'Cómo hallar el rumbo verdadero en la carta náutica' },
+    { type: 'subtitle', text: 'Cómo hallar el rumbo verdadero en la carta náutica' },
     { type: 'paragraph', text: 'Para obtener el rumbo verdadero de una línea trazada en la carta náutica se utiliza la regla de paralelas o transportador:' },
     { type: 'list', items: [
       'Se trazan los puntos de salida y llegada y se une con una línea recta (la ruta)',

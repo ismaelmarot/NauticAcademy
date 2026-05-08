@@ -22,8 +22,9 @@ router.get('/', authenticateToken, async (req: AuthRequest, res: Response) => {
       level: user.level,
       streak: user.streak
     });
-  } catch (error) {
-    res.status(500).json({ error: 'Error interno del servidor' });
+  } catch (error: any) {
+    console.error('Error in GET /progress:', error);
+    res.status(500).json({ error: 'Error interno del servidor', details: error.message });
   }
 });
 
@@ -56,8 +57,9 @@ router.post('/topic/:topicId', authenticateToken, async (req: AuthRequest, res: 
     }
 
     res.json({ success: true });
-  } catch (error) {
-    res.status(500).json({ error: 'Error interno del servidor' });
+  } catch (error: any) {
+    console.error('Error in POST /progress/topic:', error);
+    res.status(500).json({ error: 'Error interno del servidor', details: error.message });
   }
 });
 
@@ -81,8 +83,9 @@ router.post('/quiz', authenticateToken, async (req: AuthRequest, res: Response) 
     }
 
     res.json({ success: true, xpGained });
-  } catch (error) {
-    res.status(500).json({ error: 'Error interno del servidor' });
+  } catch (error: any) {
+    console.error('Error in POST /quiz:', error);
+    res.status(500).json({ error: 'Error interno del servidor', details: error.message });
   }
 });
 

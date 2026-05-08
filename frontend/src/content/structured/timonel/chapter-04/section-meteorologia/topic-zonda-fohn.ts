@@ -8,11 +8,11 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'El Zonda' },
     { type: 'paragraph', text: 'Viento cálido, seco y a menudo violento que desciende de los Andes hacia las llanuras orientales de Argentina. Es una expresión local del efecto Föhn.' },
-    { type: 'title', text: 'Efecto Föhn' },
+    { type: 'subtitle', text: 'Efecto Föhn' },
     { type: 'paragraph', text: 'Viento cálido, seco y descendente en el lado de sotavento de una cadena montañosa. Fenómenos equivalentes: Chinook (Norteamérica), Bergwind (Sudáfrica).' },
-    { type: 'title', text: 'Proceso del efecto Föhn' },
+    { type: 'subtitle', text: 'Proceso del efecto Föhn' },
     { type: 'list', items: ['Una masa de aire húmedo es forzada a ascender sobre una barrera orográfica (cordillera)', 'El aire se expande y enfría adiabáticamente durante el ascenso', 'En el punto de saturación, el vapor se condensa → nubes y precipitación en el lado barlovento', 'Se libera calor latente durante la condensación', 'El aire desciende en el lado de sotavento, se comprime y calienta adiabáticamente', 'La tasa de calentamiento durante el descenso seco es mayor que la tasa de enfriamiento durante el ascenso húmedo', 'Resultado: el viento en sotavento es más seco, cálido e intenso que el aire original'] },
-    { type: 'title', text: 'Efecto Föhn en la navegación' },
+    { type: 'subtitle', text: 'Efecto Föhn en la navegación' },
     { type: 'list', items: ['Aceleración rápida del viento, carácter racheado, turbulencia marcada', 'Fuertes corrientes descendentes, cambios bruscos de dirección, viento muy desigual en cortas distancias', 'En archipiélagos (Canarias, Cabo Verde, costa de Brasil): chorros de viento entre islas, zonas de calma cercanas', 'Vórtices de von Kármán: vórtices alternados formados al abrigo de islas/montañas cuando un flujo estable fuerte las golpea. Causan rodillos rápidos, ráfagas marcadas, zonas de fuerte cizallamiento', 'La superficie del mar refleja la inestabilidad: zonas muy rizadas junto a otras relativamente planas'] }
   ],
   quiz: [

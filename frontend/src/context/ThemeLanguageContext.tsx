@@ -3,6 +3,8 @@ import { ThemeMode, getTheme, Theme } from '@/styles/theme';
 import { Language } from '@/i18n/translations';
 import { getTranslation } from '@/i18n/translations';
 
+export type { Theme };
+
 interface ThemeLanguageContextType {
   theme: Theme;
   themeMode: ThemeMode;

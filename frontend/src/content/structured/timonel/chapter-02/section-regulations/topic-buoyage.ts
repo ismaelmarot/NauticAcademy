@@ -11,30 +11,30 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Hasta 1976 existían más de 30 sistemas de boyado diferentes, algunos contradictorios. Tras la Segunda Guerra Mundial, la IALA (International Association of Lighthouse Authorities) trabajó para unificar criterios.' },
     { type: 'paragraph', text: 'En 1957 se formó la IALA. En 1976 se completaron las reglas del Sistema Lateral Región "A" y "B". En 1980 se integró el Sistema Cardinal y se conformó el Sistema de Balizamiento Marítimo (IALA).' },
 
-    { type: 'title', text: 'Principios Generales' },
+    { type: 'subtitle', text: 'Principios Generales' },
     { type: 'paragraph', text: 'El Sistema de Balizamiento Marítimo comprende dos partes:' },
     { type: 'list', items: [
       'Sistema de Balizamiento Marítimo: Marcas laterales, cardinales, peligro aislado, nuevos peligros, aguas seguras, especiales.',
       'Ayudas a la Navegación: Dispositivos fijos (faros, espeques, balizas) y flotantes (boyas, buques faros).'
     ]},
 
-    { type: 'title', text: 'Sistema Lateral - Región "A"' },
+    { type: 'subtitle', text: 'Sistema Lateral - Región "A"' },
     { type: 'paragraph', text: 'Sentido convencional hacia el puerto más cercano. Babor = Rojo, Estribor = Verde. Formas: Cónicas a estribor, cilíndricas a babor. Luces: Roja a babor, Verde a estribor.' },
 
-    { type: 'title', text: 'Sistema Lateral - Región "B"' },
+    { type: 'subtitle', text: 'Sistema Lateral - Región "B"' },
     { type: 'paragraph', text: 'Sentido convencional hacia el puerto más cercano. Babor = Verde, Estribor = Rojo. Formas: Cónicas a babor, cilíndricas a estribor. Luces: Verde a babor, Roja a estribor.' },
 
-    { type: 'title', text: 'Sistema Cardinal' },
+    { type: 'subtitle', text: 'Sistema Cardinal' },
     { type: 'paragraph', text: 'Indica dónde están las aguas más profundas (seguras) respecto a la marca. Norte: Negro arriba, Amarillo abajo. Este: Negro centro, Amarillo extremos. Sur: Amarillo arriba, Negro abajo. Oeste: Amarillo centro, Negro extremos.' },
     { type: 'paragraph', text: 'Luces blancas con ritmos: Norte (continuos rápidos), Este (3 destellos), Sur (6 destellos), Oeste (9 destellos).' },
 
-    { type: 'title', text: 'Marca de Peligro Aislado' },
+    { type: 'subtitle', text: 'Marca de Peligro Aislado' },
     { type: 'paragraph', text: 'Señala peligro localizado (naufragio, rocas) rodeado de aguas navegables. Color: Negro con banda roja central. Luz blanca, grupos de 2 destellos.' },
 
-    { type: 'title', text: 'Marca de Aguas Seguras' },
+    { type: 'subtitle', text: 'Marca de Aguas Seguras' },
     { type: 'paragraph', text: 'Indica aguas navegables alrededor. Color: Franjas verticales rojas y blancas. Luz blanca: fases iguales o código Morse "A".' },
 
-    { type: 'title', text: 'Otras Ayudas' },
+    { type: 'subtitle', text: 'Otras Ayudas' },
     { type: 'paragraph', text: 'Enfilaciones: Grupos de marcas en línea vertical para guiar por un rumbo. Luces de Sectores: Haces de distintos colores visibles en arcos específicos. Faros: Estructuras fijas de gran porte para referencia y luz potente.' },
     { type: 'paragraph', text: 'Ayudas Electrónicas: RACON (transpondedor radar), Reflectores de Radar (dispositivos pasivos), AIS AtoN (transmisor automático en ayudas).' }
   ],

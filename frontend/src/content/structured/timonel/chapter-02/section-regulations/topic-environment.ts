@@ -11,7 +11,7 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Artículo 41 de la Constitución Argentina: "Todos los habitantes gozan del derecho a un ambiente sano... y tienen el deber de preservarlo."' },
     { type: 'paragraph', text: 'La Prefectura Naval Argentina, bajo la Ordenanza Nº 4/98, regula la protección ambiental para embarcaciones deportivas y recreativas en aguas jurisdiccionales.' },
 
-    { type: 'title', text: 'Conductas para la Preservación del Medio Acuático' },
+    { type: 'subtitle', text: 'Conductas para la Preservación del Medio Acuático' },
     { type: 'paragraph', text: 'El Capitán debe:' },
     { type: 'list', items: [
       'Almacenar desechos en condiciones higiénicas según eslora y duración de singladura.',
@@ -21,11 +21,11 @@ export const topic: Topic = {
       'Retener basura a bordo hasta su disposición en instalaciones receptoras en tierra.'
     ]},
 
-    { type: 'title', text: 'Tabla de Descargas' },
+    { type: 'subtitle', text: 'Tabla de Descargas' },
     { type: 'paragraph', text: 'Zonas de Protección Especial (Bahía Samborombón, San Blas, Golfo San José, etc.): Prohibido descargar cualquier residuo. Solo aguas servidas degradables a más de 3 mn.' },
     { type: 'paragraph', text: 'Resto de aguas generales: Degradables triturados a más de 3 mn. No degradables ni hidrocarburos: retener a bordo. Aceites: retener a bordo hasta tierra.' },
 
-    { type: 'title', text: 'Zonas de Protección Especial' },
+    { type: 'subtitle', text: 'Zonas de Protección Especial' },
     { type: 'paragraph', text: 'Buenos Aires: Bahía Samborombón (6 mn). Río Negro: Caleta Los Loros, Bahía San Antonio. Chubut: Golfo San José, Golfo Nuevo, Punta Tombo. Santa Cruz: Ría Puerto Deseado, Cabo Vírgenes, Ría Santa Cruz. Tierra del Fuego: Bahía San Sebastián a Río Grande, Bahías Ushuaia y Lapataia, Canal Beagle.' }
   ],
 

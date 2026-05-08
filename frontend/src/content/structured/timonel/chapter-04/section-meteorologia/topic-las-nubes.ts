@@ -10,30 +10,30 @@ export const topic: Topic = {
     { type: 'title', text: 'Las Nubes' },
     { type: 'paragraph', text: 'Las nubes son un conjunto de minúsculas partículas de agua o hielo suspendidas por corrientes ascendentes. Se forman cuando el aire húmedo asciende, se enfría y el vapor se condensa en torno a partículas de polvo, hollín y sales marinas. No son de vapor de agua (que es invisible), sino de agua líquida o hielo condensado.' },
     { type: 'paragraph', text: 'Para el navegante, las nubes son indicadores visuales del estado de la atmósfera y de los cambios que pueden venir.' },
-    { type: 'title', text: 'Clasificación por Aspecto' },
+    { type: 'subtitle', text: 'Clasificación por Aspecto' },
     { type: 'list', items: [
       'Estratiformes: desarrollo horizontal, manto uniforme, estabilidad atmosférica, precipitación débil y persistente',
       'Cumuliformes: desarrollo vertical, inestabilidad atmosférica, precipitaciones intensas y localizadas'
     ]},
-    { type: 'title', text: 'Nubes Altas (por encima de 6.000 m, cristales de hielo)' },
+    { type: 'subtitle', text: 'Nubes Altas (por encima de 6.000 m, cristales de hielo)' },
     { type: 'list', items: [
       'Cirrus (Ci): delgadas y fibrosas, "colas de caballo", no precipitan',
       'Cirrostratus (Cs): capa delgada blanquecina, produce halos alrededor del Sol o la Luna',
       'Cirrocúmulus (Cc): pequeños grumos blancos en ondulaciones, no precipitan'
     ]},
-    { type: 'title', text: 'Nubes Medias (2 a 8 km según latitud, gotas de agua y cristales)' },
+    { type: 'subtitle', text: 'Nubes Medias (2 a 8 km según latitud, gotas de agua y cristales)' },
     { type: 'list', items: [
       'Altocúmulus (Ac): láminas blancas o grises, guijarros o rodillos, ~3.000-4.000 m',
       'Altostratus (As): capa grisácea uniforme, Sol visible como mancha difusa, puede precipitar llovizna'
     ]},
-    { type: 'title', text: 'Nubes Bajas (por debajo de 2.000 m, gotas de agua)' },
+    { type: 'subtitle', text: 'Nubes Bajas (por debajo de 2.000 m, gotas de agua)' },
     { type: 'list', items: [
       'Stratus (St): capa gris uniforme, puede producir lloviznas finas',
       'Stratocúmulus (Sc): mosaicos grises o blanquecinos, no dejan ver el Sol',
       'Nimbostratus (Ns): manto gris oscuro muy espeso, lluvia o nieve continua, no deja ver el Sol',
       'Cúmulus (Cu): contornos definidos, blancos, base plana, desarrollo vertical tipo coliflor'
     ]},
-    { type: 'title', text: 'Cumulonimbos (Cb): La Nube de Tormenta' },
+    { type: 'subtitle', text: 'Cumulonimbos (Cb): La Nube de Tormenta' },
     { type: 'paragraph', text: 'El Cumulonimbo es una nube densa, potente y de enorme desarrollo vertical, desde ~500 m hasta el límite de la Tropósfera (10-12 km). Su cima adopta la característica forma de yunque.' },
     { type: 'paragraph', text: 'Ciclo de vida: 1-3 horas (2 horas promedio). Etapa de madurez: 20-40 minutos de fenómenos peligrosos.' },
     { type: 'list', items: [
@@ -43,7 +43,7 @@ export const topic: Topic = {
       'Arcus o "cigarro": arco visible en la base, con roll clouds, wall clouds o shelf clouds',
       'Etapa de disipación: la nube pierde energía, se contrae, cesa la precipitación'
     ]},
-    { type: 'title', text: 'Actividad Eléctrica' },
+    { type: 'subtitle', text: 'Actividad Eléctrica' },
     { type: 'paragraph', text: 'Las colisiones entre cristales de hielo, graupel y gotas superenfriadas generan cargas eléctricas dentro del Cumulonimbo. Se forma una estructura de dipolo (alto positivo, medio negativo) y tripolo (alto positivo, medio negativo, base positiva).' },
     { type: 'list', items: [
       'Rayo: descarga entre nube y superficie (peligroso para la navegación)',

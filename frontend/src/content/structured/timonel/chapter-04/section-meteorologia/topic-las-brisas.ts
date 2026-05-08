@@ -11,7 +11,7 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Las brisas son movimientos de aire locales generados por las diferencias de temperatura —y por lo tanto de presión— entre dos superficies cercanas que se calientan y enfrían a ritmos distintos, como la tierra y el agua.' },
     { type: 'paragraph', text: 'Para la náutica, entender cómo y cuándo se forman las brisas es fundamental, porque pueden modificar significativamente la intensidad y dirección del viento real sobre el agua, incluso en condiciones de aparente calma atmosférica general.' },
     { type: 'paragraph', text: 'A diferencia del viento, que es producto del gradiente de presión a gran escala y se desplaza con las masas de aire, las brisas son movimientos localizados causados por efectos térmicos en las zonas costeras.' },
-    { type: 'title', text: 'Brisa Marina' },
+    { type: 'subtitle', text: 'Brisa Marina' },
     { type: 'paragraph', text: 'Durante el día, el Sol calienta la tierra más rápidamente que el agua. El aire sobre la tierra se calienta, asciende y crea un área de baja presión relativa (baja térmica). La atmósfera busca restablecer el equilibrio, y el aire fluye desde el agua (mayor presión) hacia la costa (menor presión), produciendo la brisa marina.' },
     { type: 'list', items: [
       'Comienza entre 2 y 4 horas después del amanecer',
@@ -21,14 +21,14 @@ export const topic: Topic = {
       'Sobre la costa puede formarse nubosidad cumuliforme',
       'Es más fuerte cerca de la costa; aguas adentro hay calmas con vientos descendentes'
     ]},
-    { type: 'title', text: 'Brisa de Tierra (Terral)' },
+    { type: 'subtitle', text: 'Brisa de Tierra (Terral)' },
     { type: 'paragraph', text: 'Durante la noche, la tierra se enfría más rápido que el agua, invirtiendo el proceso. El aire sobre la tierra se vuelve más denso y pesado, y fluye desde la costa hacia el agua. En altura se genera el flujo de retorno, desde las aguas hacia la costa.' },
     { type: 'list', items: [
       'Es más débil que la brisa marina porque la variación térmica nocturna del agua es menor',
       'Más común en otoño e invierno',
       'El terreno frío actúa como freno para las masas de aire'
     ]},
-    { type: 'title', text: 'Factores de la Circulación de las Brisas' },
+    { type: 'subtitle', text: 'Factores de la Circulación de las Brisas' },
     { type: 'list', items: [
       'Ocurren en costas de mares y grandes cuerpos de agua (Río de la Plata, grandes lagos)',
       'Condiciones ideales: cielos despejados y vientos que no superen el nivel de moderados (11-16 nudos)',
@@ -36,7 +36,7 @@ export const topic: Topic = {
       'En zonas tropicales, ocurren todo el año',
       'Un viento débil del agua hacia la costa favorece la brisa marina'
     ]},
-    { type: 'title', text: 'Brisas en el Río de la Plata' },
+    { type: 'subtitle', text: 'Brisas en el Río de la Plata' },
     { type: 'paragraph', text: 'En el sector Noreste del Río de la Plata, la brisa de mar puede alcanzar intensidades de 11 a 19 nudos, con dirección general del sector Este. En el sector Sudeste (Montevideo a Punta del Este), puede llegar a 25-30 nudos en verano.' },
     { type: 'paragraph', text: 'El término "virazón" se utiliza en el Río de la Plata para definir el momento del cambio de sentido de la brisa.' }
   ],

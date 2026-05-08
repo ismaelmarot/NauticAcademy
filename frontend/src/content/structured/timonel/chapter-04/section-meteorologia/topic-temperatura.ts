@@ -27,7 +27,7 @@ export const topic: Topic = {
       ]
     },
     {
-      type: 'title',
+      type: 'subtitle',
       text: 'Fórmulas de conversión'
     },
     {
@@ -38,7 +38,7 @@ export const topic: Topic = {
       ]
     },
     {
-      type: 'title',
+      type: 'subtitle',
       text: 'Variaciones de temperatura'
     },
     {

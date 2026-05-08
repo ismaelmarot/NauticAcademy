@@ -12,19 +12,19 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Muelles flotantes: Suben y bajan con el nivel del agua. El barco siempre está a la misma altura. Facilitan amarre, zarpada y embarque. Más sensibles al oleaje.' },
     { type: 'paragraph', text: 'Elementos de amarre: Noray (grande, muelle fijo), Bolardo (mediano, acero inoxidable), Bita (dos columnas verticales), Cornamusas (acero inoxidable, muelle flotante), Cáncamos/Argollas (pequeños, botes).' },
 
-    { type: 'title', text: 'Los Cabos de Amarre (Estachas)' },
+    { type: 'subtitle', text: 'Los Cabos de Amarre (Estachas)' },
     { type: 'paragraph', text: 'Generalmente de poliester, grosor considerable. Preferibles retorcidos por su elasticidad, reduciendo esfuerzos.' },
     { type: 'paragraph', text: 'Largos: En dirección longitudinal. Largo de proa (impide ir a popa) y largo de popa (impide ir a proa).' },
     { type: 'paragraph', text: 'Springs: Dirección contraria a los largos. Spring de proa (impide ir a proa) y spring de popa (impide ir a popa). Evitan movimientos longitudinales.' },
     { type: 'paragraph', text: 'Traveses: Perpendiculares al barco. Evitan que se separe del muelle.' },
     { type: 'paragraph', text: 'Coderas: De proa o popa, amarran a banda contraria al atraque. Mantienen el barco separado del muelle cuando hay viento/mar.' },
 
-    { type: 'title', text: 'Maniobra de Zarpada' },
+    { type: 'subtitle', text: 'Maniobra de Zarpada' },
     { type: 'paragraph', text: 'Planeamiento: Pronóstico meteorológico y mareológico. Verificar estado del barco, elementos de seguridad, documentación y provisiones.' },
     { type: 'paragraph', text: 'Preparación: Barco listo para navegar, motor encendido en neutro, velas montadas. Informar plan a tripulación, comunicación a viva voz.' },
     { type: 'paragraph', text: 'Ejecución: Soltar amarras, velocidad de seguridad, recuperar cabos, retirar defensas, adujar cabos, liberar cubierta. Navegar a motor hasta aguas abiertas.' },
 
-    { type: 'title', text: 'Maniobra de Atraque' },
+    { type: 'subtitle', text: 'Maniobra de Atraque' },
     { type: 'paragraph', text: 'Preparación: Explicar plan a tripulación, asignar tareas. Preparar cabos, defensas, bichero. Arriar velamen, liberar cubierta, reducir a velocidad de seguridad, colocar defensas.' },
     { type: 'paragraph', text: 'Ejecución: Encimar el muelle (proa o popa según convenga). Pasar motor a punto muerto. Tripulantes en bandas con defensas. Tomar amarras exteriores primero (boyas/pilotes), luego al muelle.' },
     { type: 'paragraph', text: 'Amarre en muelle a sotavento: Dejar ancla a prudente distancia, soltar cabo de fondeo, aproximar popa al muelle, tomar largo de proa. Soltar amarras y zarpar usando fondeo para ayuda.' },

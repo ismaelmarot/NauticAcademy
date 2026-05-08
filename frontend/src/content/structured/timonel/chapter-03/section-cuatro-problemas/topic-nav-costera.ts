@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Métodos de Posicionamiento en Navegación Costera' },
     { type: 'paragraph', text: 'La navegación costera es aquella que se realiza con referencias visibles de la costa: faros, cerros, boyas, enfilaciones y otros puntos notables. Es el tipo de navegación más intuitivo y preciso, siempre que haya visibilidad y referencias identificables. Los métodos de posicionamiento costero se basan en obtener líneas de posición (LOP) y cruzarlas para fijar la posición del buque.' },
-    { type: 'title', text: 'Posición por dos demoras' },
+    { type: 'subtitle', text: 'Posición por dos demoras' },
     { type: 'paragraph', text: 'Es el método más básico de posicionamiento costero. Consiste en tomar la demora a dos objetos costeros identificables y trazar las líneas de posición sobre la carta:' },
     { type: 'list', items: [
       'Se identifican dos objetos costeros en la carta (faros, puntas, cerros)',
@@ -20,7 +20,7 @@ export const topic: Topic = {
       'El ángulo ideal entre las dos demoras es cercano a 90° para mayor precisión',
       'Con ángulos muy pequeños (< 30°) o muy grandes (> 150°) la precisión disminuye notablemente'
     ]},
-    { type: 'title', text: 'Posición por tres o más demoras' },
+    { type: 'subtitle', text: 'Posición por tres o más demoras' },
     { type: 'paragraph', text: 'Cuando se toman tres o más demoras, la posición se obtiene con mayor confianza, ya que permite detectar errores:' },
     { type: 'list', items: [
       'Se toman demoras a tres o más objetos costeros',
@@ -30,7 +30,7 @@ export const topic: Topic = {
       'Un triángulo grande indica error en alguna observación o identificación errónea del objeto',
       'Con cuatro o más demoras se puede identificar cuál observación es errónea'
     ]},
-    { type: 'title', text: 'Demoras sucesivas a un mismo punto (Método del arco capaz)' },
+    { type: 'subtitle', text: 'Demoras sucesivas a un mismo punto (Método del arco capaz)' },
     { type: 'paragraph', text: 'Cuando solo se dispone de un objeto costero visible, se puede obtener una posición mediante demoras sucesivas:' },
     { type: 'list', items: [
       'Se toma una primera demora al objeto y se anota la hora',
@@ -40,7 +40,7 @@ export const topic: Topic = {
       'La intersección de la primera LOP trasladada con la segunda LOP da la posición',
       'Este método se conoce también como "running fix" o fix por traslado'
     ]},
-    { type: 'title', text: 'Posicionamiento por enfilación' },
+    { type: 'subtitle', text: 'Posicionamiento por enfilación' },
     { type: 'paragraph', text: 'La enfilación es uno de los métodos más precisos de posicionamiento costero:' },
     { type: 'list', items: [
       'Cuando dos objetos se alinean visualmente, el buque está sobre la línea que los une',
@@ -49,7 +49,7 @@ export const topic: Topic = {
       'Las enfilaciones marcadas en la carta (luces de enfilación) indican el eje del canal',
       'Es extremadamente precisa porque no depende de la medición de ángulos'
     ]},
-    { type: 'title', text: 'Posicionamiento por demoras y marcaciones' },
+    { type: 'subtitle', text: 'Posicionamiento por demoras y marcaciones' },
     { type: 'paragraph', text: 'Las demoras y marcaciones se usan indistintamente para obtener LOP, pero se calculan de forma diferente:' },
     { type: 'list', items: [
       'Demora: ángulo desde el norte al objeto (se mide directamente con pínula)',
@@ -58,7 +58,7 @@ export const topic: Topic = {
       'Las demoras son preferibles porque no dependen del rumbo del buque',
       'Las marcaciones son útiles cuando la pínula no está disponible'
     ]},
-    { type: 'title', text: 'Posicionamiento por sondaje (batimetría)' },
+    { type: 'subtitle', text: 'Posicionamiento por sondaje (batimetría)' },
     { type: 'paragraph', text: 'El sondaje puede usarse como línea de posición o como verificación de la posición estimada:' },
     { type: 'list', items: [
       'Se mide la profundidad con la ecosonda',
@@ -68,7 +68,7 @@ export const topic: Topic = {
       'El tipo de fondo (arena, roca, fango) puede confirmarse con la sondaleza y compararse con la carta',
       'Es especialmente útil en condiciones de poca visibilidad o de noche'
     ]},
-    { type: 'title', text: 'El arco capaz (ángulo horizontal)' },
+    { type: 'subtitle', text: 'El arco capaz (ángulo horizontal)' },
     { type: 'paragraph', text: 'El arco capaz es un método de posicionamiento que utiliza el ángulo horizontal entre dos objetos costeros:' },
     { type: 'list', items: [
       'Se mide el ángulo horizontal entre dos objetos con el sextante',
@@ -78,7 +78,7 @@ export const topic: Topic = {
       'Se construye gráficamente en la carta usando geometría del arco capaz',
       'El centro del arco se determina trazando perpendiculares a las cuerdas'
     ]},
-    { type: 'title', text: 'Abreviaturas de posición en la carta y bitácora' },
+    { type: 'subtitle', text: 'Abreviaturas de posición en la carta y bitácora' },
     { type: 'paragraph', text: 'En la navegación se utilizan abreviaturas estandarizadas para indicar el tipo de posición obtenida:' },
     { type: 'list', items: [
       'GPS/Fix: posición obtenida por GPS o fix por cruce de LOP (círculo)',

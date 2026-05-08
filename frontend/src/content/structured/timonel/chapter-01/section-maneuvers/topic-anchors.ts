@@ -11,7 +11,7 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'El ancla es el elemento fundamental del aparejo de fondeo. Su misión es mantener el barco inmóvil respecto del fondo, aun cuando actúen el viento, olas o corriente.' },
     { type: 'paragraph', text: 'El ancla no mantiene el barco por su peso, sino por agarre y geometría, funcionando como una garra que impide que el velero garree mientras permanece fondeado.' },
 
-    { type: 'title', text: 'Estructura de un Ancla' },
+    { type: 'subtitle', text: 'Estructura de un Ancla' },
     { type: 'paragraph', text: 'Arganeo: Ojal o anillo que opera como punto de unión del ancla con el grillete. Debe ser robusto pues soporta la totalidad de la fuerza de tracción.' },
     { type: 'paragraph', text: 'Caña: Cuerpo central que conecta el arganeo con las uñas. Actúa como brazo de palanca para orientar las uñas y que se claven en el fondo.' },
     { type: 'paragraph', text: 'Cruz: Zona donde la caña se une con las uñas. Recibe grandes cargas al "morder" el fondo.' },
@@ -19,7 +19,7 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Mapas: Bordes o costillas que dan rigidez mecánica y forma a las uñas, evitando deformaciones y mejorando capacidad de corte.' },
     { type: 'paragraph', text: 'Cepo: Barra transversal que obliga al ancla a caer de costado, asegurando que una uña entre en contacto con el fondo. Tiene ojal auxiliar para el orinque.' },
 
-    { type: 'title', text: 'Tipos de Anclas' },
+    { type: 'subtitle', text: 'Tipos de Anclas' },
     { type: 'paragraph', text: 'Danforth: Popular en embarcaciones deportivas. Dos uñas planas montadas sobre caña central. Gran agarre en arena y fango, poco peso, fácil estiba. Pierde eficiencia en fondos duros o con vegetación. Fortress es versión moderna en aluminio.' },
     { type: 'paragraph', text: 'CQR (Arado): Clásica y confiable. Cuerpo alargado con uña que se clava progresivamente. Capacidad de volver a afirmarse sola cuando cambia la tracción. Ideal para crucero.' },
     { type: 'paragraph', text: 'Bruce: Garra suavemente curvada, sin partes móviles. Se asienta rápido y orienta sola en dirección de tracción. Buen rendimiento en arena, fango y grava. Requiere fondos blandos para penetrar profundamente.' },
@@ -28,7 +28,7 @@ export const topic: Topic = {
     { type: 'paragraph', text: 'Rezón: Similar a garra con varios brazos curvados. Plegable, ideal para rocas y enganches en zonas costeras. No apta para fondos blandos o fondeos prolongados.' },
     { type: 'paragraph', text: 'Hall: Dos uñas articuladas en cuerpo robusto. Pensada para buques mercantes, fondeo temporal y maniobra portuaria. Poca penetración profunda pero gran fiabilidad operativa.' },
 
-    { type: 'title', text: 'Tipos de Fondo para cada Ancla' },
+    { type: 'subtitle', text: 'Tipos de Fondo para cada Ancla' },
     { type: 'paragraph', text: 'Danforth: Excelente en arena y fango, regular en grava, mala en rocas y algas.' },
     { type: 'paragraph', text: 'CQR y Delta: Muy buena en arena y fango, buena en grava, regular en rocas y algas.' },
     { type: 'paragraph', text: 'Bruce: Muy buena en arena, fango y grava, regular en rocas y algas.' },

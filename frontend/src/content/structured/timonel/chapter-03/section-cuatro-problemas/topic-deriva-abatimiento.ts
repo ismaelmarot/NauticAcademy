@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'La Deriva y el Abatimiento' },
     { type: 'paragraph', text: 'Cuando una embarcación navega, rara vez se desplaza exactamente en la dirección hacia la que apunta su proa. Dos factores externos —las corrientes marinas y el viento— desvían al buque de su rumbo previsto. Estos efectos se denominan deriva y abatimiento, y su correcta evaluación y compensación es esencial para una navegación precisa.' },
-    { type: 'title', text: 'La Deriva' },
+    { type: 'subtitle', text: 'La Deriva' },
     { type: 'paragraph', text: 'La deriva es el desplazamiento lateral que sufre una embarcación debido a la acción de las corrientes marinas. Una corriente es una masa de agua en movimiento con una dirección y una velocidad determinadas. Cuando el buque se encuentra dentro de una corriente, esta lo arrastra en su dirección, modificando la trayectoria real sobre el fondo.' },
     { type: 'list', items: [
       'Dirección de la corriente: hacia donde fluye el agua (se expresa en grados verdaderos)',
@@ -19,7 +19,7 @@ export const topic: Topic = {
       'La deriva puede ser a estribor (positiva) o a babor (negativa)'
     ]},
     { type: 'paragraph', text: 'La deriva no es un error del compás ni del navegante, sino un fenómeno físico real. Para compensarla, el navegante debe calcular el rumbo de estimación que, sumado vectorialmente al efecto de la corriente, resulte en la derrota deseada.' },
-    { type: 'title', text: 'El Abatimiento' },
+    { type: 'subtitle', text: 'El Abatimiento' },
     { type: 'paragraph', text: 'El abatimiento es el desplazamiento lateral que sufre la embarcación debido a la acción del viento sobre las obras muertas (parte del buque por encima de la línea de flotación). A diferencia de la deriva, que es causada por el agua, el abatimiento es causado por el aire.' },
     { type: 'list', items: [
       'Símbolo: A (a veces Ab)',
@@ -29,7 +29,7 @@ export const topic: Topic = {
       'Abatimiento a estribor: positivo (+); a babor: negativo (−)'
     ]},
     { type: 'paragraph', text: 'En la práctica, el navegante debe gobernar un rumbo que tenga en cuenta tanto la deriva como el abatimiento para seguir la derrota prevista. La corrección total es la suma algebraica de ambos efectos.' },
-    { type: 'title', text: 'Análisis vectorial: triángulo de velocidades' },
+    { type: 'subtitle', text: 'Análisis vectorial: triángulo de velocidades' },
     { type: 'paragraph', text: 'La combinación de rumbo, velocidad del buque, corriente y viento se resuelve mediante un análisis vectorial. El triángulo de velocidades relaciona:' },
     { type: 'list', items: [
       'Vector del buque: rumbo y velocidad del buque respecto al agua (R y Vb)',
@@ -37,7 +37,7 @@ export const topic: Topic = {
       'Vector resultante: derrota efectiva y velocidad efectiva (Re y Ve)',
       'Conociendo dos de los tres vectores, se puede resolver el tercero gráficamente o mediante cálculo trigonométrico'
     ]},
-    { type: 'title', text: 'Método directo para el análisis de la deriva' },
+    { type: 'subtitle', text: 'Método directo para el análisis de la deriva' },
     { type: 'paragraph', text: 'El método directo consiste en conocer las características de la corriente (dirección e intensidad) antes de navegar, y calcular de antemano el rumbo que se debe gobernar para contrarrestar su efecto.' },
     { type: 'list', items: [
       'Se conoce la derrota deseada (ruta a seguir sobre la carta)',
@@ -47,7 +47,7 @@ export const topic: Topic = {
       'Desde el extremo del vector de corriente, se traza un arco con radio igual a Vb',
       'El punto donde el arco corta la derrota deseada determina el rumbo a gobernar'
     ]},
-    { type: 'title', text: 'Método indirecto para el análisis de la deriva' },
+    { type: 'subtitle', text: 'Método indirecto para el análisis de la deriva' },
     { type: 'paragraph', text: 'El método indirecto se usa cuando no se conocen las características de la corriente, pero se puede determinar observando la posición real del buque en relación con la posición estimada.' },
     { type: 'list', items: [
       'Se parte de una posición conocida (fijada por GPS, demoras u otro método)',
@@ -56,7 +56,7 @@ export const topic: Topic = {
       'La diferencia entre la posición estimada (sin corriente) y la posición real indica la dirección e intensidad de la corriente',
       'El vector que une la posición estimada con la posición real es el vector de corriente'
     ]},
-    { type: 'title', text: 'Cómo hallar la dirección y velocidad de la corriente en las cartas' },
+    { type: 'subtitle', text: 'Cómo hallar la dirección y velocidad de la corriente en las cartas' },
     { type: 'paragraph', text: 'Las cartas náuticas y los derroteros proporcionan información sobre las corrientes predominantes en la zona. Además, las tablas de mareas y corrientes ofrecen datos detallados:' },
     { type: 'list', items: [
       'Cartas náuticas: indican corrientes permanentes con flechas y valores de velocidad',
@@ -65,7 +65,7 @@ export const topic: Topic = {
       'Publicaciones de corrientes: datos de corrientes oceánicas como la del Golfo, Brasil, etc.',
       'GPS: comparando la posición estimada con la real se puede deducir la corriente actual'
     ]},
-    { type: 'title', text: 'Método 50/90 para curvas de corrientes de marea' },
+    { type: 'subtitle', text: 'Método 50/90 para curvas de corrientes de marea' },
     { type: 'paragraph', text: 'El método 50/90 es una aproximación práctica para estimar la velocidad de la corriente de marea en momentos intermedios entre la pleamar/bajamar y el momento de máxima corriente. Se basa en la observación de que la velocidad de la corriente no aumenta linealmente, sino que sigue una curva aproximada:' },
     { type: 'list', items: [
       'A la primera hora después del reposo (estoa): la corriente alcanza aproximadamente el 50% de su velocidad máxima',

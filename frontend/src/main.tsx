@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, RouteObject, Navigate } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
 import { ThemeLanguageProvider, useThemeLanguage } from '@/context/ThemeLanguageContext';
@@ -56,9 +56,9 @@ const PublicRoute: React.FC<{ element: React.ReactNode }> = ({ element }) => {
   }
 
   return <>{element}</>;
-};
+  };
 
-const routes: RouteObject[] = [
+const routes = [
   { path: '/login', element: <PublicRoute element={<Login />} /> },
   { path: '/register', element: <PublicRoute element={<Register />} /> },
   { path: '/forgot-password', element: <PublicRoute element={<ForgotPassword />} /> },

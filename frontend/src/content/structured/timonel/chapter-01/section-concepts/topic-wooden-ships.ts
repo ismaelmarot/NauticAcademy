@@ -8,6 +8,7 @@ export const topic: Topic = {
 
   content: [
     { type: 'title', text: 'Partes de los Veleros de Madera' },
+    { type: 'image', src: '/images/content/timonel/chapter-01/estructura_01.png', alt: 'Partes de los veleros de madera', caption: 'Estructura tradicional de madera' },
     { type: 'paragraph', text: 'A diferencia de los veleros de fibra de vidrio, cuyos cascos se fabrican a partir de matrices, los de madera requieren del ensamblaje artesanal de cientos de piezas y partes.' },
     { type: 'paragraph', text: 'La estructura fundamental es la que ya hemos explicado, basada en una quilla robusta que se une en la proa a la roda y en la popa al codaste, y sobre la cual se calzan las cuadernas. Debajo de la quilla se agregan una serie de tablones que conforman la zapata y debajo de ella se coloca el quillote, fijando todo el conjunto con pernos. La función de la zapata es alejar el quillote —que es la pieza de que lleva el lastre— del centro de gravedad del barco, produciendo un brazo de palanca más largo que redunde en mayor estabilidad horizontal.' },
     { type: 'paragraph', text: 'La sobrequilla consiste en un entablado de madera más ancha que la sección de la quilla, que se coloca sobre ésta para trabar en su sitio a las cuadernas.' },

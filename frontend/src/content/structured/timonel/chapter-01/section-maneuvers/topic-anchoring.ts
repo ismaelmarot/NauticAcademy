@@ -10,26 +10,26 @@ export const topic: Topic = {
     { type: 'title', text: 'Introducción' },
     { type: 'paragraph', text: 'Fondear es la maniobra mediante la cual el barco queda afirmado al fondo mediante una o más anclas, asegurando que no se soltará quedando a la deriva.' },
 
-    { type: 'title', text: 'El Aparejo de Fondeo' },
+    { type: 'subtitle', text: 'El Aparejo de Fondeo' },
     { type: 'paragraph', text: 'Conjunto de elementos para mantener la embarcación fija: ancla, grillete, cadena o tramo de cadena y cabo, y orinque.' },
     { type: 'paragraph', text: 'La cadena cumple doble función: enlaza ancla con barco y agrega peso para soporte. En barcos pequeños se reemplaza parte por cabo de nylon o poliester para reducir peso.' },
     { type: 'paragraph', text: 'El orinque señala la ubicación del ancla y ayuda a recuperarla si está trabada. Consiste en un cabo fino con boyarín (idealmente luminoso).' },
     { type: 'paragraph', text: 'Especificaciones mínimas por eslora: 18 pies (6kg, cadena 8mm, cabo 10mm), 24 pies (10kg, 10mm, 14mm), 34 pies (14kg, 10mm, 14mm), 52 pies (20kg, 12mm, 18mm).' },
 
-    { type: 'title', text: 'Fondeo de Trabajo y de Respeto' },
+    { type: 'subtitle', text: 'Fondeo de Trabajo y de Respeto' },
     { type: 'paragraph', text: 'Mínimo 2 aparejos: trabajo (principal, ancla mayor, cadena/cabo más largo) y respeto (secundario, ancla menor o diferente). Ambos siempre armados y separados (uno en proa, otro en popa).' },
 
-    { type: 'title', text: 'Maniobra de Fondeo' },
+    { type: 'subtitle', text: 'Maniobra de Fondeo' },
     { type: 'paragraph', text: 'Elección del área: profundidad adecuada, protegida de vientos y corrientes, sin tráfico, con espacio para bornear (girar libremente).' },
     { type: 'paragraph', text: 'Aproximación: Navegar contra viento o corriente, aminorar a velocidad mínima de gobierno, arriar vela de proa. Preparar aparejo (liberar catalina, verificar malacate o preparar estacha manual).' },
     { type: 'paragraph', text: 'Suelta del fondeo: Barco sin arrancada, motor en neutro. Soltar ancla controladamente. Una vez que hizo cabeza (se afirmó), largar cadena/cabo hasta 3 veces la profundidad como mínimo.' },
     { type: 'paragraph', text: 'Verificar que no garree (arrastre del ancla). Si garrea, filar más cadena o cambiar de zona. Controlar el borneo (movimiento circular cuando cambia viento/corriente).' },
     { type: 'paragraph', text: 'Señalización: De día marca circular negra. De noche luz blanca todo horizonte de 360º en el tope del palo.' },
 
-    { type: 'title', text: 'Levantar el Fondeo' },
+    { type: 'subtitle', text: 'Levantar el Fondeo' },
     { type: 'paragraph', text: 'Preparar barco (encender motor o izar velas). Quitar amortiguador si estaba. Activar malacate o recuperar manualmente hasta liberar ancla del fondo. Estibar todo el aparejo. Zarpar con motor o velas.' },
 
-    { type: 'title', text: 'Fondeo de Seguridad' },
+    { type: 'subtitle', text: 'Fondeo de Seguridad' },
     { type: 'paragraph', text: 'Fondeo engalgado: Dos anclas en línea (una detrás de otra). Buen nivel de resistencia, ideal cuando viento/corriente son estables.' },
     { type: 'paragraph', text: 'Fondeo a barbas de gato: Dos anclas formando ángulo en la proa, previniendo cambios de dirección del viento o corriente. Una ancla a cada banda según rotación esperada.' }
   ],

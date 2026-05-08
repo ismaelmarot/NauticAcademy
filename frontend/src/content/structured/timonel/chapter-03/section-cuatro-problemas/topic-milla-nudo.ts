@@ -9,7 +9,7 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'La Milla Marina y el Nudo' },
     { type: 'paragraph', text: 'Para poder navegar con precisión, es imprescindible dominar las unidades de medida propias de la navegación. La milla marina y el nudo son las unidades fundamentales de distancia y velocidad en el mar, y su comprensión es la base para todos los cálculos de navegación.' },
-    { type: 'title', text: 'La Milla Marina (Milla Náutica)' },
+    { type: 'subtitle', text: 'La Milla Marina (Milla Náutica)' },
     { type: 'list', items: [
       'Definición: es la longitud de un minuto de arco de meridiano terrestre (1\' de latitud)',
       'Equivalencia: 1 milla marina = 1.852 metros (estandarizada internacionalmente)',
@@ -18,7 +18,7 @@ export const topic: Topic = {
       'Como la Tierra no es una esfera perfecta, la longitud real de un minuto de meridiano varía ligeramente con la latitud, pero se usa el valor promedio de 1.852 m'
     ]},
     { type: 'paragraph', text: 'La milla marina es la unidad de distancia universal en la navegación. En la carta náutica, las distancias se miden siempre sobre la escala de latitud lateral, ya que un minuto de latitud equivale a una milla marina en cualquier punto del globo. Esto no ocurre con la longitud, ya que la separación entre meridianos disminuye al acercarse a los polos.' },
-    { type: 'title', text: 'El Cable' },
+    { type: 'subtitle', text: 'El Cable' },
     { type: 'list', items: [
       'Definición: la décima parte de una milla marina',
       'Equivalencia: 1 cable = 185,2 metros',
@@ -26,7 +26,7 @@ export const topic: Topic = {
       'También se usa para expresar la profundidad del mar y la visibilidad'
     ]},
     { type: 'paragraph', text: 'El cable es una unidad práctica para distancias cortas. Por ejemplo, cuando se dice que un faro está a 5 cables de distancia, significa que está a 0,5 millas marinas (926 metros). Es especialmente útil en maniobras portuarias y en la navegación cerca de la costa.' },
-    { type: 'title', text: 'El Nudo' },
+    { type: 'subtitle', text: 'El Nudo' },
     { type: 'list', items: [
       'Definición: una milla marina por hora',
       'Equivalencia: 1 nudo = 1,852 km/h = 0,514 m/s',
@@ -35,7 +35,7 @@ export const topic: Topic = {
       'NUNCA se dice "nudos por hora" — el nudo ya es una velocidad (millas por hora)'
     ]},
     { type: 'paragraph', text: 'El nudo es la unidad de velocidad fundamental en el mar. Cuando un buque navega a 10 nudos, significa que recorre 10 millas marinas en una hora, es decir, 18.520 metros por hora. Es un error muy común decir "nudos por hora"; lo correcto es simplemente "nudos".' },
-    { type: 'title', text: 'Historia de la corredera (log line)' },
+    { type: 'subtitle', text: 'Historia de la corredera (log line)' },
     { type: 'paragraph', text: 'La palabra "nudo" proviene del antiguo método de medición de velocidad a bordo de los veleros, llamado la corredera de barquilla. Este rudimentario pero ingenioso instrumento consistía en:' },
     { type: 'list', items: [
       'Un trozo de madera en forma de cuarto de círculo (barquilla) lastrado para mantenerse vertical en el agua',
@@ -47,7 +47,7 @@ export const topic: Topic = {
       'De aquí proviene la expresión "navegar a X nudos"'
     ]},
     { type: 'paragraph', text: 'Aunque hoy en día la velocidad se mide con correderas electrónicas, pitot o GPS, la terminología ha perdurado y el nudo sigue siendo la unidad universal de velocidad en el mar.' },
-    { type: 'title', text: 'Cómo medir y trazar distancias en la carta náutica' },
+    { type: 'subtitle', text: 'Cómo medir y trazar distancias en la carta náutica' },
     { type: 'paragraph', text: 'Para medir distancias sobre la carta náutica se sigue un procedimiento sencillo:' },
     { type: 'list', items: [
       'Se abre el compás de puntas secas entre los dos puntos de interés',

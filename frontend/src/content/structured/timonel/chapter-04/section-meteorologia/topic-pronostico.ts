@@ -8,17 +8,17 @@ export const topic: Topic = {
   content: [
     { type: 'title', text: 'Importancia de los pronósticos' },
     { type: 'paragraph', text: 'Los pronósticos meteorológicos son herramientas fundamentales para que los navegantes planifiquen viajes seguros.' },
-    { type: 'title', text: 'Tipos de cartas meteorológicas' },
+    { type: 'subtitle', text: 'Tipos de cartas meteorológicas' },
     { type: 'list', items: ['Cartas Sinópticas: escala continental/oceánica. Muestran grandes sistemas (anticiclones, depresiones, frentes), isobaras, isohipsas. Esenciales para entender la situación general', 'Cartas de Mesoescala: escala regional (cientos a ~1.000 km). Más detalle sobre frentes, sistemas convectivos, efectos locales, orografía', 'Cartas de Microescala: escala 1-10 km. Procesos de pequeña escala: tormentas aisladas, corrientes descendentes, efectos de relieve local'] },
-    { type: 'title', text: 'Modelos numéricos' },
+    { type: 'subtitle', text: 'Modelos numéricos' },
     { type: 'list', items: ['GFS (NOAA/NCEP): global, no hidrostático, resolución ~7 nm, 4 ejecuciones/día, pronóstico a 16 días (fiable 5-7 días)', 'ECMWF: mayor precisión en medio plazo, pronóstico de conjunto, 2 ejecuciones/día, a 10 días', 'WRF (NCAR/NOAA): regional, no hidrostático, alta resolución, requiere entrada de modelo global. Usado por SMN Argentina a 2,2 nm', 'SPIRE: privado, usa constelación de CubeSats para perfiles atmosféricos', 'ICON (DWD/Alemania), GEM (Canadá), UKMO (Reino Unido), ACCESS-G (Australia)'] },
-    { type: 'title', text: 'Archivos GRIB' },
+    { type: 'subtitle', text: 'Archivos GRIB' },
     { type: 'paragraph', text: 'Formato binario para datos meteorológicos, requiere software (OpenCPN, Weather4D, Squid).' },
-    { type: 'title', text: 'Servicios' },
+    { type: 'subtitle', text: 'Servicios' },
     { type: 'list', items: ['SailDocs: gratuito, solicitud por email de archivos GRIB GFS', 'Global Marine Net: gratuito, solicitud por email para Mediterráneo', 'NAVTEX: 518 kHz (inglés, 400 nm alcance), 490 kHz (idioma local, 200 nm)'] },
-    { type: 'title', text: 'Mejores prácticas' },
+    { type: 'subtitle', text: 'Mejores prácticas' },
     { type: 'list', items: ['Usar 2 o más fuentes (comparar modelos)', 'Empezar por la situación sinóptica', 'Analizar tendencias, luego valores específicos', 'Priorizar viento sobre precipitación', 'Prestar atención a ráfagas (si >150% del viento, asumir como mínimo)', 'Relacionar viento con fetch y orientación del área', 'Cruzar viento con alturas de marea', 'Confirmar pronóstico con observación directa', 'Planificar alternativas de contingencia', 'Actualizar pronósticos regularmente (fiable 48-72 horas)'] },
-    { type: 'title', text: 'Condiciones no navegables' },
+    { type: 'subtitle', text: 'Condiciones no navegables' },
     { type: 'list', items: ['Borde de anticiclón migratorio', 'Frente Pampero', 'Sudestada', 'Cumulonimbus (20 nm alrededor, especialmente barlovento)', 'Vientos sostenidos > 30 kt'] }
   ],
   quiz: [

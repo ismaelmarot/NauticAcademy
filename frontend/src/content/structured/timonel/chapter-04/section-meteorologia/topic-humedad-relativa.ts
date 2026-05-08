@@ -10,27 +10,27 @@ export const topic: Topic = {
     { type: 'title', text: 'La Humedad Relativa' },
     { type: 'paragraph', text: 'La humedad es un parámetro clave para entender el comportamiento del aire y su capacidad para contener vapor de agua. Se trata de la proporción entre la cantidad de vapor que el aire contiene y la cantidad máxima que podría contener a esa misma temperatura.' },
     { type: 'paragraph', text: 'La temperatura determina el límite de saturación del aire: cuanto más cálido está, más vapor puede retener; cuanto más frío, menos. Junto con la temperatura y la presión, la humedad completa el trío de variables esenciales que gobiernan la dinámica del tiempo meteorológico.' },
-    { type: 'title', text: 'Humedad Relativa y Punto de Rocío' },
+    { type: 'subtitle', text: 'Humedad Relativa y Punto de Rocío' },
     { type: 'paragraph', text: 'La humedad relativa es la relación entre la cantidad de vapor de agua que contiene una masa de aire a una temperatura dada y la cantidad máxima que podría contener cuando está saturada a esa misma temperatura.' },
     { type: 'paragraph', text: 'La saturación ocurre cuando el aire ya no puede seguir incorporando vapor de agua y comienza a devolverlo en forma líquida, como pequeñas gotas de rocío. Ese estado corresponde al 100% de humedad relativa. Se denomina "relativa" porque depende directamente de la temperatura y la presión del aire.' },
     { type: 'paragraph', text: 'El punto de rocío es la temperatura a la cual una masa de aire debe enfriarse para alcanzar su punto de saturación. Una vez alcanzada esa temperatura, el aire deja de admitir más vapor y comienza a condensarlo, devolviéndolo al estado líquido.' },
-    { type: 'title', text: 'Ley de Dalton' },
+    { type: 'subtitle', text: 'Ley de Dalton' },
     { type: 'paragraph', text: 'La Ley de las Presiones Parciales establece que la presión total de una mezcla de gases es la suma de las presiones parciales ejercidas por cada uno de sus componentes. Esto permite explicar el comportamiento del vapor de agua en la atmósfera:' },
     { type: 'list', items: [
       'Si la temperatura permanece constante y aumenta el vapor de agua, la humedad relativa aumenta',
       'Si la temperatura aumenta con vapor constante, la humedad relativa disminuye',
       'Si la temperatura desciende con vapor constante, la humedad relativa aumenta y puede alcanzarse la saturación'
     ]},
-    { type: 'title', text: 'Instrumentos de Medición' },
+    { type: 'subtitle', text: 'Instrumentos de Medición' },
     { type: 'paragraph', text: 'La humedad relativa se mide con el higrómetro y se registra en el tiempo con el higrógrafo. El punto de rocío se obtiene generalmente con un psicrómetro, compuesto por dos termómetros: uno que toma la temperatura de un paño húmedo y otro la del aire. La diferencia entre ambos indica la distancia al punto de rocío.' },
-    { type: 'title', text: 'Ciclo Hidrológico' },
+    { type: 'subtitle', text: 'Ciclo Hidrológico' },
     { type: 'paragraph', text: 'El agua interactúa constantemente con la atmósfera a través del ciclo del agua:' },
     { type: 'list', items: [
       'Evaporación: el agua pasa del estado líquido al gaseoso, impulsada por la radiación solar',
       'Condensación: el vapor alcanza capas más frías y forma diminutas gotas que originan las nubes',
       'Precipitación: las gotas o cristales crecen lo suficiente y caen como lluvia, nieve o granizo'
     ]},
-    { type: 'title', text: 'Cambios de Estado y Energía' },
+    { type: 'subtitle', text: 'Cambios de Estado y Energía' },
     { type: 'paragraph', text: 'El proceso de cambio de estados del agua requiere intercambio de energía:' },
     { type: 'list', items: [
       'Fusión: sólido a líquido, absorbe 80 calorías por gramo',
