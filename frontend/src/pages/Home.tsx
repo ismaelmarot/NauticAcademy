@@ -13,14 +13,18 @@ import { FiSettings } from 'react-icons/fi';
 const Container = styled.div<{ $theme: any }>`
   max-width: 800px;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: 24px 20px;
+
+  @media (max-width: 500px) {
+    padding: 16px 14px;
+  }
 `;
 
 const Header = styled.div<{ $theme: any }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 `;
 
 const HeaderActions = styled.div`
@@ -63,35 +67,72 @@ const StatsRow = styled.div`
   gap: 12px;
   margin-bottom: 24px;
   flex-wrap: wrap;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    gap: 8px;
+  }
 `;
 
-const QuickActions = styled.div`
+const QuickActions = styled.div<{ $theme: any }>`
   display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin: 0 auto 24px;
+  padding: 4px;
+  border: 2px solid ${({ $theme }) => $theme.colors.primary}44;
+  background: ${({ $theme }) => $theme.colors.surface}80;
+  border-radius: 100px;
+  width: fit-content;
+  max-width: 100%;
+  backdrop-filter: blur(8px);
+
+  @media (max-width: 500px) {
+    border-radius: 16px;
+    width: 100%;
+    padding: 6px;
+  }
 `;
 
-const ActionButton = styled.button<{ $theme: any }>`
+const ActionButton = styled.button<{ $theme: any; $active: boolean }>`
   flex: 1;
-  padding: 14px 24px;
-  border: 2px solid ${({ $theme }) => $theme.colors.primary};
-  background: transparent;
-  color: ${({ $theme }) => $theme.colors.primary};
-  border-radius: 12px;
-  font-size: 15px;
+  padding: 10px 22px;
+  border: none;
+  background: ${({ $theme, $active }) => $active ? $theme.colors.primary : 'transparent'};
+  color: ${({ $theme, $active }) => $active ? 'white' : $theme.colors.primary};
+  border-radius: 100px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.25s ease;
+  white-space: nowrap;
 
   &:hover {
-    background: ${({ $theme }) => $theme.colors.primary};
-    color: white;
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 500px) {
+    flex: 1 1 auto;
+    padding: 12px 14px;
+    font-size: 13px;
+    min-width: 0;
   }
 `;
 
 const ChapterGrid = styled.div`
   display: grid;
-  gap: 16px;
+  gap: 14px;
+  margin-top: 4px;
+
+  @media (max-width: 500px) {
+    gap: 10px;
+  }
 `;
 
 const ChapterCard = styled.div<{ $theme: any }>`
@@ -99,12 +140,21 @@ const ChapterCard = styled.div<{ $theme: any }>`
   border-radius: 16px;
   padding: 20px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.25s ease;
+  border: 1px solid ${({ $theme }) => $theme.colors.textSecondary}22;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-color: ${({ $theme }) => $theme.colors.primary}44;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 500px) {
+    padding: 16px;
   }
 `;
 
@@ -133,6 +183,7 @@ const Home: React.FC = () => {
   const { theme, t } = useThemeLanguage();
   const { user } = useAuth();
   const navigate = useNavigate();
+  const [activeView, setActiveView] = useState<'apuntes' | 'nudos' | 'meteo' | 'links'>('apuntes');
 
   const [completedTopics, setCompletedTopics] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
@@ -199,50 +250,76 @@ const Home: React.FC = () => {
         {user && <StreakBadge streak={user.streak || 0} />}
       </StatsRow>
 
-      <QuickActions>
-        <ActionButton $theme={theme} onClick={() => navigate('/notes')}>
+      <QuickActions $theme={theme}>
+        <ActionButton $theme={theme} $active={activeView === 'apuntes'} onClick={() => setActiveView('apuntes')}>
           Apuntes
         </ActionButton>
-        <ActionButton $theme={theme} onClick={() => navigate('/knots')}>
+        <ActionButton $theme={theme} $active={activeView === 'nudos'} onClick={() => setActiveView('nudos')}>
           Nudos
+        </ActionButton>
+        <ActionButton $theme={theme} $active={activeView === 'meteo'} onClick={() => setActiveView('meteo')}>
+          Meteo
+        </ActionButton>
+        <ActionButton $theme={theme} $active={activeView === 'links'} onClick={() => setActiveView('links')}>
+          Links
         </ActionButton>
       </QuickActions>
 
-      <ChapterGrid>
-        {getVisibleChapters().map((chapter) => {
-          const progress = getChapterProgress(chapter);
-          const totalSections = chapter.sections.length;
-          const completedSections = chapter.sections.filter((sec: any) => {
-            const sectionTopics = sec.topics.filter((t: any) => 
-              completedTopics.includes(t.id)
-            ).length;
-            return sectionTopics === sec.topics.length && sec.topics.length > 0;
-          }).length;
+      {activeView === 'apuntes' && (
+        <ChapterGrid>
+          {getVisibleChapters().map((chapter) => {
+            const progress = getChapterProgress(chapter);
+            const totalSections = chapter.sections.length;
+            const completedSections = chapter.sections.filter((sec: any) => {
+              const sectionTopics = sec.topics.filter((t: any) => 
+                completedTopics.includes(t.id)
+              ).length;
+              return sectionTopics === sec.topics.length && sec.topics.length > 0;
+            }).length;
 
-          const isLocked = false;
+            const isLocked = false;
 
-          return (
-            <ChapterCard
-              key={chapter.id}
-              $theme={theme}
-              onClick={() => !isLocked && navigate(`/chapter/${chapter.id}`)}
-              style={{ opacity: isLocked ? 0.5 : 1, cursor: isLocked ? 'not-allowed' : 'pointer' }}
-            >
-              <ChapterTitle $theme={theme}>
-                {chapter.title}
-              </ChapterTitle>
-              <ChapterDesc $theme={theme}>
-                {totalSections} secciones
-              </ChapterDesc>
-              <ProgressInfo $theme={theme}>
-                <span>{completedSections}/{totalSections} secciones completas</span>
-                <span>{progress.completed}/{progress.totalTopics} temas</span>
-              </ProgressInfo>
-              <ProgressBar progress={progress.totalTopics > 0 ? (progress.completed / progress.totalTopics) * 100 : 0} />
-            </ChapterCard>
-          );
-        })}
-      </ChapterGrid>
+            return (
+              <ChapterCard
+                key={chapter.id}
+                $theme={theme}
+                onClick={() => !isLocked && navigate(`/chapter/${chapter.id}`)}
+                style={{ opacity: isLocked ? 0.5 : 1, cursor: isLocked ? 'not-allowed' : 'pointer' }}
+              >
+                <ChapterTitle $theme={theme}>
+                  {chapter.title}
+                </ChapterTitle>
+                <ChapterDesc $theme={theme}>
+                  {totalSections} secciones
+                </ChapterDesc>
+                <ProgressInfo $theme={theme}>
+                  <span>{completedSections}/{totalSections} secciones completas</span>
+                  <span>{progress.completed}/{progress.totalTopics} temas</span>
+                </ProgressInfo>
+                <ProgressBar progress={progress.totalTopics > 0 ? (progress.completed / progress.totalTopics) * 100 : 0} />
+              </ChapterCard>
+            );
+          })}
+        </ChapterGrid>
+      )}
+
+      {activeView === 'nudos' && (
+        <p style={{ color: theme.colors.textSecondary, textAlign: 'center', marginTop: 40 }}>
+          Próximamente...
+        </p>
+      )}
+
+      {activeView === 'meteo' && (
+        <p style={{ color: theme.colors.textSecondary, textAlign: 'center', marginTop: 40 }}>
+          Próximamente...
+        </p>
+      )}
+
+      {activeView === 'links' && (
+        <p style={{ color: theme.colors.textSecondary, textAlign: 'center', marginTop: 40 }}>
+          Próximamente...
+        </p>
+      )}
     </Container>
   );
 };
