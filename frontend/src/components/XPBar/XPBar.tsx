@@ -8,7 +8,7 @@ const Container = styled.div<{ $theme: any }>`
   gap: 12px;
   padding: 8px 16px;
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 12px;
+  border-radius: 35px;
 `;
 
 const XPInfo = styled.div<{ $theme: any }>`

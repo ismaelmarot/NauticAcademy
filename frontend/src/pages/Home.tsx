@@ -11,20 +11,20 @@ import { chapters } from '@/content/structured';
 import { FiSettings } from 'react-icons/fi';
 
 const Container = styled.div<{ $theme: any }>`
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 24px 20px;
+  padding: 32px 24px;
 
   @media (max-width: 500px) {
-    padding: 16px 14px;
+    padding: 20px 16px;
   }
 `;
 
 const Header = styled.div<{ $theme: any }>`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: flex-start;
+  margin-bottom: 28px;
 `;
 
 const HeaderActions = styled.div`
@@ -34,38 +34,46 @@ const HeaderActions = styled.div`
 `;
 
 const IconButton = styled.button<{ $theme: any }>`
-  background: none;
-  border: 2px solid ${({ $theme }) => $theme.colors.primary};
-  color: ${({ $theme }) => $theme.colors.primary};
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: ${({ $theme }) => $theme.colors.surface};
+  color: ${({ $theme }) => $theme.colors.textSecondary};
+  border-radius: 35px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 
   &:hover {
-    opacity: 0.8;
+    background: ${({ $theme }) => $theme.colors.primary}15;
+    color: ${({ $theme }) => $theme.colors.primary};
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
 `;
 
 const Greeting = styled.h1<{ $theme: any }>`
   color: ${({ $theme }) => $theme.colors.text};
-  font-size: 24px;
-  margin-bottom: 4px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin: 0 0 4px 0;
 `;
 
 const Subtitle = styled.p<{ $theme: any }>`
   color: ${({ $theme }) => $theme.colors.textSecondary};
   font-size: 14px;
+  font-weight: 400;
+  margin: 0;
 `;
 
 const StatsRow = styled.div`
   display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
 
   @media (max-width: 500px) {
@@ -78,57 +86,50 @@ const QuickActions = styled.div<{ $theme: any }>`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4px;
-  margin: 0 auto 24px;
-  padding: 4px;
-  border: 2px solid ${({ $theme }) => $theme.colors.primary}44;
-  background: ${({ $theme }) => $theme.colors.surface}80;
-  border-radius: 100px;
+  gap: 3px;
+  margin: 0 auto 28px;
+  padding: 3px;
+  background: ${({ $theme }) => $theme.colors.surface};
+  border-radius: 12px;
   width: fit-content;
   max-width: 100%;
-  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border-radius: 35px;
 
   @media (max-width: 500px) {
-    border-radius: 16px;
     width: 100%;
-    padding: 6px;
   }
 `;
 
 const ActionButton = styled.button<{ $theme: any; $active: boolean }>`
   flex: 1;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border: none;
   background: ${({ $theme, $active }) => $active ? $theme.colors.primary : 'transparent'};
-  color: ${({ $theme, $active }) => $active ? 'white' : $theme.colors.primary};
-  border-radius: 100px;
-  font-size: 14px;
-  font-weight: 600;
+  color: ${({ $theme, $active }) => $active ? 'white' : $theme.colors.textSecondary};
+  border-radius: 35px;
+  font-size: 13px;
+  font-weight: ${({ $active }) => $active ? 600 : 500};
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
   white-space: nowrap;
+  letter-spacing: 0.2px;
 
   &:hover {
-    opacity: 0.85;
-    transform: translateY(-1px);
-  }
-
-  &:active {
-    transform: translateY(0);
+    background: ${({ $theme, $active }) => $active ? $theme.colors.primary : ($theme.colors.primary + '12')};
+    color: ${({ $theme, $active }) => $active ? 'white' : $theme.colors.primary};
   }
 
   @media (max-width: 500px) {
     flex: 1 1 auto;
-    padding: 12px 14px;
-    font-size: 13px;
-    min-width: 0;
+    padding: 10px 12px;
+    font-size: 12px;
   }
 `;
 
 const ChapterGrid = styled.div`
   display: grid;
-  gap: 14px;
-  margin-top: 4px;
+  gap: 12px;
 
   @media (max-width: 500px) {
     gap: 10px;
@@ -137,20 +138,20 @@ const ChapterGrid = styled.div`
 
 const ChapterCard = styled.div<{ $theme: any }>`
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 20px;
   cursor: pointer;
-  transition: all 0.25s ease;
-  border: 1px solid ${({ $theme }) => $theme.colors.textSecondary}22;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    border-color: ${({ $theme }) => $theme.colors.primary}44;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
   }
 
   &:active {
     transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
 
   @media (max-width: 500px) {
@@ -159,24 +160,45 @@ const ChapterCard = styled.div<{ $theme: any }>`
 `;
 
 const ChapterTitle = styled.h3<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.primary};
-  margin-bottom: 8px;
-  font-size: 18px;
+  color: ${({ $theme }) => $theme.colors.text};
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 3px 0;
+  letter-spacing: -0.2px;
 `;
 
 const ChapterDesc = styled.p<{ $theme: any }>`
   color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 14px;
-  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0 0 14px 0;
 `;
 
 const ProgressInfo = styled.div<{ $theme: any }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: 12px;
   color: ${({ $theme }) => $theme.colors.textSecondary};
   margin-bottom: 8px;
+  font-weight: 500;
+`;
+
+const SectionHeader = styled.div<{ $theme: any }>`
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: ${({ $theme }) => $theme.colors.textSecondary};
+  margin-bottom: 12px;
+`;
+
+const EmptyState = styled.div<{ $theme: any }>`
+  text-align: center;
+  padding: 60px 20px;
+  color: ${({ $theme }) => $theme.colors.textSecondary};
+  font-size: 14px;
+  font-weight: 400;
 `;
 
 const Home: React.FC = () => {
@@ -266,59 +288,50 @@ const Home: React.FC = () => {
       </QuickActions>
 
       {activeView === 'apuntes' && (
-        <ChapterGrid>
-          {getVisibleChapters().map((chapter) => {
-            const progress = getChapterProgress(chapter);
-            const totalSections = chapter.sections.length;
-            const completedSections = chapter.sections.filter((sec: any) => {
-              const sectionTopics = sec.topics.filter((t: any) => 
-                completedTopics.includes(t.id)
-              ).length;
-              return sectionTopics === sec.topics.length && sec.topics.length > 0;
-            }).length;
+        <>
+          <SectionHeader $theme={theme}>Capítulos</SectionHeader>
+          <ChapterGrid>
+            {getVisibleChapters().map((chapter) => {
+              const progress = getChapterProgress(chapter);
+              const totalSections = chapter.sections.length;
+              const completedSections = chapter.sections.filter((sec: any) => {
+                const sectionTopics = sec.topics.filter((t: any) => 
+                  completedTopics.includes(t.id)
+                ).length;
+                return sectionTopics === sec.topics.length && sec.topics.length > 0;
+              }).length;
 
-            const isLocked = false;
+              const isLocked = false;
 
-            return (
-              <ChapterCard
-                key={chapter.id}
-                $theme={theme}
-                onClick={() => !isLocked && navigate(`/chapter/${chapter.id}`)}
-                style={{ opacity: isLocked ? 0.5 : 1, cursor: isLocked ? 'not-allowed' : 'pointer' }}
-              >
-                <ChapterTitle $theme={theme}>
-                  {chapter.title}
-                </ChapterTitle>
-                <ChapterDesc $theme={theme}>
-                  {totalSections} secciones
-                </ChapterDesc>
-                <ProgressInfo $theme={theme}>
-                  <span>{completedSections}/{totalSections} secciones completas</span>
-                  <span>{progress.completed}/{progress.totalTopics} temas</span>
-                </ProgressInfo>
-                <ProgressBar progress={progress.totalTopics > 0 ? (progress.completed / progress.totalTopics) * 100 : 0} />
-              </ChapterCard>
-            );
-          })}
-        </ChapterGrid>
+              return (
+                <ChapterCard
+                  key={chapter.id}
+                  $theme={theme}
+                  onClick={() => !isLocked && navigate(`/chapter/${chapter.id}`)}
+                  style={{ opacity: isLocked ? 0.5 : 1, cursor: isLocked ? 'not-allowed' : 'pointer' }}
+                >
+                  <ChapterTitle $theme={theme}>
+                    {chapter.title}
+                  </ChapterTitle>
+                  <ChapterDesc $theme={theme}>
+                    {totalSections} secciones
+                  </ChapterDesc>
+                  <ProgressInfo $theme={theme}>
+                    <span>{completedSections}/{totalSections} secciones completas</span>
+                    <span>{progress.completed}/{progress.totalTopics} temas</span>
+                  </ProgressInfo>
+                  <ProgressBar progress={progress.totalTopics > 0 ? (progress.completed / progress.totalTopics) * 100 : 0} />
+                </ChapterCard>
+              );
+            })}
+          </ChapterGrid>
+        </>
       )}
 
-      {activeView === 'nudos' && (
-        <p style={{ color: theme.colors.textSecondary, textAlign: 'center', marginTop: 40 }}>
-          Próximamente...
-        </p>
-      )}
-
-      {activeView === 'meteo' && (
-        <p style={{ color: theme.colors.textSecondary, textAlign: 'center', marginTop: 40 }}>
-          Próximamente...
-        </p>
-      )}
-
-      {activeView === 'links' && (
-        <p style={{ color: theme.colors.textSecondary, textAlign: 'center', marginTop: 40 }}>
-          Próximamente...
-        </p>
+      {activeView !== 'apuntes' && (
+        <EmptyState $theme={theme}>
+          Próximamente disponible
+        </EmptyState>
       )}
     </Container>
   );
