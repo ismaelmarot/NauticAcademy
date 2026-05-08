@@ -10,17 +10,21 @@ import ProgressBar from '@/components/ProgressBar';
 const Container = styled.div<{ $theme: any }>`
   max-width: 800px;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: ${({ $theme }) => $theme.spacing[24]} ${({ $theme }) => $theme.spacing[16]};
 `;
 
 const BackButton = styled.button<{ $theme: any }>`
   background: none;
   border: none;
-  color: ${({ $theme }) => $theme.colors.primary};
-  font-size: 16px;
+  color: ${({ $theme }) => $theme.colors.secondary};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
   cursor: pointer;
   padding: 8px 0;
-  margin-bottom: 16px;
+  margin-bottom: ${({ $theme }) => $theme.spacing[16]};
+  text-decoration: underline;
+  text-underline-offset: 2px;
 
   &:hover {
     opacity: 0.8;
@@ -28,9 +32,12 @@ const BackButton = styled.button<{ $theme: any }>`
 `;
 
 const Title = styled.h1<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.text};
-  font-size: 28px;
-  margin-bottom: 24px;
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.headline};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.heading};
+  line-height: ${({ $theme }) => $theme.typography.lineHeight.heading};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.heading};
+  color: ${({ $theme }) => $theme.colors.primary};
+  margin-bottom: ${({ $theme }) => $theme.spacing[24]};
 `;
 
 const SectionList = styled.div`
@@ -40,8 +47,9 @@ const SectionList = styled.div`
 
 const SectionCard = styled.div<{ $theme: any }>`
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  border: 1px solid ${({ $theme }) => $theme.colors.border};
+  padding: ${({ $theme }) => $theme.spacing[16]};
   cursor: pointer;
   transition: transform 0.2s;
 
@@ -51,20 +59,27 @@ const SectionCard = styled.div<{ $theme: any }>`
 `;
 
 const SectionTitle = styled.h3<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.primary};
-  font-size: 16px;
+  color: ${({ $theme }) => $theme.colors.text};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.headingSm};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.headingSm};
   margin-bottom: 4px;
 `;
 
 const SectionDesc = styled.p<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 13px;
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.caption};
 `;
 
 const ProgressInfo = styled.div<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 14px;
-  margin-bottom: 16px;
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
+  margin-bottom: ${({ $theme }) => $theme.spacing[16]};
 `;
 
 const Chapter: React.FC = () => {

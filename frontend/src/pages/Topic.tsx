@@ -11,17 +11,21 @@ import { chapters } from '@/content/structured';
 const Container = styled.div<{ $theme: any }>`
   max-width: 800px;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: ${({ $theme }) => $theme.spacing[24]} ${({ $theme }) => $theme.spacing[16]};
 `;
 
 const BackButton = styled.button<{ $theme: any }>`
   background: none;
   border: none;
-  color: ${({ $theme }) => $theme.colors.primary};
-  font-size: 16px;
+  color: ${({ $theme }) => $theme.colors.secondary};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
   cursor: pointer;
   padding: 8px 0;
-  margin-bottom: 16px;
+  margin-bottom: ${({ $theme }) => $theme.spacing[16]};
+  text-decoration: underline;
+  text-underline-offset: 2px;
 
   &:hover {
     opacity: 0.8;
@@ -33,38 +37,49 @@ const Header = styled.div`
 `;
 
 const Title = styled.h1<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.text};
-  font-size: 24px;
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.headline};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.heading};
+  line-height: ${({ $theme }) => $theme.typography.lineHeight.heading};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.heading};
+  color: ${({ $theme }) => $theme.colors.primary};
   margin-bottom: 8px;
 `;
 
 const Meta = styled.div<{ $theme: any }>`
   display: flex;
-  gap: 16px;
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 14px;
-  margin-bottom: 16px;
+  gap: ${({ $theme }) => $theme.spacing[16]};
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.caption};
+  margin-bottom: ${({ $theme }) => $theme.spacing[16]};
 `;
 
 const CompleteButton = styled.button<{ $theme: any; $completed: boolean }>`
   width: 100%;
   padding: 14px;
   border: none;
-  border-radius: 8px;
-  background: ${({ $theme, $completed }) => $completed ? $theme.colors.success : $theme.colors.primary};
-  color: ${({ $theme }) => $theme.colors.background};
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  background: ${({ $theme, $completed }) => $completed ? $theme.colors.success : $theme.button.primaryBg};
+  color: ${({ $theme }) => $theme.button.primaryText};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
+  box-shadow: ${({ $theme, $completed }) => $completed ? 'none' : $theme.button.primaryShadow};
   cursor: ${({ $completed }) => $completed ? 'default' : 'pointer'};
-  margin-top: 24px;
+  margin-top: ${({ $theme }) => $theme.spacing[24]};
+  transition: transform 0.1s, box-shadow 0.1s;
 
-  &:hover:not(:disabled) {
-    opacity: 0.9;
+  &:active:not(:disabled) {
+    transform: translateY(2px);
+    box-shadow: ${({ $theme }) => $theme.button.primaryActiveShadow};
   }
 
   &:disabled {
     opacity: 0.7;
     cursor: default;
+    box-shadow: none;
   }
 `;
 

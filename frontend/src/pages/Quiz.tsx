@@ -47,7 +47,8 @@ const Progress = styled.div<{ $theme: any }>`
 
 const ResultCard = styled.div<{ $theme: any }>`
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 16px;
+  border-radius: ${({ $theme }) => $theme.radius.lg};
+  border: 1px solid ${({ $theme }) => $theme.colors.border};
   padding: 32px;
   text-align: center;
   margin-top: 24px;
@@ -85,7 +86,7 @@ const ResultMessage = styled.p<{ $theme: any }>`
 const Button = styled.button<{ $theme: any }>`
   padding: 14px 32px;
   border: none;
-  border-radius: 8px;
+  border-radius: ${({ $theme }) => $theme.radius.sm};
   background: ${({ $theme }) => $theme.colors.primary};
   color: ${({ $theme }) => $theme.colors.background};
   font-size: 16px;

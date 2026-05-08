@@ -21,8 +21,8 @@ const Overlay = styled.div<{ $theme: any }>`
 
 const Modal = styled.div<{ $theme: any }>`
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 16px;
-  padding: 32px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  padding: ${({ $theme }) => $theme.spacing[32]};
   max-width: 400px;
   width: 90%;
   text-align: center;
@@ -31,14 +31,19 @@ const Modal = styled.div<{ $theme: any }>`
 
 const ModalTitle = styled.h2<{ $theme: any }>`
   color: ${({ $theme }) => $theme.colors.text};
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.headingSm};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.headingSm};
+  margin-bottom: ${({ $theme }) => $theme.spacing[12]};
 `;
 
 const ModalText = styled.p<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 14px;
-  margin-bottom: 24px;
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.caption};
+  margin-bottom: ${({ $theme }) => $theme.spacing[24]};
   line-height: 1.5;
 `;
 
@@ -49,30 +54,33 @@ const ModalButtons = styled.div`
 `;
 
 const CancelButton = styled.button<{ $theme: any }>`
-  padding: 12px 24px;
-  border: 2px solid ${({ $theme }) => $theme.colors.textSecondary};
+  padding: ${({ $theme }) => $theme.spacing[12]} ${({ $theme }) => $theme.spacing[24]};
+  border: 2px solid ${({ $theme }) => $theme.colors.border};
   background: transparent;
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
+  color: ${({ $theme }) => $theme.colors.text};
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
   cursor: pointer;
   transition: all 0.2s;
 
   &:hover {
-    background: ${({ $theme }) => $theme.colors.textSecondary};
-    color: white;
+    background: ${({ $theme }) => $theme.colors.border};
   }
 `;
 
 const ConfirmButton = styled.button<{ $theme: any }>`
-  padding: 12px 24px;
+  padding: ${({ $theme }) => $theme.spacing[12]} ${({ $theme }) => $theme.spacing[24]};
   border: none;
   background: ${({ $theme }) => $theme.colors.error};
   color: white;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
   cursor: pointer;
   transition: all 0.2s;
 
@@ -84,7 +92,7 @@ const ConfirmButton = styled.button<{ $theme: any }>`
 const Container = styled.div<{ $theme: any }>`
   max-width: 500px;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: ${({ $theme }) => $theme.spacing[24]} ${({ $theme }) => $theme.spacing[16]};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,11 +110,15 @@ const HeaderRow = styled.div`
 const BackButton = styled.button<{ $theme: any }>`
   background: none;
   border: none;
-  color: ${({ $theme }) => $theme.colors.primary};
-  font-size: 16px;
+  color: ${({ $theme }) => $theme.colors.secondary};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
   cursor: pointer;
   padding: 8px 0;
   align-self: flex-start;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 
   &:hover {
     opacity: 0.8;
@@ -115,40 +127,46 @@ const BackButton = styled.button<{ $theme: any }>`
 
 const ExitButton = styled.button<{ $theme: any }>`
   background: transparent;
-  border: 2px solid ${({ $theme }) => $theme.colors.textSecondary};
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 14px;
+  border: 2px solid ${({ $theme }) => $theme.colors.border};
+  color: ${({ $theme }) => $theme.colors.text};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.medium};
   cursor: pointer;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: 500;
+  padding: 8px ${({ $theme }) => $theme.spacing[16]};
+  border-radius: ${({ $theme }) => $theme.radius.md};
   transition: all 0.2s;
 
   &:hover {
-    background: ${({ $theme }) => $theme.colors.textSecondary};
-    color: white;
-    opacity: 1;
+    background: ${({ $theme }) => $theme.colors.border};
   }
 `;
 
 const Title = styled.h1<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.text};
-  font-size: 24px;
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.headline};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.heading};
+  line-height: ${({ $theme }) => $theme.typography.lineHeight.heading};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.heading};
+  color: ${({ $theme }) => $theme.colors.primary};
   margin-bottom: 8px;
 `;
 
 const Instruction = styled.p<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 14px;
-  margin-bottom: 24px;
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.caption};
+  margin-bottom: ${({ $theme }) => $theme.spacing[24]};
   text-align: center;
 `;
 
 const Score = styled.div<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.text};
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 16px;
+  color: ${({ $theme }) => $theme.colors.primary};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
+  margin-top: ${({ $theme }) => $theme.spacing[16]};
 `;
 
 const Practice: React.FC = () => {

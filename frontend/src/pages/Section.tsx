@@ -9,17 +9,21 @@ import { chapters } from '@/content/structured';
 const Container = styled.div<{ $theme: any }>`
   max-width: 800px;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: ${({ $theme }) => $theme.spacing[24]} ${({ $theme }) => $theme.spacing[16]};
 `;
 
 const BackButton = styled.button<{ $theme: any }>`
   background: none;
   border: none;
-  color: ${({ $theme }) => $theme.colors.primary};
-  font-size: 16px;
+  color: ${({ $theme }) => $theme.colors.secondary};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
   cursor: pointer;
   padding: 8px 0;
-  margin-bottom: 16px;
+  margin-bottom: ${({ $theme }) => $theme.spacing[16]};
+  text-decoration: underline;
+  text-underline-offset: 2px;
 
   &:hover {
     opacity: 0.8;
@@ -27,15 +31,20 @@ const BackButton = styled.button<{ $theme: any }>`
 `;
 
 const Title = styled.h1<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.text};
-  font-size: 24px;
-  margin-bottom: 24px;
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.headline};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.heading};
+  line-height: ${({ $theme }) => $theme.typography.lineHeight.heading};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.heading};
+  color: ${({ $theme }) => $theme.colors.primary};
+  margin-bottom: ${({ $theme }) => $theme.spacing[24]};
 `;
 
 const ProgressInfo = styled.div<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 14px;
-  margin-bottom: 24px;
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
+  margin-bottom: ${({ $theme }) => $theme.spacing[24]};
 `;
 
 const TopicList = styled.div`
@@ -45,12 +54,13 @@ const TopicList = styled.div`
 
 const TopicCard = styled.div<{ $theme: any; $completed: boolean }>`
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  border: 1px solid ${({ $theme }) => $theme.colors.border};
+  border-left: 4px solid ${({ $theme, $completed }) =>
+    $completed ? $theme.colors.success : $theme.colors.primary};
+  padding: ${({ $theme }) => $theme.spacing[16]};
   cursor: pointer;
   transition: transform 0.2s;
-  border-left: 4px solid ${({ $theme, $completed }) => 
-    $completed ? $theme.colors.success : $theme.colors.primary};
 
   &:hover {
     transform: translateX(4px);
@@ -59,13 +69,18 @@ const TopicCard = styled.div<{ $theme: any; $completed: boolean }>`
 
 const TopicTitle = styled.h3<{ $theme: any }>`
   color: ${({ $theme }) => $theme.colors.text};
-  font-size: 16px;
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
   margin-bottom: 4px;
 `;
 
 const TopicMeta = styled.p<{ $theme: any }>`
-  color: ${({ $theme }) => $theme.colors.textSecondary};
-  font-size: 13px;
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.caption};
 `;
 
 const ActionButtons = styled.div`
@@ -76,17 +91,26 @@ const ActionButtons = styled.div`
 
 const ActionButton = styled.button<{ $theme: any }>`
   flex: 1;
-  padding: 12px;
+  padding: ${({ $theme }) => $theme.spacing[12]};
   border: none;
-  border-radius: 8px;
-  background: ${({ $theme }) => $theme.colors.primary};
-  color: ${({ $theme }) => $theme.colors.background};
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  background: ${({ $theme }) => $theme.button.primaryBg};
+  color: ${({ $theme }) => $theme.button.primaryText};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.body};
+  box-shadow: ${({ $theme }) => $theme.button.primaryShadow};
   cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.95;
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: ${({ $theme }) => $theme.button.primaryActiveShadow};
   }
 `;
 
@@ -122,7 +146,7 @@ const Section: React.FC = () => {
     return <Container $theme={theme}><p>Sección no encontrada</p></Container>;
   }
 
-  const completedCount = section.topics.filter((t: any) => 
+  const completedCount = section.topics.filter((t: any) =>
     completedTopics.includes(t.id)
   ).length;
 
@@ -138,7 +162,7 @@ const Section: React.FC = () => {
       <TopicList>
         {section.topics.map((topic: any) => {
           const isCompleted = completedTopics.includes(topic.id);
-              return (
+          return (
             <TopicCard
               key={topic.id}
               $theme={theme}

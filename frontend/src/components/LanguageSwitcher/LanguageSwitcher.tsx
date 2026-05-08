@@ -12,7 +12,7 @@ const LangButton = styled.button<{ $active: boolean; $theme: any }>`
   border: 2px solid ${({ $theme }) => $theme.colors.primary};
   background: ${({ $active, $theme }) => $active ? $theme.colors.primary : 'transparent'};
   color: ${({ $active, $theme }) => $active ? $theme.colors.background : $theme.colors.primary};
-  border-radius: 8px;
+  border-radius: ${({ $theme }) => $theme.radius.sm};
   cursor: pointer;
   font-size: 14px;
   transition: all 0.2s;

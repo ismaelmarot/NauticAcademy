@@ -35,7 +35,8 @@ const Title = styled.h1<{ $theme: any }>`
 
 const ProfileCard = styled.div<{ $theme: any }>`
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 16px;
+  border-radius: ${({ $theme }) => $theme.radius.lg};
+  border: 1px solid ${({ $theme }) => $theme.colors.border};
   padding: 24px;
   margin-bottom: 24px;
 `;
@@ -75,7 +76,8 @@ const StatsGrid = styled.div`
 
 const StatCard = styled.div<{ $theme: any }>`
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: 12px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
+  border: 1px solid ${({ $theme }) => $theme.colors.border};
   padding: 16px;
   text-align: center;
 `;
@@ -106,7 +108,7 @@ const LogoutButton = styled.button<{ $theme: any }>`
   width: 100%;
   padding: 14px;
   border: 2px solid ${({ $theme }) => $theme.colors.error};
-  border-radius: 8px;
+  border-radius: ${({ $theme }) => $theme.radius.sm};
   background: transparent;
   color: ${({ $theme }) => $theme.colors.error};
   font-size: 16px;

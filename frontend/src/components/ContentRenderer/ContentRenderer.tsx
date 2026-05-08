@@ -42,7 +42,7 @@ const ListItem = styled.li<{ $theme: any }>`
 const ImageContainer = styled.figure<{ $theme: any }>`
   margin: 24px 0;
   text-align: center;
-  border-radius: 12px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
   overflow: hidden;
 `;
 
@@ -57,11 +57,6 @@ const StyledImage = styled.img`
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  }
-  
-  @media (max-width: 768px) {
-    max-width: 100%;
-    border-radius: 8px;
   }
 `;
 

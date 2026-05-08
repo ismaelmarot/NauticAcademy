@@ -5,7 +5,8 @@ import { useThemeLanguage } from '@/context/ThemeLanguageContext';
 
 const CardContainer = styled.div<{ $theme: any; $offsetX: number; $isDragging: boolean }>`
   background: ${(props: any) => props.$theme && props.$theme.colors ? props.$theme.colors.surface : '#FFFFFF'};
-  border-radius: 16px;
+  border-radius: ${({ $theme }) => $theme.radius.lg};
+  border: 1px solid ${(props: any) => props.$theme && props.$theme.colors ? props.$theme.colors.border : '#e0e4ee'};
   padding: 24px;
   margin: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -37,7 +38,7 @@ const ButtonContainer = styled.div`
 const ActionButton = styled.button<{ $theme: any; $correct: boolean }>`
   padding: 12px 24px;
   border: none;
-  border-radius: 8px;
+  border-radius: ${({ $theme }) => $theme.radius.sm};
   background: ${(props: any) => 
     props.$theme && props.$theme.colors ? 
       (props.$correct ? props.$theme.colors.success : props.$theme.colors.error) : 

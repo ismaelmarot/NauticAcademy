@@ -41,7 +41,7 @@ const Card = styled.div<{ $theme: any; $correct?: boolean; $showResult?: boolean
     $showResult 
       ? ($correct ? $theme.colors.success + '08' : $theme.colors.error + '08')
       : $theme.colors.surface};
-  border-radius: 16px;
+  border-radius: ${({ $theme }) => $theme.radius.lg};
   padding: 24px;
   margin: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -76,7 +76,7 @@ const Option = styled.button<{ $theme: any; $selected: boolean; $correct: boolea
     return 'transparent';
   }};
   color: ${({ $theme }) => $theme.colors.text};
-  border-radius: 12px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
   cursor: ${({ $showResult }) => $showResult ? 'default' : 'pointer'};
   text-align: left;
   font-size: 15px;
@@ -108,7 +108,7 @@ const ResultBanner = styled.div<{ $theme: any; $correct: boolean }>`
                 'linear-gradient(135deg, ' + $theme.colors.error + '15, ' + $theme.colors.error + '25)'};
   border: 3px solid ${({ $theme, $correct }) => 
     $correct ? $theme.colors.success : $theme.colors.error};
-  border-radius: 12px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
   animation: ${css`${fadeIn} 0.4s ease-in`};
   box-shadow: 0 4px 12px ${({ $correct }) => 
     $correct ? 'rgba(76, 175, 80, 0.2)' : 'rgba(244, 67, 54, 0.2)'};
@@ -138,7 +138,7 @@ const NextButton = styled.button<{ $theme: any }>`
   padding: 16px;
   margin-top: 20px;
   border: none;
-  border-radius: 12px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
   background: linear-gradient(135deg, ${({ $theme }) => $theme.colors.primary}, ${({ $theme }) => $theme.colors.primary + 'CC'});
   color: white;
   font-size: 17px;
