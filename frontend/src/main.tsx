@@ -1,23 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import { AuthProvider, useAuth } from '@/context/AuthContext';
-import { ThemeLanguageProvider, useThemeLanguage } from '@/context/ThemeLanguageContext';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+import { AuthProvider, useAuth } from '@/context/AuthContext'
+import { ThemeLanguageProvider, useThemeLanguage } from '@/context/ThemeLanguageContext'
+import './index.css'
 
-import Home from '@/pages/Home';
-import Login from '@/pages/Login';
-import Register from '@/pages/Register';
-import ForgotPassword from '@/pages/ForgotPassword';
-import ResetPassword from '@/pages/ResetPassword';
-import Profile from '@/pages/Profile';
-import Chapter from '@/pages/Chapter';
-import Section from '@/pages/Section';
-import Topic from '@/pages/Topic';
-import Quiz from '@/pages/Quiz';
-import Practice from '@/pages/Practice';
-import styled from 'styled-components';
+import {
+  Home,
+  Login,
+  Register,
+  ForgotPassword,
+  ResetPassword,
+  Profile,
+  Chapter,
+  Section,
+  Topic,
+  Quiz,
+  Practice
+} from '@/pages'
+import styled from 'styled-components'
 
 const LoadingContainer = styled.div<{ $theme: any }>`
   min-height: 100vh;
@@ -26,36 +28,36 @@ const LoadingContainer = styled.div<{ $theme: any }>`
   justify-content: center;
   background: ${({ $theme }) => $theme.colors.background};
   color: ${({ $theme }) => $theme.colors.text};
-`;
+`
 
 const ProtectedRoute: React.FC<{ element: React.ReactNode }> = ({ element }) => {
   const { user, loading } = useAuth();
   const { theme } = useThemeLanguage();
 
   if (loading) {
-    return <LoadingContainer $theme={theme}>Cargando...</LoadingContainer>;
+    return <LoadingContainer $theme={theme}>Cargando...</LoadingContainer>
   }
 
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login" replace />
   }
 
-  return <>{element}</>;
+  return <>{element}</>
 };
 
 const PublicRoute: React.FC<{ element: React.ReactNode }> = ({ element }) => {
-  const { user, loading } = useAuth();
-  const { theme } = useThemeLanguage();
+  const { user, loading } = useAuth()
+  const { theme } = useThemeLanguage()
 
   if (loading) {
-    return <LoadingContainer $theme={theme}>Cargando...</LoadingContainer>;
+    return <LoadingContainer $theme={theme}>Cargando...</LoadingContainer>
   }
 
   if (user) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/" replace />
   }
 
-  return <>{element}</>;
+  return <>{element}</>
   };
 
 const routes = [
@@ -92,4 +94,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </ThemeLanguageProvider>
     </AuthProvider>
   </React.StrictMode>
-);
+)

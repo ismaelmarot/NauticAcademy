@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
-import { useAuth } from '@/context/AuthContext';
-import { useThemeLanguage } from '@/context/ThemeLanguageContext';
-import XPBar from '@/components/XPBar';
-import StreakBadge from '@/components/StreakBadge';
-import ProgressBar from '@/components/ProgressBar';
-import { getProgress } from '@/api/progress';
-import { chapters } from '@/content/structured';
-import { FiSettings } from 'react-icons/fi';
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import styled from 'styled-components'
+import { useAuth } from '@/context/AuthContext'
+import { useThemeLanguage } from '@/context/ThemeLanguageContext'
+import XPBar from '@/components/XPBar'
+import StreakBadge from '@/components/StreakBadge'
+import ProgressBar from '@/components/ProgressBar'
+import { getProgress } from '@/api/progress'
+import { chapters } from '@/content/structured'
+import { FiSettings } from 'react-icons/fi'
 
 const Container = styled.div<{ $theme: any }>`
   max-width: 720px;
@@ -89,7 +89,7 @@ const QuickActions = styled.div<{ $theme: any }>`
   margin: 0 auto ${({ $theme }) => $theme.spacing[28] || '28px'};
   padding: 3px;
   background: ${({ $theme }) => $theme.colors.surface};
-  border-radius: ${({ $theme }) => $theme.radius.md};
+  border-radius: ${({ $theme }) => $theme.radius.xxl};
   width: fit-content;
   max-width: 100%;
 
@@ -104,7 +104,7 @@ const ActionButton = styled.button<{ $theme: any; $active: boolean }>`
   border: none;
   background: ${({ $theme, $active }) => $active ? $theme.colors.primary : 'transparent'};
   color: ${({ $theme, $active }) => $active ? 'white' : $theme.colors.textBody};
-  border-radius: ${({ $theme }) => $theme.radius.md};
+  border-radius: ${({ $theme }) => $theme.radius.xxl};
   font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
   font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
   font-weight: ${({ $theme, $active }) => $active ? $theme.typography.fontWeight.bold : $theme.typography.fontWeight.medium};
@@ -696,7 +696,7 @@ const Home: React.FC = () => {
         </EmptyState>
       )}
     </Container>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
