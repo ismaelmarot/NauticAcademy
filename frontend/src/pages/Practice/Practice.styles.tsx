@@ -110,7 +110,8 @@ export const BackButton = styled.button<{ $theme: any }>`
   font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
   cursor: pointer;
   padding: 8px 0;
-  align-self: flex-start;
+  margin-left: auto;
+  display: table;
   text-decoration: underline;
   text-underline-offset: 2px;
 

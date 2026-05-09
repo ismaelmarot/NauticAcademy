@@ -16,6 +16,8 @@ export const BackButton = styled.button<{ $theme: any }>`
   cursor: pointer;
   padding: 8px 0;
   margin-bottom: ${({ $theme }) => $theme.spacing[16]};
+  margin-left: auto;
+  display: table;
   text-decoration: underline;
   text-underline-offset: 2px;
 

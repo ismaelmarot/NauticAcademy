@@ -14,6 +14,8 @@ export const BackButton = styled.button<{ $theme: any }>`
   cursor: pointer;
   padding: 8px 0;
   margin-bottom: 16px;
+  margin-left: auto;
+  display: table;
 
   &:hover {
     opacity: 0.8;
