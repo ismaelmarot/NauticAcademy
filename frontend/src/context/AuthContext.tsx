@@ -1,5 +1,7 @@
 import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 
+const STORAGE_KEY = 'nautic-data';
+
 export interface User {
   id: number;
   firstName: string;
@@ -12,11 +14,41 @@ export interface User {
   streak: number;
 }
 
+interface LocalData {
+  user: User;
+  completedTopics: string[];
+}
+
+function loadData(): LocalData {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch {}
+  return {
+    user: {
+      id: 1,
+      firstName: 'Invitado',
+      lastName: '',
+      nickname: 'invitado',
+      email: 'guest@nauticacademy.com',
+      emailVerified: true,
+      xp: 0,
+      level: 1,
+      streak: 0,
+    },
+    completedTopics: [],
+  };
+}
+
+function saveData(data: LocalData) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
 interface AuthContextType {
   user: User | null;
   loading: boolean;
   updateUser: (updates: Partial<User>) => void;
-  refreshUser: () => Promise<void>;
+  refreshUser: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -26,32 +58,25 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/user/me')
-      .then(res => res.json())
-      .then(data => {
-        setUser({ ...data, emailVerified: !!data.emailVerified });
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
+    const data = loadData();
+    setUser(data.user);
+    setLoading(false);
   }, []);
 
   const updateUser = useCallback((updates: Partial<User>) => {
     setUser(prev => {
       if (!prev) return null;
-      return { ...prev, ...updates };
+      const updated = { ...prev, ...updates };
+      const data = loadData();
+      data.user = updated;
+      saveData(data);
+      return updated;
     });
   }, []);
 
-  const refreshUser = useCallback(async () => {
-    try {
-      const res = await fetch('/api/user/me');
-      const data = await res.json();
-      setUser(prev => prev ? { ...prev, ...data, emailVerified: !!data.emailVerified } : null);
-    } catch (error) {
-      console.error('Failed to refresh user:', error);
-    }
+  const refreshUser = useCallback(() => {
+    const data = loadData();
+    setUser(data.user);
   }, []);
 
   return (
