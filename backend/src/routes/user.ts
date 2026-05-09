@@ -7,7 +7,7 @@ const router = Router();
 router.get('/me', authenticateToken, async (req: AuthRequest, res: Response) => {
   try {
     const user = await get(
-      'SELECT id, firstName, lastName, nickname, email, xp, level, streak, language, theme FROM users WHERE id = ?',
+      'SELECT id, firstName, lastName, nickname, email, emailVerified, xp, level, streak, language, theme FROM users WHERE id = ?',
       [req.userId]
     );
 

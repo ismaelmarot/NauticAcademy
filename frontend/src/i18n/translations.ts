@@ -79,7 +79,9 @@ export const translations = {
     goodEvening: 'Buenas noches',
     keepLearning: 'Sigue aprendiendo',
     todayProgress: 'Progreso de hoy',
-    weeklyGoal: 'Meta semanal'
+    weeklyGoal: 'Meta semanal',
+    verifyEmailBanner: 'Verifica tu correo electrónico para acceder a todas las funcionalidades.',
+    verifyNow: 'Verificar ahora'
   },
   en: {
     appName: 'NauticAcademy',
@@ -159,7 +161,9 @@ export const translations = {
     goodEvening: 'Good evening',
     keepLearning: 'Keep learning',
     todayProgress: "Today's progress",
-    weeklyGoal: 'Weekly goal'
+    weeklyGoal: 'Weekly goal',
+    verifyEmailBanner: 'Verify your email to access all features.',
+    verifyNow: 'Verify now'
   }
 };
 

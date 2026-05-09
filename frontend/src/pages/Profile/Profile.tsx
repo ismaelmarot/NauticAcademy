@@ -5,7 +5,6 @@ import {
   Avatar,
   BackButton,
   Container,
-  LogoutButton,
   Name,
   Nickname,
   ProfileCard,
@@ -26,12 +25,9 @@ const Profile: React.FC = () => {
     initials,
 
     goBack,
-    goToLogin,
-    handleLogout
   } = useProfile()
 
   if (!user) {
-    goToLogin()
     return null
   }
 
@@ -106,13 +102,6 @@ const Profile: React.FC = () => {
 
         <LanguageSwitcher />
       </Section>
-
-      <LogoutButton
-        $theme={theme}
-        onClick={handleLogout}
-      >
-        {t('logout')}
-      </LogoutButton>
     </Container>
   )
 }

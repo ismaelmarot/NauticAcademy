@@ -3,19 +3,11 @@ import { useAuth, useThemeLanguage } from '@/context'
 
 export const useProfile = () => {
   const { theme, t } = useThemeLanguage()
-  const { user, logout } = useAuth()
+  const { user } = useAuth()
   const navigate = useNavigate()
 
   const goBack = () => {
     navigate('/')
-  }
-
-  const goToLogin = () => {
-    navigate('/login')
-  }
-
-  const handleLogout = () => {
-    logout()
   }
 
   const initials =
@@ -28,7 +20,5 @@ export const useProfile = () => {
     initials,
 
     goBack,
-    goToLogin,
-    handleLogout
   }
 }

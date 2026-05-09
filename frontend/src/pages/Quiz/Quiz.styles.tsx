@@ -7,18 +7,24 @@ export const Container = styled.div<{ $theme: any }>`
 `
 
 export const BackButton = styled.button<{ $theme: any }>`
-  background: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
   border: none;
   color: ${({ $theme }) => $theme.colors.primary};
-  font-size: 16px;
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.body};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.medium};
   cursor: pointer;
-  padding: 8px 0;
+  padding: 8px 12px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
   margin-bottom: 16px;
   margin-left: auto;
-  display: table;
+  transition: all 0.2s;
 
   &:hover {
-    opacity: 0.8;
+    background: ${({ $theme }) => $theme.colors.primaryLight};
   }
 `
 

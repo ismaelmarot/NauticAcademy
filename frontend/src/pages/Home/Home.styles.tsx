@@ -80,7 +80,7 @@ export const QuickActions = styled.div<{ $theme: any }>`
     margin: 0 auto ${({ $theme }) => $theme.spacing[28] || '28px'};
     padding: 3px;
     background: ${({ $theme }) => $theme.colors.surface};
-    border-radius: ${({ $theme }) => $theme.radius.xxl};
+    border-radius: ${({ $theme }) => $theme.radius.lg};
     width: fit-content;
     max-width: 100%;
 

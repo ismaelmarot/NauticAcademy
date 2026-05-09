@@ -102,21 +102,23 @@ export const HeaderRow = styled.div`
 `
 
 export const BackButton = styled.button<{ $theme: any }>`
-  background: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
   border: none;
-  color: ${({ $theme }) => $theme.colors.secondary};
+  color: ${({ $theme }) => $theme.colors.primary};
   font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
   font-size: ${({ $theme }) => $theme.typography.fontSize.body};
-  font-weight: ${({ $theme }) => $theme.typography.fontWeight.bold};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.medium};
   cursor: pointer;
-  padding: 8px 0;
+  padding: 8px 12px;
+  border-radius: ${({ $theme }) => $theme.radius.md};
   margin-left: auto;
-  display: table;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  transition: all 0.2s;
 
   &:hover {
-    opacity: 0.8;
+    background: ${({ $theme }) => $theme.colors.primaryLight};
   }
 `
 

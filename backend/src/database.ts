@@ -18,6 +18,9 @@ db.serialize(() => {
       nickname TEXT UNIQUE,
       email TEXT UNIQUE NOT NULL,
       password TEXT NOT NULL,
+      emailVerified INTEGER DEFAULT 0,
+      verificationToken TEXT,
+      verificationExpiresAt TEXT,
       avatarUrl TEXT,
       xp INTEGER DEFAULT 0,
       level INTEGER DEFAULT 1,
@@ -64,6 +67,28 @@ db.serialize(() => {
       FOREIGN KEY (userId) REFERENCES users(id)
     )
   `);
+
+  db.run(`ALTER TABLE users ADD COLUMN emailVerified INTEGER DEFAULT 0`, (err: any) => {
+    if (err && !err.message.includes('duplicate column')) {
+      console.error('Migration error (emailVerified):', err.message);
+    }
+  });
+
+  db.run(`ALTER TABLE users ADD COLUMN verificationToken TEXT`, (err: any) => {
+    if (err && !err.message.includes('duplicate column')) {
+      console.error('Migration error (verificationToken):', err.message);
+    }
+  });
+
+  db.run(`ALTER TABLE users ADD COLUMN verificationExpiresAt TEXT`, (err: any) => {
+    if (err && !err.message.includes('duplicate column')) {
+      console.error('Migration error (verificationExpiresAt):', err.message);
+    }
+  });
+
+  db.run(`INSERT OR IGNORE INTO users (firstName, lastName, nickname, email, password, emailVerified) VALUES ('Invitado', '', 'invitado', 'guest@nauticacademy.com', '', 1)`, (err: any) => {
+    if (err) console.error('Error creating guest user:', err.message);
+  });
 });
 
 export const run = (sql: string, params: any[] = []): Promise<any> => {

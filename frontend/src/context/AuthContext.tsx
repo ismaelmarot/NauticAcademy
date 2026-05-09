@@ -1,12 +1,12 @@
 import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
-import { login as apiLogin, register as apiRegister } from '@/api/auth';
 
-interface User {
+export interface User {
   id: number;
   firstName: string;
   lastName: string;
   nickname?: string;
   email: string;
+  emailVerified: boolean;
   xp: number;
   level: number;
   streak: number;
@@ -14,10 +14,6 @@ interface User {
 
 interface AuthContextType {
   user: User | null;
-  token: string | null;
-  login: (email: string, password: string) => Promise<void>;
-  register: (data: Parameters<typeof apiRegister>[0]) => Promise<void>;
-  logout: () => void;
   loading: boolean;
   updateUser: (updates: Partial<User>) => void;
   refreshUser: () => Promise<void>;
@@ -27,48 +23,19 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [token, setToken] = useState<string | null>(localStorage.getItem('nautic-token'));
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (token) {
-      fetch('/api/user/me', {
-        headers: { Authorization: `Bearer ${token}` }
+    fetch('/api/user/me')
+      .then(res => res.json())
+      .then(data => {
+        setUser({ ...data, emailVerified: !!data.emailVerified });
+        setLoading(false);
       })
-        .then(res => res.json())
-        .then(data => {
-          setUser(data);
-          setLoading(false);
-        })
-        .catch(() => {
-          localStorage.removeItem('nautic-token');
-          setToken(null);
-          setLoading(false);
-        });
-    } else {
-      setLoading(false);
-    }
-  }, [token]);
-
-  const login = async (email: string, password: string) => {
-    const data = await apiLogin({ email, password });
-    localStorage.setItem('nautic-token', data.token);
-    setToken(data.token);
-    setUser(data.user as User);
-  };
-
-  const register = async (data: Parameters<typeof apiRegister>[0]) => {
-    const res = await apiRegister(data);
-    localStorage.setItem('nautic-token', res.token);
-    setToken(res.token);
-    setUser(res.user as User);
-  };
-
-  const logout = () => {
-    localStorage.removeItem('nautic-token');
-    setToken(null);
-    setUser(null);
-  };
+      .catch(() => {
+        setLoading(false);
+      });
+  }, []);
 
   const updateUser = useCallback((updates: Partial<User>) => {
     setUser(prev => {
@@ -78,20 +45,17 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const refreshUser = useCallback(async () => {
-    if (!token) return;
     try {
-      const res = await fetch('/api/user/me', {
-        headers: { Authorization: `Bearer ${token}` }
-      });
+      const res = await fetch('/api/user/me');
       const data = await res.json();
-      setUser(data);
+      setUser(prev => prev ? { ...prev, ...data, emailVerified: !!data.emailVerified } : null);
     } catch (error) {
       console.error('Failed to refresh user:', error);
     }
-  }, [token]);
+  }, []);
 
   return (
-    <AuthContext.Provider value={{ user, token, login, register, logout, loading, updateUser, refreshUser }}>
+    <AuthContext.Provider value={{ user, loading, updateUser, refreshUser }}>
       {children}
     </AuthContext.Provider>
   );

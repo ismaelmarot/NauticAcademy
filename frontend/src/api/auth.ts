@@ -34,6 +34,7 @@ export interface AuthResponse {
     lastName: string;
     nickname?: string;
     email: string;
+    emailVerified?: boolean;
     xp?: number;
     level?: number;
     streak?: number;
@@ -47,6 +48,16 @@ export const register = async (data: RegisterData): Promise<AuthResponse> => {
 
 export const login = async (data: LoginData): Promise<AuthResponse> => {
   const res = await api.post('/auth/login', data);
+  return res.data;
+};
+
+export const verifyEmail = async (code: string): Promise<{ message: string }> => {
+  const res = await api.post('/auth/verify-email', { code });
+  return res.data;
+};
+
+export const resendVerification = async (): Promise<{ message: string }> => {
+  const res = await api.post('/auth/resend-verification');
   return res.data;
 };
 
