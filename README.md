@@ -1,6 +1,6 @@
 # NAUTICACADEMY
 
-<img src="frontend/public/images/app_icons/icon-ios.png" alt="NauticAcademy Icon" width="150">
+<img src="/frontend/public/images/app_icons/icon-ios.png" alt="NauticAcademy Icon" width="150">
 
 ***NauticAcademy is a web application for studying and preparing for the Timonel de Yate de Vela y Motor (Sailing and Motor Yacht Skipper) certification, based on the official program of the Argentine Coast Guard (Prefectura Naval Argentina).***
 
