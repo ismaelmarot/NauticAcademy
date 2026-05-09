@@ -69,9 +69,10 @@ The app features 6 chapters of structured nautical content with topics, sections
 7. [Content Structure](#content-structure)
 8. [API Endpoints](#api-endpoints)
 9. [Database Schema](#database-schema)
-10. [Deployment](#deployment)
-11. [License](#license)
-12. [Contact](#contact)
+10. [Screenshots](#screenshots)
+11. [Deployment](#deployment)
+12. [License](#license)
+13. [Contact](#contact)
 
 <br>
 
@@ -391,6 +392,29 @@ The backend is ready to be deployed on **Render** (or any Node.js host) with:
 - **MongoDB Atlas** for database (replacing SQLite)
 - **SendGrid** for transactional emails
 - Environment variables configured via `.env`
+
+<br>
+
+----------------------------------
+
+<a id="screenshots"></a>
+## 📸 Screenshots
+
+<p align="center">
+  <img src="frontend/public/images/app_captures/cap_01.PNG" width="250"/>
+  <img src="frontend/public/images/app_captures/cap_02.jpg" width="250"/>
+  <img src="frontend/public/images/app_captures/cap_03.jpg" width="250"/>
+</p>
+
+<p align="center">
+  <img src="frontend/public/images/app_captures/cap_04.jpg" width="250"/>
+  <img src="frontend/public/images/app_captures/cap_05.jpg" width="250"/>
+  <img src="frontend/public/images/app_captures/cap_06.jpg" width="250"/>
+</p>
+
+<p align="center">
+  <img src="frontend/public/images/app_captures/cap_07.jpg" width="250"/>
+</p>
 
 <br>
 
