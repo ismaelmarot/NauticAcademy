@@ -1,1 +1,1 @@
-export { default } from './SwipeCard';
+export { default } from './SwipeCard'

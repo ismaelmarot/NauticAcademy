@@ -41,6 +41,11 @@ export const MeteoSection: React.FC<Props> = ({
               <LinkFavicon
                 src={`https://www.google.com/s2/favicons?domain=${new URL(link.url).hostname}&sz=64`}
                 alt={link.name}
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement
+                  img.style.display = 'none'
+                  img.src = ''
+                }}
               />
 
               <LinkInfo>

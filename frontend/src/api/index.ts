@@ -1,0 +1,1 @@
+export { getProgress } from '@/api/progress'

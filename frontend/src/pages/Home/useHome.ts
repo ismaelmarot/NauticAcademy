@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-import { useAuth } from '@/context/AuthContext'
-import { useThemeLanguage } from '@/context/ThemeLanguageContext'
-
+import { getProgress } from '@/api'
+import { useAuth, useThemeLanguage } from '@/context'
 import { ActiveView } from '@/types'
-
-import { getProgress } from '@/api/progress'
 import { chapters } from '@/content/structured'
 
 const useHome = () => {

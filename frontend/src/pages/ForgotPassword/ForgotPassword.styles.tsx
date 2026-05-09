@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { useThemeLanguage } from '@/context/ThemeLanguageContext';
-import { resetPassword } from '@/api/auth';
+import styled from 'styled-components'
 
-const Container = styled.div<{ $theme: any }>`
+export const Container = styled.div<{ $theme: any }>`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,27 +8,36 @@ const Container = styled.div<{ $theme: any }>`
   justify-content: center;
   background: ${({ $theme }) => $theme.colors.background};
   padding: ${({ $theme }) => $theme.spacing[16]};
-`;
+`
 
-const Card = styled.div<{ $theme: any }>`
+export const Card = styled.div<{ $theme: any }>`
   background: ${({ $theme }) => $theme.colors.surface};
   border-radius: ${({ $theme }) => $theme.radius.md};
   padding: ${({ $theme }) => $theme.spacing[32]};
   width: 100%;
   max-width: 400px;
-`;
+`
 
-const Title = styled.h1<{ $theme: any }>`
+export const Title = styled.h1<{ $theme: any }>`
   font-family: ${({ $theme }) => $theme.typography.fontFamily.headline};
   font-size: ${({ $theme }) => $theme.typography.fontSize.heading};
   line-height: ${({ $theme }) => $theme.typography.lineHeight.heading};
   letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.heading};
   color: ${({ $theme }) => $theme.colors.primary};
   text-align: center;
-  margin-bottom: ${({ $theme }) => $theme.spacing[24]};
-`;
+  margin-bottom: ${({ $theme }) => $theme.spacing[16]};
+`
 
-const Input = styled.input<{ $theme: any }>`
+export const Subtitle = styled.p<{ $theme: any }>`
+  color: ${({ $theme }) => $theme.colors.textBody};
+  text-align: center;
+  margin-bottom: ${({ $theme }) => $theme.spacing[24]};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  letter-spacing: ${({ $theme }) => $theme.typography.letterSpacing.caption};
+`
+
+export const Input = styled.input<{ $theme: any }>`
   width: 100%;
   padding: 12px ${({ $theme }) => $theme.spacing[16]};
   margin: 8px 0;
@@ -53,9 +58,9 @@ const Input = styled.input<{ $theme: any }>`
   &::placeholder {
     color: ${({ $theme }) => $theme.colors.textDisabled};
   }
-`;
+`
 
-const Button = styled.button<{ $theme: any }>`
+export const Button = styled.button<{ $theme: any }>`
   width: 100%;
   padding: 14px;
   margin: ${({ $theme }) => $theme.spacing[16]} 0 8px;
@@ -86,17 +91,17 @@ const Button = styled.button<{ $theme: any }>`
     transform: none;
     box-shadow: ${({ $theme }) => $theme.button.primaryShadow};
   }
-`;
+`
 
-const Message = styled.p<{ $theme: any; $error?: boolean }>`
+export const Message = styled.p<{ $theme: any; $error?: boolean }>`
   color: ${({ $theme, $error }) => $error ? $theme.colors.error : $theme.colors.success};
   text-align: center;
   margin: 8px 0;
   font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
   font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
-`;
+`
 
-const LinkText = styled.p<{ $theme: any }>`
+export const LinkText = styled.p<{ $theme: any }>`
   color: ${({ $theme }) => $theme.colors.textBody};
   text-align: center;
   margin-top: ${({ $theme }) => $theme.spacing[16]};
@@ -110,75 +115,4 @@ const LinkText = styled.p<{ $theme: any }>`
     text-decoration: underline;
     text-underline-offset: 2px;
   }
-`;
-
-const ResetPassword: React.FC = () => {
-  const { theme, t } = useThemeLanguage();
-  const navigate = useNavigate();
-
-  const [token] = useState(new URLSearchParams(window.location.search).get('token') || '');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setMessage('');
-
-    if (password !== confirmPassword) {
-      setError('Las contraseñas no coinciden');
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      await resetPassword(token, password);
-      setMessage(t('success'));
-      setTimeout(() => navigate('/login'), 2000);
-    } catch (err: any) {
-      setError(err.response?.data?.error || 'Error');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <Container $theme={theme}>
-      <Card $theme={theme}>
-        <Title $theme={theme}>{t('resetPassword')}</Title>
-        <form onSubmit={handleSubmit}>
-          <Input
-            $theme={theme}
-            type="password"
-            placeholder={t('password')}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <Input
-            $theme={theme}
-            type="password"
-            placeholder={t('confirmPassword')}
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-          {error && <Message $theme={theme} $error>{error}</Message>}
-          {message && <Message $theme={theme}>{message}</Message>}
-          <Button $theme={theme} type="submit" disabled={loading}>
-            {loading ? t('loading') : t('save')}
-          </Button>
-        </form>
-        <LinkText $theme={theme}>
-          <Link to="/login">{t('backToLogin')}</Link>
-        </LinkText>
-      </Card>
-    </Container>
-  );
-};
-
-export default ResetPassword;
+`

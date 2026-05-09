@@ -74,7 +74,12 @@ const routes = [
   { path: '/practice', element: <ProtectedRoute element={<Practice />} /> },
 ];
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(routes, {
+  future: {
+    v7_startTransition: true,
+    v7_relativeSplatPath: true,
+  },
+});
 
 const App: React.FC = () => {
   const { theme } = useThemeLanguage();
