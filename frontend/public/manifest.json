@@ -7,12 +7,12 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/images/app_icons/icon-ios.png",
+      "src": "/images/app_icons/app-icon.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/images/app_icons/icon-ios.png",
+      "src": "/images/app_icons/app-icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }

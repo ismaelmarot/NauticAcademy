@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['images/app_icons/icon-ios.png'],
+      includeAssets: ['images/app_icons/app-icon.png'],
       manifest: {
         name: 'NauticAcademy',
         short_name: 'NauticAc',
@@ -17,12 +17,12 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
-            src: '/images/app_icons/icon-ios.png',
+            src: '/images/app_icons/app-icon.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/images/app_icons/icon-ios.png',
+            src: '/images/app_icons/app-icon.png',
             sizes: '512x512',
             type: 'image/png'
           }

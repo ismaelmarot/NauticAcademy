@@ -79,25 +79,65 @@ interface ContentBlock {
 
 interface ContentRendererProps {
   content: ContentBlock[];
+  activeIndex?: number;
 }
 
-const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
+const HighlightedParagraph = styled(Paragraph)<{ $active: boolean; $theme: any }>`
+  background: ${({ $active, $theme }) =>
+    $active ? $theme.colors.primaryLight : 'transparent'};
+  border-radius: ${({ $active }) => ($active ? '8px' : '0')};
+  padding: ${({ $active }) => ($active ? '4px 8px' : '0')};
+  margin: ${({ $active }) => ($active ? '8px -8px' : '0 0 12px 0')};
+  transition: all 0.3s ease;
+`;
+
+const HighlightedSubtitle = styled(Subtitle)<{ $active: boolean; $theme: any }>`
+  background: ${({ $active, $theme }) =>
+    $active ? $theme.colors.primaryLight : 'transparent'};
+  border-radius: ${({ $active }) => ($active ? '8px' : '0')};
+  padding: ${({ $active }) => ($active ? '4px 8px' : '0')};
+  margin: ${({ $active }) => ($active ? '20px -8px 12px' : '24px 0 12px 0')};
+  transition: all 0.3s ease;
+`;
+
+const HighlightedListItem = styled(ListItem)<{ $active: boolean; $theme: any }>`
+  background: ${({ $active, $theme }) =>
+    $active ? $theme.colors.primaryLight : 'transparent'};
+  border-radius: ${({ $active }) => ($active ? '6px' : '0')};
+  padding: ${({ $active }) => ($active ? '2px 6px' : '0')};
+  margin: ${({ $active }) => ($active ? '4px -6px' : '0 0 6px 0')};
+  transition: all 0.3s ease;
+`;
+
+const ContentRenderer: React.FC<ContentRendererProps> = ({ content, activeIndex }) => {
   const { theme } = useThemeLanguage();
 
   return (
     <Container $theme={theme}>
       {content.map((block, index) => {
+        const isActive = activeIndex === index;
+
         if (block.type === 'title') {
           return <Title key={index} $theme={theme}>{block.text}</Title>;
         }
         if (block.type === 'subtitle') {
-          return <Subtitle key={index} $theme={theme}>{block.text}</Subtitle>;
+          return (
+            <HighlightedSubtitle key={index} $theme={theme} $active={isActive}>
+              {block.text}
+            </HighlightedSubtitle>
+          );
         }
         if (block.type === 'list' && block.items) {
           return (
             <List key={index} $theme={theme}>
               {block.items.map((item, i) => (
-                <ListItem key={i} $theme={theme}>{item}</ListItem>
+                <HighlightedListItem
+                  key={i}
+                  $theme={theme}
+                  $active={isActive && i === 0}
+                >
+                  {item}
+                </HighlightedListItem>
               ))}
             </List>
           );
@@ -112,7 +152,11 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content }) => {
             </ImageContainer>
           );
         }
-        return <Paragraph key={index} $theme={theme}>{block.text}</Paragraph>;
+        return (
+          <HighlightedParagraph key={index} $theme={theme} $active={isActive}>
+            {block.text}
+          </HighlightedParagraph>
+        );
       })}
     </Container>
   );

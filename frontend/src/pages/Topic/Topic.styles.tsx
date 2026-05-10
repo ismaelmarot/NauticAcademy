@@ -51,6 +51,46 @@ export const Meta = styled.div<{ $theme: any }>`
   margin-bottom: ${({ $theme }) => $theme.spacing[16]};
 `
 
+export const SpeechRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+`
+
+export const SpeechButton = styled.button<{ $theme: any; $active: boolean }>`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 2px solid ${({ $theme, $active }) =>
+    $active ? $theme.colors.primary : $theme.colors.border};
+  border-radius: 9999px;
+  background: ${({ $theme, $active }) =>
+    $active ? $theme.colors.primaryLight : 'transparent'};
+  color: ${({ $theme }) => $theme.colors.text};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  font-weight: ${({ $theme }) => $theme.typography.fontWeight.medium};
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: ${({ $theme }) => $theme.colors.primary};
+    background: ${({ $theme }) => $theme.colors.primaryLight};
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+`
+
+export const SpeechStatus = styled.span<{ $theme: any }>`
+  font-size: ${({ $theme }) => $theme.typography.fontSize.caption};
+  color: ${({ $theme }) => $theme.colors.textBody};
+  font-family: ${({ $theme }) => $theme.typography.fontFamily.body};
+`
+
 export const CompleteButton = styled.button<{ $theme: any; $completed: boolean }>`
   width: 100%;
   padding: 14px;
