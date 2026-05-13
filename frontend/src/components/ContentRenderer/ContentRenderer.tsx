@@ -1,5 +1,6 @@
 import React from 'react'
-import { useThemeLanguage } from '@/context/ThemeLanguageContext'
+import { useThemeLanguage } from '@/context'
+import { ContentRendererProps } from '@/interfaces'
 import {
   Caption,
   Container,
@@ -11,20 +12,6 @@ import {
   StyledImage,
   Title
 } from './ContentRender.styles'
-
-interface ContentBlock {
-  type: 'title' | 'subtitle' | 'paragraph' | 'list' | 'image';
-  text?: string;
-  items?: string[];
-  src?: string;
-  alt?: string;
-  caption?: string;
-}
-
-interface ContentRendererProps {
-  content: ContentBlock[];
-  activeIndex?: number;
-}
 
 const ContentRenderer: React.FC<ContentRendererProps> = ({ content, activeIndex }) => {
   const { theme } = useThemeLanguage();
@@ -42,7 +29,7 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content, activeIndex 
             <HighlightedSubtitle key={index} $theme={theme} $active={isActive}>
               {block.text}
             </HighlightedSubtitle>
-          );
+          )
         }
         if (block.type === 'list' && block.items) {
           return (
@@ -57,7 +44,7 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content, activeIndex 
                 </HighlightedListItem>
               ))}
             </List>
-          );
+          )
         }
         if (block.type === 'image' && block.src) {
           return (
@@ -67,16 +54,16 @@ const ContentRenderer: React.FC<ContentRendererProps> = ({ content, activeIndex 
                 <Caption $theme={theme}>{block.caption}</Caption>
               )}
             </ImageContainer>
-          );
+          )
         }
         return (
           <HighlightedParagraph key={index} $theme={theme} $active={isActive}>
             {block.text}
           </HighlightedParagraph>
-        );
+        )
       })}
     </Container>
-  );
-};
+  )
+}
 
-export default ContentRenderer;
+export default ContentRenderer
