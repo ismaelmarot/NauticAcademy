@@ -1,7 +1,7 @@
 import React from 'react'
 import { ICONS } from '@/constants'
 import { XPBar, StreakBadge } from '@/components'
-import { ChaptersSection, KnotsSection, LinksSection, MeteoSection } from './sections'
+import { ChaptersSection, KnotsSection, LinksSection, MeteoSection, BuoysSection, QCodeSection, VhfSection } from './sections'
 import useHome from './useHome'
 import {
   Container,
@@ -11,6 +11,7 @@ import {
   Greeting,
   Subtitle,
   StatsRow,
+  QuickActionsWrapper,
   QuickActions,
   ActionButton,
   EmptyState,
@@ -66,6 +67,7 @@ const Home: React.FC = () => {
         {user && <StreakBadge streak={user.streak || 0} />}
       </StatsRow>
 
+      <QuickActionsWrapper $theme={theme}>
       <QuickActions $theme={theme}>
         <ActionButton
           $theme={theme}
@@ -95,7 +97,29 @@ const Home: React.FC = () => {
         >
           Links
         </ActionButton>
+        <ActionButton
+          $theme={theme}
+          $active={activeView === 'boyas'}
+          onClick={() => setActiveView('boyas')}
+        >
+          Boyas
+        </ActionButton>
+        <ActionButton
+          $theme={theme}
+          $active={activeView === 'qcode'}
+          onClick={() => setActiveView('qcode')}
+        >
+          Código Q
+        </ActionButton>
+        <ActionButton
+          $theme={theme}
+          $active={activeView === 'vhf'}
+          onClick={() => setActiveView('vhf')}
+        >
+          VHF
+        </ActionButton>
       </QuickActions>
+      </QuickActionsWrapper>
 
       {activeView === 'apuntes' && (
         <ChaptersSection
@@ -119,7 +143,19 @@ const Home: React.FC = () => {
         <LinksSection theme={theme} />
       )}
 
-      {activeView !== 'apuntes' && activeView !== 'nudos' && activeView !== 'meteo' && activeView !== 'links' && (
+      {activeView === 'boyas' && (
+        <BuoysSection theme={theme} />
+      )}
+
+      {activeView === 'qcode' && (
+        <QCodeSection theme={theme} />
+      )}
+
+      {activeView === 'vhf' && (
+        <VhfSection theme={theme} />
+      )}
+
+      {activeView !== 'apuntes' && activeView !== 'nudos' && activeView !== 'meteo' && activeView !== 'links' && activeView !== 'boyas' && activeView !== 'qcode' && activeView !== 'vhf' && (
         <EmptyState $theme={theme}>
           Próximamente disponible
         </EmptyState>

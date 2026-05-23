@@ -1,5 +1,7 @@
-
 export * from './ChaptersSection'
 export * from './KnotsSection'
 export * from './MeteoSection'
 export * from './LinksSection'
+export * from './BuoysSection'
+export * from './QCodeSection'
+export * from './VhfSection'

@@ -3,3 +3,6 @@ export type ActiveView =
     | 'nudos'
     | 'meteo'
     | 'links'
+    | 'boyas'
+    | 'qcode'
+    | 'vhf'
